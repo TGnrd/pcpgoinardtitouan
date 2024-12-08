@@ -1,6 +1,6 @@
 body {
     background-image: url(img/brown-wooden-dock.jpg);
-    background-color: #007EA7;
+    background-color: #bd9e7c;
     background-repeat: no-repeat;
     background-size: 100%;
     border: 100%;
@@ -46,7 +46,7 @@ body {
     color: #CCDBDC;
     font-size: 200%;
     border-radius: 20px;
-    background-color: #003249;
+    background-color: #bd9e7c;
     width: 12%;
     padding: 10px;
     display: block;
@@ -55,12 +55,8 @@ body {
     
 }
 
-section {
-    background-color: #007EA7;
-    
-}
-
 h1 {
+    padding-top: 3%;
     font-size: 60px;
     margin-left: 10%;
     margin-top: 12%;
@@ -72,6 +68,7 @@ h1 {
     color: rgb(255, 255, 255);
     margin-left: 20%;
     margin-top: 15%;
+    margin-bottom: 50%;
 }
 
 .tete {
@@ -83,12 +80,82 @@ h1 {
     margin-right: 30%;
 }
 
-table {
-    color: #CCDBDC;
-    border: solid 1px #CCDBDC;
+#competences {
+    height: 900px;
+    background-color: #46704c;
 }
 
-th {
+.tableau {
+    position: relative;
+    margin: auto;
+    color: #CCDBDC;
     border: solid 1px #CCDBDC;
+    width: 80%;
+    font-size: 25px;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+.tableau td {
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+th, td {
+    border: solid 1px #CCDBDC;
+    margin: auto;
+}
+
+.box {
+    position: relative;
+}
+
+.pourcent {
+    position: relative;
+}
+
+svg {
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: auto;
+    padding: 3%;
+}
+
+svg circle {
     
+    fill: none;
+    stroke: #bd9e7c;
+    stroke-width: 10px;
+    transform: translate(5px, 5px);
+    stroke-linecap: round;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+
+svg circle:nth-child(1) {
+    stroke: #92929296;
+    stroke-dashoffset: 0;
+}
+
+svg circle:nth-child(2) {
+    stroke: #bd9e7c;
+    animation: circle 2s forwards;
+}
+
+@keyframes circle {
+    to {
+        stroke-dashoffset: 220; 
+    }
+}
+
+span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: #bd9e7c;
 }
