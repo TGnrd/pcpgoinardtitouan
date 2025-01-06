@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>PCP </title>
+    <title>PCP GOINARD Titouan</title>
     
 </head>
 <body>
@@ -17,13 +17,15 @@
             <a href="#contact">Contact</a>
         </ul>
     </nav>
+    <div class="container">
+        <a class="visite" href="#presentation">Visiter</a>
+    </div>
+    
     <section id = "presentation">
-        <div>
-            <h1>Présentation</h1>
-            <p class="info">GOINARD Titouan <br>
-            18 ans
-            </p>
-        </div>
+        <h1>Présentation</h1>
+        <p class="info">GOINARD Titouan <br>
+        18 ans
+        </p>
     </section>
     
     <section id = "competences">

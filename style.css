@@ -1,6 +1,5 @@
 body {
-    background-image: url(img/brown-wooden-dock.jpg);
-    background-color: #bd9e7c;
+    background-color: #9dd6e7;
     background-repeat: no-repeat;
     background-size: 100%;
     border: 100%;
@@ -8,15 +7,17 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: flex-end; /* Aligne tous les éléments à droite */
-    align-items: center;
     position: sticky;
+    background-color: #51a2bb;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 40px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    align-items: center;
     z-index: 5;
-    width: 50%;
-    margin-top: 1%;
-    margin-left: auto; 
-    margin-right: 12%;
-    gap: 80%;
+    width: 95%;
+    gap: 40%;
 }
 
 .content {
@@ -26,33 +27,17 @@ body {
 
 .acceuil, .content a {
     text-decoration: none;
-    color: #CCDBDC;
+    color: #616a6b;
     font-size: 200%;
 }
 
-.content a:hover {
-    box-shadow: rgb(35, 35, 35) ;
-}
-
-.container {
+section {
+    background-color: aliceblue;
     display: flex;
-    justify-content: center; 
-    align-items: center; /* Centre verticalement */
-    height: 100vh; /* S'étend sur toute la hauteur de la page */
-}
-
-.visite {
-    text-decoration: none;
-    color: #CCDBDC;
-    font-size: 200%;
-    border-radius: 20px;
-    background-color: #bd9e7c;
-    width: 12%;
-    padding: 10px;
-    display: block;
-    margin: 0 auto; /* Centre horizontalement */
-    text-align: center;
-    
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    height: 60%;
+    width: 95%;
 }
 
 h1 {
@@ -60,12 +45,12 @@ h1 {
     font-size: 60px;
     margin-left: 10%;
     margin-top: 12%;
-    color: #CCDBDC;
+    color: #616a6b;
 }
 
 .info {
     font-size: 25px;
-    color: rgb(255, 255, 255);
+    color: #616a6b;
     margin-left: 20%;
     margin-top: 15%;
     margin-bottom: 50%;
@@ -82,14 +67,13 @@ h1 {
 
 #competences {
     height: 900px;
-    background-color: #46704c;
 }
 
 .tableau {
     position: relative;
     margin: auto;
-    color: #CCDBDC;
-    border: solid 1px #CCDBDC;
+    color: #616a6b;
+    border: solid 1px  #616a6b;
     width: 80%;
     font-size: 25px;
     width: 80%;
@@ -102,7 +86,7 @@ h1 {
 }
 
 th, td {
-    border: solid 1px #CCDBDC;
+    border: solid 1px  #616a6b;
     margin: auto;
 }
 
@@ -140,7 +124,7 @@ svg circle:nth-child(1) {
 }
 
 svg circle:nth-child(2) {
-    stroke: #bd9e7c;
+    stroke:  #616a6b;
     animation: circle 2s forwards;
 }
 
@@ -157,5 +141,5 @@ span {
     transform: translate(-50%, -50%);
     font-size: 30px;
     font-weight: bold;
-    color: #bd9e7c;
+    color:  #616a6b;
 }
