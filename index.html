@@ -8,6 +8,7 @@
     
 </head>
 <body>
+<!-- Navbar -->
     <nav class="navbar">
         <a href="#acceuil" class="acceuil">Acceuil</a>
         <ul class="content">
@@ -17,17 +18,27 @@
             <a href="#contact">Contact</a>
         </ul>
     </nav>
+
     <section id = "presentation">
-        <div>
+        <div class="information">
             <h1>Présentation</h1>
-            <p class="info">GOINARD Titouan <br>
-            18 ans
+            <p class="info">
+                Bonjour, je m'appel <strong> Titouan Goinard</strong> et j'ai 18 ans.
+            </p>
+            <p class="info">
+                Je suis actuellement étudiant au lycée <strong>Victor Hélène Basch</strong> en 
+                <strong>BTS Services Informatiques aux Organisations option solutions logicielles 
+                et applications métiers</strong>. 
+            </p>
+            <p class="info">
+                Étant créatif, je suis passionné par la programmation depuis <strong>5 ans </strong>maintenant.
             </p>
         </div>
+        <img src="img/pp.jpg" class="tete">
     </section>
     
     <section id = "competences">
-        <h1>Compétences</h1>
+        <h1 class="titre">Compétences</h1>
         <table class="tableau">
             <tr><th>Langage appris</th><th>Niveau</th></tr>
             <tr>
@@ -36,9 +47,9 @@
                     <div class = "box">
                         <svg>
                             <circle cx = "50px" cy = "50px" r = "50px"></circle>
-                            <circle cx = "50px" cy = "50px" r = "50px"></circle>
+                            <circle class="circle-html" cx = "50px" cy = "50px" r = "50px"></circle>
                         </svg>
-                        <span>70%</span>
+                        <span>60%</span>
                     </div>
                 </td>
             </tr>
@@ -48,7 +59,7 @@
                     <div class = "box">
                         <svg>
                             <circle cx = "50px" cy = "50px" r = "50px"></circle>
-                            <circle cx = "50px" cy = "50px" r = "50px"></circle>
+                            <circle class="circle-css" cx = "50px" cy = "50px" r = "50px"></circle>
                         </svg>
                         <span>50%</span>
                     </div>
@@ -60,7 +71,7 @@
                     <div class = "box">
                         <svg>
                             <circle cx = "50px" cy = "50px" r = "50px"></circle>
-                            <circle cx = "50px" cy = "50px" r = "50px"></circle>
+                            <circle class="circle-js" cx = "50px" cy = "50px" r = "50px"></circle>
                         </svg>
                         <span>20%</span>
                     </div>
@@ -71,10 +82,36 @@
                 <td>
                     <div class = "box">
                         <div class="pourcent">
-                            <span>80%</span>
+                            <span>75%</span>
                             <svg>
                                 <circle cx = "50px" cy = "50px" r = "50px"></circle>
+                                <circle class="circle-python" cx = "50px" cy = "50px" r = "50px"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>PHP</th>
+                <td>
+                    <div class = "box">
+                        <svg>
+                            <circle cx = "50px" cy = "50px" r = "50px"></circle>
+                            <circle class="circle-php" cx = "50px" cy = "50px" r = "50px"></circle>
+                        </svg>
+                        <span>40%</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>SQL</th>
+                <td>
+                    <div class = "box">
+                        <div class="pourcent">
+                            <span>90%</span>
+                            <svg>
                                 <circle cx = "50px" cy = "50px" r = "50px"></circle>
+                                <circle class="circle-sql" cx = "50px" cy = "50px" r = "50px"></circle>
                             </svg>
                         </div>
                     </div>
@@ -84,7 +121,22 @@
     </section>
     <section id ="projets">
         <h1>Projets</h1>
+        <article class="firstProject">
+            <a class="projet1" href="https://tgnrd.github.io/HMM/">HMM...
+                <img src="img/projetHMM.png" alt="image-projet-HMM..." height="200px" class="image-projet-HMM">
+            </a>
+        </article>
     </section>
-    <script src="script.ps"></script>
+    <footer id="contact">
+        <h1>Contact</h1>
+        <div class="contact-linkedin">
+            <a href="www.linkedin.com/in/titouan-goinard/" >
+                <img src="img/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.webp"  href="www.linkedin.com/in/titouan-goinard-585657339" class="linkedin">
+            </a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+
 </body>
 </html>

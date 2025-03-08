@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_quiz.css">
+    <title>Ziuq</title>
+</head>
+<body>
+    <div id="quiz">
+        <div id="question1" class="question">
+            <h2>Première question:</h2>
+            <p class="quest">Que vaut 01001011 ?</p>
+            <div class="answers">
+                <button onclick="checkAnswer(1, '80')">80</button>
+                <button onclick="checkAnswer(1, '73')">73</button>
+                <button onclick="checkAnswer(1, '75')">75</button>
+                <button onclick="checkAnswer(1, '76')">76</button>
+            </div>
+        </div>
+        <div id="question2" class="question hidden">
+            <h2>Deuxième question:</h2>
+            <p class="quest">Quel est le coût du tri par fusion ?</p>
+            <div class="answers">
+                <button onclick="checkAnswer(2, 'O²')">O²</button>
+                <button onclick="checkAnswer(2, 'n²')">n²</button>
+                <button onclick="checkAnswer(2, 'n(1/2)')">n(1/2)</button>
+                <button onclick="checkAnswer(2, 'O(n)')">O(n)</button>
+            </div>
+        </div>
+        <div id="question3" class="question hidden">
+            <h2>Troisième question:</h2>
+            <p class="quest">Comment le site a-t-il été créé ?</p>
+            <div class="answers">
+                <button onclick="checkAnswer(3, 'Visual')">Par Visual Studio Code</button>
+                <button onclick="checkAnswer(3, 'Amitié')">Grâce au pouvoir de l'amitié</button>
+                <button onclick="checkAnswer(3, 'Chatgpt')">Par Chatgpt</button>
+                <button onclick="checkAnswer(3, 'dieux')">Par des dieux </button>
+            </div>
+        </div>
+        <div id="result" class="hidden">
+            <h2 class="resultat">Résultat:</h2>
+            <p id="score"></p>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
