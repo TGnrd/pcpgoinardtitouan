@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(14, 14, 14);
+    margin: 0;
+    padding: 0;
+}
+
+.custom-popup {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 180px; /* Largeur du popup */
+    height: 180px; /* Hauteur du popup */
+}
+
+.cross {
+    position: absolute;
+    background-color: red;
+    border-radius: 45%;
+    top: 5px; /* Position verticale de la croix */
+    right: 5px; /* Position horizontale de la croix */
+    color: rgb(255, 255, 255); /* Couleur de la croix */
+    cursor: pointer; /* Curseur au survol */
+}

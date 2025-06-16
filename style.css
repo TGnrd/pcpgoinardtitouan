@@ -189,20 +189,25 @@ span {
     margin-left: 5%; 
 }
 
-.projet1 {
+.projet1, .projet2{
     position: relative;
     color:  #ebc400;
     font-size: 20px;
     margin-bottom: 10%;
-    margin-left: 37%;
+    margin-left: 30%;
     text-decoration: none;
 }
 
-.image-projet-HMM{
-    margin-top: 10px;
+.image-projet-Mistral {
+    margin-left: 23%;
 }
 
-.firstProject {
+.image-projet-HMM {
+    margin-top: 10px;
+    margin-left: -5%;
+}
+
+.firstProject, .secondProject {
     position: relative;
     margin-top: 20%;
     
@@ -216,16 +221,29 @@ span {
 
 .contact {
     position: relative;
-    margin-left: 46%;
-    
 }
 
-.contact-linkedin {
-    position: relative;
-    margin-left: 46%;
-    margin-top: 15%;
+.mail-link {
+    position: absolute;
+    color: #ffffff;
+    margin-top: 25%;  
+}
+
+.contact-linkedin, .contact-mail {  
+    margin-left: 45%;
+    margin-top: 5%;
+}
+
+.mail {
+    margin-left: 20%;
 }
 
 .linkedin {
-    height: 120px;
+    margin-left: 2%;
+}
+
+.linkedin, .mail {
+    position: absolute;
+    height: 120px;    
+    margin-top: 10%;
 }
