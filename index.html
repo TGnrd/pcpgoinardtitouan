@@ -14,7 +14,7 @@
         <ul class="content">
             <a href="#presentation">Présentation</a>
             <a href="#competences">Compétences</a>
-            <a href="#projets">Projets</a>
+            <a href="#realisationpro">Réalisation professionnelle</a>
             <a href="#contact">Contact</a>
         </ul>
     </nav>
@@ -119,32 +119,37 @@
             </tr>
         </table>
     </section>
-    <section id ="projets">
-        <h1>Projets</h1>
-        <article class="firstProject">
-            <a class="projet1" href="https://tgnrd.github.io/HMM/">HMM...
-                <img src="img/projetHMM.png" alt="image-projet-HMM..." height="200px" class="image-projet-HMM">
-            </a>
+    <section id="realisationpro">
+        <h1 class="titre">Réalisation professionnelle</h1>
+        <h2>Stage de 1ère année</h2>
+        <article id="premierStage" style="display: none;">
+            <img src="img/Logo de la startup Mistral.ai.png" alt="logo de Mastral" class="logoMistral" height="30%" width="30%">
+            <p>
+                J'ai effectué mon stage de 1ère année de BTS dans l'entreprise <strong>Altervoice - Thema-web</strong> au Rheu.
+                <br><br>
+                Lors de ce stage, j'ai eu à réaliser une <strong>API</strong> permetteant d'extraire les informations d'un CV par de la lecture OCR et par la reconnaissance de 
+                caractères de l'API de Mistral. Le but du programme est de l'implémenter sur le site web Beauté Job édité par l'entreprise, l'objectif final est de pré-remplir 
+                les informations personnelles des utilisateurs.
+                <br><br>
+                <a class="lienProjet" href="https://github.com/TGnrd/projetCV_stage"><strong>Productions réalisées durant le stage.</strong></a>
+            </p>
         </article>
-        <article class="secondProject">
-            <a class="projet2" href="https://github.com/TGnrd/projetCV_stage">API extraction informations CV 
-                <img src="img/Logo de la startup Mistral.ai.png" alt="logo-mistral" height="200px" class="image-projet-Mistral">
-            </a>
-            
-        </article>
+        <button id="boutonDescent" class="boutonDescent" onclick="afficherArticle()">▼</button>
     </section>
     <footer id="contact">
         <h1>Contact</h1>
-        <div class="contact-linkedin">
-            <a href="www.linkedin.com/in/titouan-goinard/" >
-                <img src="img/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.webp"  href="www.linkedin.com/in/titouan-goinard-585657339" class="linkedin">
-            </a>
-        </div>
-        <div class="contact-mail">
-            <a class="mail-link">
-                <img src="img/mail-logo.png" alt="logo-mail" class="mail">
-                titouan.goinard@gmail.com
-            </a>
+        <div class="liste-contact">
+            <div class="contact-linkedin">
+                <a href="www.linkedin.com/in/titouan-goinard/" >
+                    <img src="img/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.webp"  href="www.linkedin.com/in/titouan-goinard-585657339" class="linkedin">
+                </a>
+            </div>
+            <div class="contact-mail">
+                <a class="mail-link">
+                    <img src="img/mail-logo.png" alt="logo-mail" class="mail">
+                    titouan.goinard@gmail.com
+                </a>
+            </div>
         </div>
     </footer>
     <script src="script.js"></script>

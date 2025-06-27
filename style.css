@@ -17,11 +17,14 @@ body {
     align-items: center;
     z-index: 5;
     width: 95%;
-    gap: 40%;
 }
 
 .content {
     display: flex;
+    width: 60%;
+    align-items: center;
+    position: relative;
+    margin-left: 20%;
     gap: 10%; /* Ajoute un espace entre les liens */
 }
 
@@ -56,6 +59,7 @@ section {
 }
 
 h1 {
+    width: 90%;
     font-size: 60px;
     margin-left: 12%;
     margin-top: 2%;
@@ -93,7 +97,7 @@ h1 {
     position: relative;
     margin-top: 15%;
     margin-right: 20%;
-    margin-left: -10%;
+    margin-left: -40%;
     color: #ffffff;
     border: solid 1px  #ffffff;
     width: 80%;
@@ -185,32 +189,84 @@ span {
 
 /*Projet*/
 
-#projets h1 {
+#realisationpro h1 {
+    width: 100%;
     margin-left: 5%; 
 }
 
-.projet1, .projet2{
+#premierStage p {
+    margin: 5%;
+    margin-right: 30%;
+}
+
+article {
+    background-color: #ebc400;
     position: relative;
-    color:  #ebc400;
-    font-size: 20px;
-    margin-bottom: 10%;
-    margin-left: 30%;
+    width: 35%;
+    height: 60%;
+    margin-top: 18.5%;
+    margin-left: -35%;
+}
+
+.lienProjet{
+    align-items: center;  
+    justify-content: center;  
     text-decoration: none;
+    display: flex;
+    color: rgb(18, 21, 31);
 }
 
-.image-projet-Mistral {
-    margin-left: 23%;
+.lienProjet:hover {
+    color: #c4a000;
 }
 
-.image-projet-HMM {
-    margin-top: 10px;
-    margin-left: -5%;
+.texteStage {
+    margin: 10px;
 }
 
-.firstProject, .secondProject {
-    position: relative;
+.logoMistral {
+    position: absolute;
+    display: flex;
+    margin-left: 70%;
     margin-top: 20%;
-    
+}
+
+.boutonDescent {
+    display: flex;
+    position: relative;
+    margin-top: 18.5%;
+    margin-left: -35%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: none;
+    background-color: #ebc400;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(18, 21, 31);
+    font-size: large;
+    width: 35%;
+    height: 50px;
+}
+
+.boutonDescent:hover {
+    background-color: #c4a000;
+}   
+
+h2 {
+    position: relative;
+    background-color: #ebc400;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: rgb(18, 21, 31);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    width: 35%;
+    position: relative;
+    margin-top: 15%;
+    margin-left: -95%;
 }
 
 /*Footer*/
@@ -219,23 +275,26 @@ span {
     margin-left: 5%;
 }
 
-.contact {
-    position: relative;
+.ligne-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* espace entre les contacts */
+    margin-top: 20px;
+}
+
+.contact-linkedin, .contact-mail {
+    position: static;
+    margin: 0;
 }
 
 .mail-link {
-    position: absolute;
     color: #ffffff;
-    margin-top: 25%;  
-}
-
-.contact-linkedin, .contact-mail {  
-    margin-left: 45%;
-    margin-top: 5%;
-}
-
-.mail {
-    margin-left: 20%;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .linkedin {
@@ -243,7 +302,8 @@ span {
 }
 
 .linkedin, .mail {
-    position: absolute;
-    height: 120px;    
-    margin-top: 10%;
+    position: static;
+    height: 125px;
+    margin: 0 10px 0 0;
+    vertical-align: middle;
 }

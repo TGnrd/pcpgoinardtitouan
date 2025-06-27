@@ -5,3 +5,18 @@ document.querySelectorAll(".box").forEach((box) => {
     circle.style.strokeDasharray = circumference;
     circle.style.strokeDashoffset = circumference - (circumference * percentage) / 100;
 });
+
+function afficherArticle() {
+    var article = document.getElementById('premierStage');
+    var bouton = document.getElementById('boutonDescent');
+
+    if (article.style.display === 'none' || article.style.display === '') {
+        article.style.display = 'block';
+        bouton.style.marginTop = '38%';
+        bouton.textContent = '▲';
+    } else {
+        article.style.display = 'none';
+        bouton.style.marginTop = '18.5%';
+        bouton.textContent = '▼';
+    }  
+};
