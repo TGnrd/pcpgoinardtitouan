@@ -107,7 +107,7 @@ h1 {
 }
 
 .tableau td {
-    font-size: 25px;
+    text-align: center;
     vertical-align: middle;
 }
 
@@ -177,14 +177,15 @@ svg circle:nth-child(2) {
     stroke-dashoffset: calc(440 - (440 * 90) / 100); /* 90% */
 }
 
-span {
+.box span {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 30px;
     font-weight: bold;
-    color:  #ffffff;
+    color: #ffffff;
+    pointer-events: none;
 }
 
 /*Projet*/
@@ -275,35 +276,45 @@ h2 {
     margin-left: 5%;
 }
 
-.ligne-contact {
+.contact {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 40px; /* espace entre les contacts */
+    align-items: flex-start;
+    gap: 40px;
     margin-top: 20px;
 }
 
-.contact-linkedin, .contact-mail {
-    position: static;
-    margin: 0;
+.mail-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
 }
 
-.mail-link {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
+.contact-mail {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
+}
+
+.mail {
+    height: 50px;
+    margin-bottom: 8px;
+}
+
+.text-mail {
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .linkedin {
-    margin-left: 2%;
+    height: 50px;
 }
 
 .linkedin, .mail {
-    position: static;
     height: 125px;
-    margin: 0 10px 0 0;
     vertical-align: middle;
 }
