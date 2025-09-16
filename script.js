@@ -20,3 +20,7 @@ function afficherArticle() {
         bouton.textContent = '▼';
     }  
 };
+
+function afficherDetails() {
+
+};

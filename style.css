@@ -153,12 +153,12 @@ svg circle:nth-child(2) {
 }
 
 .circle-html {
-    stroke-dashoffset: calc(440 - (440 * 70) / 100);
+    stroke-dashoffset: calc(440 - (440 * 100) / 100);
     /* 60% */
 }
 
 .circle-css {
-    stroke-dashoffset: calc(440 - (440 * 60) / 100);
+    stroke-dashoffset: calc(440 - (440 * 100) / 100);
     /* 50% */
 }
 
@@ -173,7 +173,7 @@ svg circle:nth-child(2) {
 }
 
 .circle-php {
-    stroke-dashoffset: calc(440 - (440 * 50) / 100);
+    stroke-dashoffset: calc(440 - (440 * 70) / 100);
     /* 40% */
 }
 
@@ -216,7 +216,7 @@ article {
     background-color: #ebc400;
     position: relative;
     width: 35%;
-    height: 60%;
+    height: 70%;
     margin-top: 18.5%;
     margin-left: -35%;
 }
@@ -240,8 +240,8 @@ article {
 .logoMistral {
     position: absolute;
     display: flex;
-    margin-left: 70%;
-    margin-top: 20%;
+    margin-left: 67%;
+    margin-top: 10%;
 }
 
 .boutonDescent {
@@ -261,6 +261,22 @@ article {
 }
 
 .boutonDescent:hover {
+    background-color: #c4a000;
+}
+
+.boutonDetail {
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    margin-left: 110%;
+    z-index: 2;
+    background-color: #ebc400;
+    text-align: center;
+    color: rgb(18, 21, 31);
+    font-size: large;
+}
+
+.boutonDetail:hover {
     background-color: #c4a000;
 }
 
