@@ -25,14 +25,16 @@ body {
     align-items: center;
     position: relative;
     margin-left: 20%;
-    gap: 10%; /* Ajoute un espace entre les liens */
+    gap: 10%;
+    /* Ajoute un espace entre les liens */
 }
 
 .acceuil {
     padding-left: 20px;
 }
 
-.acceuil, .content a {
+.acceuil,
+.content a {
     text-decoration: none;
     color: #ebc400;
     font-size: 150%;
@@ -42,13 +44,13 @@ body {
 .information {
     margin-top: 10%;
     margin-left: 10%;
-    background-image: 
-    radial-gradient(circle at 4% 15%, rgb(18, 21, 31) 0%, rgb(18, 21, 31) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
-    radial-gradient(circle at 4% 50%, rgb(18, 21, 31) 0%, rgb(18, 21, 31) 1.5%, transparent calc(1.5% + 1px), transparent 100%), 
-    radial-gradient(circle at 4% 85%, rgb(18, 21, 31) 0%, rgb(18, 21, 31) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
-    linear-gradient(90deg, transparent 0%, transparent 10%, #DB676C 10%, #DB676C calc(10% + 2px), transparent calc(10% + 2px), transparent 100%),
-    linear-gradient(180deg, white 12%, transparent 12%), repeating-linear-gradient(180deg, #91C1E1 0px, #91C1E1 1px, transparent 1px, transparent 30px), 
-    linear-gradient(white,white);
+    background-image:
+        radial-gradient(circle at 4% 15%, rgb(18, 21, 31) 0%, rgb(18, 21, 31) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
+        radial-gradient(circle at 4% 50%, rgb(18, 21, 31) 0%, rgb(18, 21, 31) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
+        radial-gradient(circle at 4% 85%, rgb(18, 21, 31) 0%, rgb(18, 21, 31) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
+        linear-gradient(90deg, transparent 0%, transparent 10%, #DB676C 10%, #DB676C calc(10% + 2px), transparent calc(10% + 2px), transparent 100%),
+        linear-gradient(180deg, white 12%, transparent 12%), repeating-linear-gradient(180deg, #91C1E1 0px, #91C1E1 1px, transparent 1px, transparent 30px),
+        linear-gradient(white, white);
 }
 
 section {
@@ -90,7 +92,7 @@ h1 {
 .titre {
     font-size: 60px;
     margin-left: 5%;
-    margin-top:1%;
+    margin-top: 1%;
 }
 
 .tableau {
@@ -99,7 +101,7 @@ h1 {
     margin-right: 20%;
     margin-left: -40%;
     color: #ffffff;
-    border: solid 1px  #ffffff;
+    border: solid 1px #ffffff;
     width: 80%;
     font-size: 25px;
     width: 80%;
@@ -111,16 +113,13 @@ h1 {
     vertical-align: middle;
 }
 
-th, td {
-    border: solid 1px  #ffffff;
+th,
+td {
+    border: solid 1px #ffffff;
     margin: auto;
 }
 
 .box {
-    position: relative;
-}
-
-.pourcent {
     position: relative;
 }
 
@@ -149,35 +148,47 @@ svg circle:nth-child(1) {
 }
 
 svg circle:nth-child(2) {
-    stroke:  #ebc400;
+    stroke: #ebc400;
     stroke-dashoffset: 440;
 }
 
 .circle-html {
-    stroke-dashoffset: calc(440 - (440 * 60) / 100); /* 60% */
+    stroke-dashoffset: calc(440 - (440 * 70) / 100);
+    /* 60% */
 }
 
 .circle-css {
-    stroke-dashoffset: calc(440 - (440 * 50) / 100); /* 50% */
+    stroke-dashoffset: calc(440 - (440 * 60) / 100);
+    /* 50% */
 }
 
 .circle-js {
-    stroke-dashoffset: calc(440 - (440 * 20) / 100); /* 20% */
+    stroke-dashoffset: calc(440 - (440 * 30) / 100);
+    /* 20% */
 }
 
 .circle-python {
-    stroke-dashoffset: calc(440 - (440 * 75) / 100); /* 75% */
+    stroke-dashoffset: calc(440 - (440 * 75) / 100);
+    /* 75% */
 }
 
 .circle-php {
-    stroke-dashoffset: calc(440 - (440 * 40) / 100); /* 40% */
+    stroke-dashoffset: calc(440 - (440 * 50) / 100);
+    /* 40% */
 }
 
 .circle-sql {
-    stroke-dashoffset: calc(440 - (440 * 90) / 100); /* 90% */
+    stroke-dashoffset: calc(440 - (440 * 80) / 100);
+    /* 90% */
 }
 
-.box span {
+.circle-markdown {
+    stroke-dashoffset: calc(440 - (440 * 30) / 100);
+    /* 90% */
+}
+
+.percent{
+    margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -188,11 +199,12 @@ svg circle:nth-child(2) {
     pointer-events: none;
 }
 
+
 /*Projet*/
 
 #realisationpro h1 {
     width: 100%;
-    margin-left: 5%; 
+    margin-left: 5%;
 }
 
 #premierStage p {
@@ -209,9 +221,9 @@ article {
     margin-left: -35%;
 }
 
-.lienProjet{
-    align-items: center;  
-    justify-content: center;  
+.lienProjet {
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     display: flex;
     color: rgb(18, 21, 31);
@@ -233,16 +245,14 @@ article {
 }
 
 .boutonDescent {
-    display: flex;
     position: relative;
-    margin-top: 18.5%;
-    margin-left: -35%;
+    z-index: 2;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border: none;
+    margin-top: 17.5%;
+    margin-left: -35%;
     background-color: #ebc400;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     color: rgb(18, 21, 31);
     font-size: large;
@@ -252,7 +262,7 @@ article {
 
 .boutonDescent:hover {
     background-color: #c4a000;
-}   
+}
 
 h2 {
     position: relative;
@@ -266,7 +276,7 @@ h2 {
     height: 50px;
     width: 35%;
     position: relative;
-    margin-top: 15%;
+    margin-top: 16%;
     margin-left: -95%;
 }
 
@@ -314,7 +324,8 @@ h2 {
     height: 50px;
 }
 
-.linkedin, .mail {
+.linkedin,
+.mail {
     height: 125px;
     vertical-align: middle;
 }
