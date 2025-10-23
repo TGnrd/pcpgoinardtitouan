@@ -24,3 +24,19 @@ function afficherArticle() {
 function afficherDetails() {
 
 };
+
+document.addEventListener('DOMContentLoaded', function () {
+  const btn = document.getElementById('menuBtn');
+  const nav = document.getElementById('main-nav');
+
+  if (!btn || !nav) return;
+
+  btn.addEventListener('click', function () {
+    const opened = btn.classList.toggle('opened'); // conserve visuel existant
+    nav.classList.toggle('open', opened);
+
+    // ARIA pour accessibilité
+    btn.setAttribute('aria-expanded', String(opened));
+    nav.setAttribute('aria-hidden', String(!opened));
+  });
+});

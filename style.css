@@ -1,63 +1,215 @@
 body {
-    background-color: rgb(18, 21, 31);
+    background-color: rgb(219, 219, 219);
     background-repeat: no-repeat;
-    background-size: 100%;
-    border: 100%;
+}
+
+.menu {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  margin-left: 93%;
+  margin-top: -1%;
+  padding: 0;
+  width: 70px;   /* <- largeur du bouton */
+  height: 70px;  /* <- hauteur du bouton */
+  align-items: center;
+  justify-content: center;
+}
+.menu svg {
+  width: 100%;   /* le SVG prend la taille du bouton */
+  height: 100%;
+  display: block;
+}
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.typewriter {
+    /* Style de base */
+    font-size: 30px;
+    margin: 2% auto;
+    text-align: left; 
+    position: relative;
+    /* Clé de l'animation */
+    width: 0; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    /* Le curseur est sur l'élément lui-même */
+    border-right: 2px solid rgba(255, 255, 255, .75); 
+    /* On applique les DEUX animations */
+    animation: 
+        /*L'animation d'écriture */
+        typewriter 2s steps(13) forwards, /* 13 étapes pour 13 caractères */
+        /*L'animation de clignotement (infinie) */
+        blinkingCursor 750ms steps(1) infinite;
+}
+
+/* Animation d'écriture : anime la largeur */
+@keyframes typewriter {
+    from { 
+        width: 0; /* Commence à 0 */
+    }
+    to { 
+        /* Anime la largeur jusqu'à 13 "ch".
+           "ch" est une unité CSS qui correspond à la largeur du caractère "0" 
+           de la police. C'est parfait pour une animation de 13 caractères.
+        */
+        width: 13ch; 
+    }
+}
+
+/* Animation de clignotement : anime la couleur du curseur */
+@keyframes blinkingCursor {
+    0%, 100% { 
+        border-right-color: rgba(0, 0, 0, 0.75); 
+    }
+    50% { 
+        border-right-color: transparent; /* Le curseur disparaît */
+    }
 }
 
 .navbar {
-    display: flex;
-    position: sticky;
-    border: 2px solid red;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    margin-top: 40px;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    align-items: center;
-    z-index: 5;
-    width: 95%;
+  display: none; /* cachée par défaut */
+  border-radius: 10px;
+  transition: max-height 0.25s ease-out, opacity 0.25s ease-out;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  background: transparent; /* optionnel : couleur de fond si souhaitée */
+  padding: 0;
+  background-color: #8e8e8e;
+}
+
+.navbar.open {
+  display: block;
+  position: absolute;
+  margin-left: 79%;
+  margin-top: 5%;
+  height: auto;
+  width: 20%;
+  opacity: 1;
+  max-height: 500px; /* ajuster selon le contenu */
+  padding: 10px 0;
 }
 
 .content {
+    top: 0;
+    left: 0;
     display: flex;
-    width: 60%;
-    align-items: center;
-    position: relative;
-    margin-left: 20%;
-    gap: 10%;
-    /* Ajoute un espace entre les liens */
+    flex-direction: column; /* empile verticalement */
+    width: 100%;
+    padding: 8px 16px;
+    gap: 12px;
+    box-sizing: border-box;
+    text-align: center;
+
 }
 
-.acceuil {
-    padding-left: 20px;
+.content a:hover {
+    background-color: #66666665;
+    border-radius: 10px;
+    color: #ebc400;
+    width: 100%;
+    padding: 8px 0;
 }
 
-.acceuil,
 .content a {
     text-decoration: none;
-    color: #ebc400;
-    font-size: 150%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: #000000;
+    font-size: 1.50rem; /* équivalent à ~125% */
     font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    display: block; /* chaque lien prend sa ligne */
+    width: 100%;
+    padding: 8px 0;
+    justify-content: center;
+    align-items: center;
 }
 
 .information {
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 10%;
+    border-radius: 50px;
+    margin-bottom: 5%;
     background-image:
-        radial-gradient(circle at 4% 15%, rgb(18, 21, 31) 0%, rgb(18, 21, 31) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
-        radial-gradient(circle at 4% 50%, rgb(18, 21, 31) 0%, rgb(18, 21, 31) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
-        radial-gradient(circle at 4% 85%, rgb(18, 21, 31) 0%, rgb(18, 21, 31) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
+        radial-gradient(circle at 4% 15%, rgb(219, 219, 219) 0%, rgb(219, 219, 219) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
+        radial-gradient(circle at 4% 50%, rgb(219, 219, 219) 0%, rgb(219, 219, 219) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
+        radial-gradient(circle at 4% 85%, rgb(219, 219, 219) 0%, rgb(219, 219, 219) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
         linear-gradient(90deg, transparent 0%, transparent 10%, #DB676C 10%, #DB676C calc(10% + 2px), transparent calc(10% + 2px), transparent 100%),
         linear-gradient(180deg, white 12%, transparent 12%), repeating-linear-gradient(180deg, #91C1E1 0px, #91C1E1 1px, transparent 1px, transparent 30px),
         linear-gradient(white, white);
 }
 
+.intro {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 100%;
+    margin-bottom: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro .text-intro {
+    width: 60%;
+    font-size: 25px;
+    color: #000000;
+    margin-left: 20%;
+    margin-bottom: 8%;
+    margin-right: 3%;
+    line-height: 125%;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.text-intro strong {
+    color: #ebc400;
+}
+
 section {
     display: flex;
     height: 60%;
-    width: 95%;
-    margin-bottom: 15%;
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+#presentation {
+    background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
 }
 
 h1 {
@@ -85,7 +237,7 @@ h1 {
     width: 18%;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 18%;
+    margin-top: 12%;
     border-radius: 25px;
 }
 
@@ -100,8 +252,8 @@ h1 {
     margin-top: 15%;
     margin-right: 20%;
     margin-left: -40%;
-    color: #ffffff;
-    border: solid 1px #ffffff;
+    color: #000000;
+    border: solid 1px #000000;
     width: 80%;
     font-size: 25px;
     width: 80%;
@@ -115,7 +267,7 @@ h1 {
 
 th,
 td {
-    border: solid 1px #ffffff;
+    border: solid 1px #000000;
     margin: auto;
 }
 
@@ -195,105 +347,241 @@ svg circle:nth-child(2) {
     transform: translate(-50%, -50%);
     font-size: 30px;
     font-weight: bold;
-    color: #ffffff;
+    color: #000000;
     pointer-events: none;
 }
 
 
 /*Projet*/
 
-#realisationpro h1 {
-    width: 100%;
-    margin-left: 5%;
+.main {
+  max-width: 100%;
+  margin-left: 5%;
 }
 
-#premierStage p {
-    margin: 5%;
-    margin-right: 30%;
+.cards {
+  display: grid;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  width: 95%;
 }
 
-article {
-    background-color: #ebc400;
-    position: relative;
-    width: 35%;
-    height: 70%;
-    margin-top: 18.5%;
-    margin-left: -35%;
+.cards_item {
+  display: flex;
+}
+
+.card_image {
+  display: flex;
+  height: 250px;
+  box-shadow: 0 50px 100px 0 var(--violet);
+}
+
+.card_image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-color: #ffffff;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--purple);
+  border-radius: 5px 25px 5px 50px;
+  transition: transform 0.1s linear, box-shadow 0.2s;
+}
+
+.card_text:focus,
+.card:focus {
+  outline: 2px dashed var(--aqua);
+}
+
+.card:focus,
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.2);
+}
+
+.card_content {
+  padding: 0.5rem 1rem 1rem;
+  color: var(--white);
+  background-color: #ffffff;
+}
+
+.card_title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90%;
+  height: auto;
+  color: var(--black);
+  padding: 0.5rem;
+  border-radius: 5px 0 0 5px;
+  transform: rotate(-3.3deg);
+  transform-origin: left top;
+  font-family: Georgia, Times, serif;
+  font-weight: 600;
+  font-size: 1.325rem;
+  overflow: hidden;
+  z-index: 1;
+  background-color: rgba(255, 122, 13, 0.75);
+  animation: 0s 0s fly-in 0 reverse both;
+}
+
+@media (min-width: 535px) {
+  .card_title {
+    animation: 0.5s 0.25s fly-out 1 both;
+  }
+}
+
+.card:focus .card_title,
+.card:hover .card_title {
+  animation: 0.5s ease-in 0s fly-in 1 both;
+}
+
+.card_text {
+  font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica,
+    Helvetica Neue, Arial, sans-serif;
+  line-height: 1.5;
+  text-size-adjust: 0.2px;
+  padding: 0 1rem;
+}
+
+.card_text p:first-of-type:first-letter {
+  font-size: 1.8em;
+  font-family: Georgia, Times, serif;
+  margin-right: 0.05em;
+}
+
+@media (min-width: 480px) {
+  .card_text {
+    overflow: auto;
+    max-height: 20rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--aqua) var(--violet);
+  }
+
+  .card_text::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .card_text::-webkit-scrollbar-track {
+    background: var(--violet);
+  }
+
+  .card_text::-webkit-scrollbar-thumb {
+    background-color: var(--aqua);
+  }
+}
+
+.card_text strong {
+  color: var(--aqua);
+}
+
+.note {
+  display: block;
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: 900;
+  background-image: linear-gradient(
+    -45deg,
+    transparent 10%,
+    var(--aqua) 10.5%,
+    var(--aqua) 90%,
+    transparent 90.5%
+  );
+  color: var(--black);
+  font-size: 1.3em;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+@keyframes fly-in {
+  0% {
+    top: 0;
+    right: 0;
+    font-size: 1.325rem;
+  }
+
+  25% {
+    top: 0;
+    right: -200%;
+    font-size: 1.325rem;
+  }
+
+  26% {
+    font-size: 2rem;
+  }
+
+  100% {
+    top: 2rem;
+    right: 0;
+    font-size: 2rem;
+  }
+}
+
+@keyframes fly-out {
+  0% {
+    top: 2rem;
+    right: 0;
+    font-size: 2rem;
+  }
+
+  50% {
+    top: 0;
+    right: -200%;
+    font-size: 1.325rem;
+  }
+
+  100% {
+    top: 0;
+    right: 0;
+    font-size: 1.325rem;
+  }
+}
+
+.tech{
+    background-color: rgba(128, 128, 128, 0.445);
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 1%;
 }
 
 .lienProjet {
-    align-items: center;
-    justify-content: center;
     text-decoration: none;
-    display: flex;
-    color: rgb(18, 21, 31);
+    color: #000000;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.lienProjet:hover {   
+    background-color: rgba(110, 110, 110, 0.658);
+    padding: 5px;
+    border-radius: 5px;
 }
 
-.lienProjet:hover {
-    color: #c4a000;
-}
-
-.texteStage {
-    margin: 10px;
-}
-
-.logoMistral {
-    position: absolute;
-    display: flex;
-    margin-left: 67%;
-    margin-top: 10%;
-}
-
-.boutonDescent {
-    position: relative;
-    z-index: 2;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border: none;
-    margin-top: 17.5%;
-    margin-left: -35%;
-    background-color: #ebc400;
-    text-align: center;
-    color: rgb(18, 21, 31);
-    font-size: large;
-    width: 35%;
-    height: 50px;
-}
-
-.boutonDescent:hover {
-    background-color: #c4a000;
-}
+/** Bouton détail projet **/
 
 .boutonDetail {
+    padding: 10px 20px;
+    background-color: #ebc400;
+    color: #000000;
     border: none;
-    border-radius: 10px;
-    position: relative;
-    margin-left: 110%;
-    z-index: 2;
-    background-color: #ebc400;
-    text-align: center;
-    color: rgb(18, 21, 31);
-    font-size: large;
-}
-
-.boutonDetail:hover {
-    background-color: #c4a000;
-}
-
-h2 {
-    position: relative;
-    background-color: #ebc400;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    color: rgb(18, 21, 31);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 50px;
-    width: 35%;
-    position: relative;
-    margin-top: 16%;
-    margin-left: -95%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 10%;
+    margin-top: 1%;
+    margin-bottom: 2%;
 }
 
 /*Footer*/
