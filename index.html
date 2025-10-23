@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>PCP </title>
-    
+
 </head>
+
 <body>
-<!-- Navbar -->
-    <nav class="navbar">
-        <a href="#acceuil" class="acceuil">Acceuil</a>
+    <!-- Navbar -->
+    <button id="menuBtn" class="menu" aria-label="Main Menu" aria-expanded="false" aria-controls="main-nav">
+        <svg width="100" height="100" viewBox="0 0 100 100">
+            <path class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+            <path class="line line2" d="M 20,50 H 80" />
+            <path class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+        </svg>
+    </button>
+    <nav id="main-nav" class="navbar" aria-hidden="true">
         <ul class="content">
             <a href="#presentation">Présentation</a>
             <a href="#competences">Compétences</a>
@@ -18,36 +28,54 @@
             <a href="#contact">Contact</a>
         </ul>
     </nav>
-
-    <section id = "presentation">
+    <h1 class="typewriter">Découvrez-moi</h1>
+    <section class="intro">
+        <div>
+            <h2 class="nom">Titouan Goinard</h2>
+        </div>
+        <div>
+            <h3>Étudiant en BTS SIO option SLAM</h3>
+        </div>
+        <div>
+            <p class="text-intro">
+                Je suis actuellement à la recherche d'un stage <strong>du 12 janvier au 20 février 2026</strong>.
+                Passionné par la programmation. J’entame ma <strong>seconde année en BTS SIO option SLAM</strong>
+                au lycée Victor Hélène Basch de Rennes.
+            </p>
+        </div>
+    </section>
+    <section id="presentation">
         <div class="information">
             <h1>Présentation</h1>
             <p class="info">
-                Bonjour, je m'appel <strong> Titouan Goinard</strong> et j'ai 18 ans.
+                Bonjour, je m'appelle <strong> Titouan Goinard</strong> et j'ai 19 ans.
             </p>
             <p class="info">
-                Je suis actuellement étudiant au lycée <strong>Victor Hélène Basch</strong> en 
-                <strong>BTS Services Informatiques aux Organisations option solutions logicielles 
-                et applications métiers</strong>. 
+                Je suis actuellement étudiant au lycée <strong>Victor Hélène Basch</strong> en
+                <strong>BTS Services Informatiques aux Organisations option Solutions Logicielles
+                    et Applications Métiers</strong>.
             </p>
             <p class="info">
-                Étant créatif, je suis passionné par la programmation depuis <strong>5 ans </strong>maintenant.
+                Étant créatif, je suis passionné par la programmation depuis <strong>6 ans </strong>maintenant.
             </p>
         </div>
         <img src="img/pp.jpg" class="tete">
     </section>
-    
-    <section id = "competences">
+
+    <section id="competences">
         <h1 class="titre">Compétences</h1>
         <table class="tableau">
-            <tr><th>Langage appris</th><th>Niveau</th></tr>
+            <tr>
+                <th>Langage appris</th>
+                <th>Niveau</th>
+            </tr>
             <tr>
                 <th>HTML</th>
                 <td>
-                    <div class = "box">
+                    <div class="box">
                         <svg>
-                            <circle cx = "50px" cy = "50px" r = "50px"></circle>
-                            <circle class="circle-html" cx = "50px" cy = "50px" r = "50px"></circle>
+                            <circle cx="50px" cy="50px" r="50px"></circle>
+                            <circle class="circle-html" cx="50px" cy="50px" r="50px"></circle>
                         </svg>
                         <span class="percent">100%</span>
                     </div>
@@ -56,10 +84,10 @@
             <tr>
                 <th>CSS</th>
                 <td>
-                    <div class = "box">
+                    <div class="box">
                         <svg>
-                            <circle cx = "50px" cy = "50px" r = "50px"></circle>
-                            <circle class="circle-css" cx = "50px" cy = "50px" r = "50px"></circle>
+                            <circle cx="50px" cy="50px" r="50px"></circle>
+                            <circle class="circle-css" cx="50px" cy="50px" r="50px"></circle>
                         </svg>
                         <span class="percent">100%</span>
                     </div>
@@ -68,10 +96,10 @@
             <tr>
                 <th>JavaScript</th>
                 <td>
-                    <div class = "box">
+                    <div class="box">
                         <svg>
-                            <circle cx = "50px" cy = "50px" r = "50px"></circle>
-                            <circle class="circle-js" cx = "50px" cy = "50px" r = "50px"></circle>
+                            <circle cx="50px" cy="50px" r="50px"></circle>
+                            <circle class="circle-js" cx="50px" cy="50px" r="50px"></circle>
                         </svg>
                         <span class="percent">30%</span>
                     </div>
@@ -80,11 +108,11 @@
             <tr>
                 <th>Python</th>
                 <td>
-                    <div class = "box">
+                    <div class="box">
                         <div class="pourcent">
                             <svg>
-                                <circle cx = "50px" cy = "50px" r = "50px"></circle>
-                                <circle class="circle-python" cx = "50px" cy = "50px" r = "50px"></circle>
+                                <circle cx="50px" cy="50px" r="50px"></circle>
+                                <circle class="circle-python" cx="50px" cy="50px" r="50px"></circle>
                             </svg>
                             <span class="percent">75%</span>
                         </div>
@@ -94,10 +122,10 @@
             <tr>
                 <th>PHP</th>
                 <td>
-                    <div class = "box">
+                    <div class="box">
                         <svg>
-                            <circle cx = "50px" cy = "50px" r = "50px"></circle>
-                            <circle class="circle-php" cx = "50px" cy = "50px" r = "50px"></circle>
+                            <circle cx="50px" cy="50px" r="50px"></circle>
+                            <circle class="circle-php" cx="50px" cy="50px" r="50px"></circle>
                         </svg>
                         <span class="percent">70%</span>
                     </div>
@@ -106,11 +134,11 @@
             <tr>
                 <th>SQL</th>
                 <td>
-                    <div class = "box">
+                    <div class="box">
                         <div class="pourcent">
                             <svg>
-                                <circle cx = "50px" cy = "50px" r = "50px"></circle>
-                                <circle class="circle-sql" cx = "50px" cy = "50px" r = "50px"></circle>
+                                <circle cx="50px" cy="50px" r="50px"></circle>
+                                <circle class="circle-sql" cx="50px" cy="50px" r="50px"></circle>
                             </svg>
                             <span class="percent">80%</span>
                         </div>
@@ -120,11 +148,11 @@
             <tr>
                 <th>Markdown</th>
                 <td>
-                    <div class = "box">
+                    <div class="box">
                         <div class="pourcent">
                             <svg>
-                                <circle cx = "50px" cy = "50px" r = "50px"></circle>
-                                <circle class="circle-sql" cx = "50px" cy = "50px" r = "50px"></circle>
+                                <circle cx="50px" cy="50px" r="50px"></circle>
+                                <circle class="circle-sql" cx="50px" cy="50px" r="50px"></circle>
                             </svg>
                             <span class="percent">30%</span>
                         </div>
@@ -133,37 +161,82 @@
             </tr>
         </table>
     </section>
+    <h1 class="titre">Réalisation professionnelle</h1>
     <section id="realisationpro">
-        <h1 class="titre">Réalisation professionnelle</h1>
-        <h2>Stage de 1ère année</h2>
-        <button id="boutonDescent" class="boutonDescent" onclick="afficherArticle()">▼</button>
-        <article id="premierStage" style="display: none;">
-            <img src="img/Logo de la startup Mistral.ai.png" alt="logo de Mastral" class="logoMistral" height="32%" width="33%">
-            <p>
-                J'ai effectué mon stage de 1ère année de BTS dans l'entreprise <strong>Altervoice - Thema-web</strong> au Rheu.
-                <br><br>
-                Lors de ce stage, j'ai eu à réaliser une <strong>API</strong> permetteant d'extraire les informations d'un CV par de la lecture OCR et par la reconnaissance de 
-                caractères de l'API de Mistral. Le but du programme est de l'implémenter sur le site web Beauté Job édité par l'entreprise, l'objectif final est de pré-remplir 
-                les informations personnelles des utilisateurs.
-                <br><br>
-                <a class="lienProjet" href="https://github.com/TGnrd/Stage1_production"><strong>Productions réalisées durant le stage.</strong></a>
-                <button id="boutonDetail" class="boutonDetail" onclick="afficherArticle()">Détails</button>
-            </p>
-        </article>
+        <div class="main">
+            <ul class="cards">
+                <li class="cards_item">
+                    <div class="card" tabindex="0">
+                        <div class="card_image"><img src="./img/altervoice.png"></div>
+                        <div class="card_content">
+                            <h2 class="card_title">Stage Altervoice Thema-web</h2>
+                            <div class="card_text">
+                                <h3>Stage de 1ère année</h3>
+                                <p>J'ai effectué mon stage de 1ère année de BTS dans l'entreprise <strong>Altervoice -
+                                        Thema-web</strong>
+                                    au Rheu. <br><br>
+                                    Lors de ce stage, j'ai eu à réaliser une <strong>API</strong> permetteant d'<strong>extraire</strong>
+                                    les informations d'un <strong>CV</strong> par de la <strong>lecture OCR</strong> et par la 
+                                    <strong>reconnaissance de caractères de l'API de Mistral</strong>. Le but du programme est de l'implémenter sur 
+                                    le site web <strong>Beauté Job</strong> édité par l'entreprise, l'objectif final est de <strong>pré-remplir les 
+                                    informations personnelles des utilisateurs</strong>.
+                                </p>
+                                <h3>Technologies utilisées</h3>
+                                <div>
+                                    <span class="tech">Visual Studio Code</span>
+                                    <span class="tech">PHP</span>
+                                    <span class="tech">Mistral AI</span>
+                                    <span class="tech">Open API</span>
+                                    <span class="tech">Postman</span>
+                                </div>
+                                <a class="lienProjet"
+                                    href="https://github.com/TGnrd/Stage1_production"><strong>Productions
+                                        réalisées
+                                        durant le stage.</strong></a>
+                                <button id="boutonDetail" class="boutonDetail"
+                                    onclick="afficherArticle()">Détails</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            
+                <li class="cards_item">
+                    <div class="card" tabindex="0">
+                        <div class="card_image"><img
+                                src="./img/png-clipart-question-mark-graphy-batman-miscellaneous-heroes.png"></div>
+                        <div class="card_content">
+                            <h2 class="card_title">Stage ???</h2>
+                            <div class="card_text">
+                                <h3>Stage de 2ème année</h3>
+                                <p> ?????????????????????????????????????????????????????????????????????????????????????
+
+                                </p>
+                                <br><br><br><br><br><br><br><br><br>
+                                <p>
+                                     </p>
+                                <p> 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </section>
     <footer id="contact">
         <h1>Contact</h1>
         <div class="contact">
             <div class="contact-mail">
-                    <a class="mail-link">
-                        <img src="img/mail-logo.png" alt="logo-mail" class="mail">
-                        <div class="text-mail">titouan.goinard@gmail.com</div>
-                    </a>
-                </div>
+                <a class="mail-link">
+                    <img src="img/mail-logo.png" alt="logo-mail" class="mail">
+                    <div class="text-mail">titouan.goinard@gmail.com</div>
+                </a>
+            </div>
             <div class="liste-contact">
                 <div class="contact-linkedin">
-                    <a href="https://www.linkedin.com/in/titouan-goinard-585657339" >
-                        <img src="img/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.webp"  href="www.linkedin.com/in/titouan-goinard-585657339" class="linkedin">
+                    <a href="https://www.linkedin.com/in/titouan-goinard-585657339">
+                        <img src="img/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.webp"
+                            href="www.linkedin.com/in/titouan-goinard-585657339" class="linkedin">
                     </a>
                 </div>
             </div>
@@ -173,4 +246,5 @@
 
 
 </body>
+
 </html>
