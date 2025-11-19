@@ -7,10 +7,9 @@ document.querySelectorAll(".box").forEach((box) => {
 });
 
 function afficherArticle() {
-    var article = document.getElementById('premierStage');
-    var bouton = document.getElementById('boutonDescent');
-
-    if (article.style.display === 'none' || article.style.display === '') {
+    var article = document.getElementById('deuxiemeStage');
+    var bouton = document.getElementById('boutonDescent2');
+    if (article.style.display === 'none') {
         article.style.display = 'block';
         bouton.style.marginTop = '33%';
         bouton.textContent = '▲';
@@ -19,10 +18,6 @@ function afficherArticle() {
         bouton.style.marginTop = '17.5%';
         bouton.textContent = '▼';
     }  
-};
-
-function afficherDetails() {
-
 };
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -40,3 +35,55 @@ document.addEventListener('DOMContentLoaded', function () {
     nav.setAttribute('aria-hidden', String(!opened));
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Gestion du bouton versPresentation
+    const btnVersPresentation = document.getElementById('versPresentation');
+    const sectionPresentation = document.getElementById('presentation');
+
+    if (btnVersPresentation && sectionPresentation) {
+        btnVersPresentation.addEventListener('click', function() {
+            sectionPresentation.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    }
+
+    // Gestion du défilement smooth pour tous les liens de la navbar
+    const navLinks = document.querySelectorAll('.content a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                
+                // Ferme le menu après le clic (optionnel)
+                const nav = document.getElementById('main-nav');
+                const menuBtn = document.getElementById('menuBtn');
+                if (nav && menuBtn) {
+                    nav.classList.remove('open');
+                    menuBtn.classList.remove('opened');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                }
+            }
+        });
+    });
+});
+
+function afficherCompetence() {
+        var competenceDiv = document.getElementById("competencesStage");
+        if (competenceDiv.style.display === "none") {
+            competenceDiv.style.display = "block";
+        } 
+        else {
+            competenceDiv.style.display = "none";
+        }
+    }

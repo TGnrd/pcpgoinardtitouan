@@ -178,7 +178,7 @@ body {
 .intro {
     display: flex;
     flex-direction: column;
-    height: 80%;
+    height: 650px;
     width: 100%;
     margin-bottom: 5%;
     justify-content: center;
@@ -199,6 +199,20 @@ body {
 
 .text-intro strong {
     color: #ebc400;
+}
+
+#versPresentation {
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    color: #000;
+}
+
+#versPresentation:hover {
+    transform: translateY(5px);
 }
 
 section {
@@ -372,6 +386,7 @@ svg circle:nth-child(2) {
 
 .cards_item {
   display: flex;
+  margin-left: 5%;
 }
 
 .card_image {
@@ -431,7 +446,7 @@ svg circle:nth-child(2) {
   font-size: 1.325rem;
   overflow: hidden;
   z-index: 1;
-  background-color: rgba(255, 122, 13, 0.75);
+  background: linear-gradient(70deg, rgba(19, 46, 81, 0.602), rgb(47, 89, 255, 0.602), rgb(77, 18, 89, 0.602));
   animation: 0s 0s fly-in 0 reverse both;
 }
 
@@ -452,6 +467,13 @@ svg circle:nth-child(2) {
   line-height: 1.5;
   text-size-adjust: 0.2px;
   padding: 0 1rem;
+}
+
+.card_text h3 {
+  margin-top: 0;
+  width: 45%;
+  color: var(--aqua);
+  font-family: Georgia, Times, serif;
 }
 
 .card_text p:first-of-type:first-letter {
@@ -483,24 +505,6 @@ svg circle:nth-child(2) {
 
 .card_text strong {
   color: var(--aqua);
-}
-
-.note {
-  display: block;
-  text-align: center;
-  padding: 0.5rem;
-  font-weight: 900;
-  background-image: linear-gradient(
-    -45deg,
-    transparent 10%,
-    var(--aqua) 10.5%,
-    var(--aqua) 90%,
-    transparent 90.5%
-  );
-  color: var(--black);
-  font-size: 1.3em;
-  font-style: italic;
-  margin-top: 1rem;
 }
 
 @keyframes fly-in {
@@ -547,6 +551,16 @@ svg circle:nth-child(2) {
   }
 }
 
+/* Faire en sorte que la section realisationpro s'empile verticalement */
+#realisationpro {
+  display: flex;
+  flex-direction: column; /* empile les enfants verticalement */
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 4%; /* espace sous la section si besoin */
+}
+
 .tech{
     background-color: rgba(128, 128, 128, 0.445);
     padding: 5px;
@@ -555,47 +569,99 @@ svg circle:nth-child(2) {
 }
 
 .lienProjet {
+    position: relative;
+    display: block;
     text-decoration: none;
     color: #000000;
     font-size: 18px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 .lienProjet:hover {   
     background-color: rgba(110, 110, 110, 0.658);
-    padding: 5px;
     border-radius: 5px;
+}
+
+#competencesStage {
+    display: none; 
+    margin-top: 10px;
+    background-color: #dcdcdc;
+    padding: 2%;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.competencesHeader th {
+    padding: 10px;
+    border: 1px solid #000000;
+    background-color: #d3d3d3;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.competencesRow td {
+    padding: 10px;
+    border: 1px solid #000000;
+    text-align: center;
+    vertical-align: middle;
 }
 
 /** Bouton détail projet **/
 
-.boutonDetail {
-    padding: 10px 20px;
-    background-color: #ebc400;
-    color: #000000;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    margin-left: 10%;
-    margin-top: 1%;
-    margin-bottom: 2%;
+.btnCompetences {
+  position: absolute;
+  padding: 8px 12px;
+  background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  z-index: 5;
 }
 
+.card_text h3:first-of-type {
+  display: inline-block;
+  margin: 0;
+  padding-right: 5rem; /* ajuste si le bouton est plus large */
+}
+
+@media (max-width: 480px) {
+  .btnCompetences {
+    position: static;
+    display: inline-block;
+    margin-top: 0.5rem;
+    width: auto;
+  }
+  .card_text h3:first-of-type {
+    padding-right: 0;
+  }
+}
 /*Footer*/
+
+footer {
+    background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
+    height: 100%;
+    width: 100%;
+    margin-top: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+}
 
 #contact h1 {
     margin-left: 5%;
+    color: #ffffff;
 }
 
 .contact {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    margin-top: 20px;
+    margin-top: 10%;
+    height: 200px;
 }
 
 .mail-link {
@@ -628,8 +694,44 @@ svg circle:nth-child(2) {
     height: 50px;
 }
 
+.contact-mail, .liste-contact, .github-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+}
+
 .linkedin,
-.mail {
+.mail, .github {
     height: 125px;
     vertical-align: middle;
+}
+
+.btnDownload {
+    justify-content: center;
+    align-items: center;
+    display: block;
+    width: 10%;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 5%;
+    margin-left: 45%;
+    margin-bottom: 80px;
+}
+
+.droits {
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
 }
