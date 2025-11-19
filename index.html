@@ -43,6 +43,7 @@
                 au lycée Victor Hélène Basch de Rennes.
             </p>
         </div>
+        <button id="versPresentation">⏷</button>
     </section>
     <section id="presentation">
         <div class="information">
@@ -161,8 +162,8 @@
             </tr>
         </table>
     </section>
-    <h1 class="titre">Réalisation professionnelle</h1>
     <section id="realisationpro">
+        <h1 class="titre">Réalisation professionnelle</h1>
         <div class="main">
             <ul class="cards">
                 <li class="cards_item">
@@ -172,14 +173,20 @@
                             <h2 class="card_title">Stage Altervoice Thema-web</h2>
                             <div class="card_text">
                                 <h3>Stage de 1ère année</h3>
+                                <button id="btnCompetences" class="btnCompetences"
+                                    onclick="afficherCompetence()">Compétences</button>
                                 <p>J'ai effectué mon stage de 1ère année de BTS dans l'entreprise <strong>Altervoice -
                                         Thema-web</strong>
                                     au Rheu. <br><br>
-                                    Lors de ce stage, j'ai eu à réaliser une <strong>API</strong> permetteant d'<strong>extraire</strong>
-                                    les informations d'un <strong>CV</strong> par de la <strong>lecture OCR</strong> et par la 
-                                    <strong>reconnaissance de caractères de l'API de Mistral</strong>. Le but du programme est de l'implémenter sur 
-                                    le site web <strong>Beauté Job</strong> édité par l'entreprise, l'objectif final est de <strong>pré-remplir les 
-                                    informations personnelles des utilisateurs</strong>.
+                                    Lors de ce stage, j'ai eu à réaliser une <strong>API</strong> permetteant
+                                    d'<strong>extraire</strong>
+                                    les informations d'un <strong>CV</strong> par de la <strong>lecture OCR</strong> et
+                                    par la
+                                    <strong>reconnaissance de caractères de l'API de Mistral</strong>. Le but du
+                                    programme est de l'implémenter sur
+                                    le site web <strong>Beauté Job</strong> édité par l'entreprise, l'objectif final est
+                                    de <strong>pré-remplir les
+                                        informations personnelles des utilisateurs</strong>.
                                 </p>
                                 <h3>Technologies utilisées</h3>
                                 <div>
@@ -190,16 +197,14 @@
                                     <span class="tech">Postman</span>
                                 </div>
                                 <a class="lienProjet"
-                                    href="https://github.com/TGnrd/Stage1_production"><strong>Productions
-                                        réalisées
+                                    href="https://github.com/TGnrd/Stage1_production"><strong>Productions réalisées
                                         durant le stage.</strong></a>
-                                <button id="boutonDetail" class="boutonDetail"
-                                    onclick="afficherArticle()">Détails</button>
                             </div>
                         </div>
                     </div>
                 </li>
-            
+
+
                 <li class="cards_item">
                     <div class="card" tabindex="0">
                         <div class="card_image"><img
@@ -208,13 +213,13 @@
                             <h2 class="card_title">Stage ???</h2>
                             <div class="card_text">
                                 <h3>Stage de 2ème année</h3>
-                                <p> ?????????????????????????????????????????????????????????????????????????????????????
+                                <p> ????????????????????????????????????????????????????????????????????????????
 
                                 </p>
                                 <br><br><br><br><br><br><br><br><br>
                                 <p>
-                                     </p>
-                                <p> 
+                                </p>
+                                <p>
                                 </p>
                             </div>
                         </div>
@@ -222,16 +227,49 @@
                 </li>
             </ul>
         </div>
+        <div id="competencesStage">
+            <h2>Compérences Stage 1</h2>
+            <table>
+                <thead>
+                    <tr class="competencesHeader">
+                        <th scope="col">B1</th>
+                        <th scope="col">B2</th>
+                        <th scope="col">B3</th>
+                    </tr>
+                </thead>
+                <tr class="competencesRow">
+                    <td>B1.2 : Répondre aux incidents et aux demandes d’assistance et d’évolution</td>
+                    <td>B2.1 : Concevoir et développer une solution applicative</td>
+                    <td>B3.1 : Protéger les données à caractère personnel</td>
+                </tr>
+                <tr class="competencesRow">
+                    <td>B1.3 : Développer la présence en ligne de l’organisation</td>
+                    <td>B2.2 : Assurer la maintenance corrective ou évolutive d’une solution applicative</td>
+                    <td>B3.2 : Préserver l'identité numérique de l’organisation</td>
+                </tr>
+                <tr class="competencesRow">
+                    <td>B1.4 : Travailler en mode projet</td>
+                    <td></td>
+                    <td>B3.4 : Garantir la disponibilité, l’intégrité et la confidentialité des services informatiques
+                        et
+                        des données de l’organisation face aux cyberattaques</td>
+                </tr>
+                <tr class="competencesRow">
+                    <td>B1.5 : Mettre à disposition des utilisateurs un service informatique (orienté utilisateurs)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="competencesRow">
+                    <td>B1.6 : Organiser son développement professionnel</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
     </section>
     <footer id="contact">
         <h1>Contact</h1>
         <div class="contact">
-            <div class="contact-mail">
-                <a class="mail-link">
-                    <img src="img/mail-logo.png" alt="logo-mail" class="mail">
-                    <div class="text-mail">titouan.goinard@gmail.com</div>
-                </a>
-            </div>
             <div class="liste-contact">
                 <div class="contact-linkedin">
                     <a href="https://www.linkedin.com/in/titouan-goinard-585657339">
@@ -240,11 +278,26 @@
                     </a>
                 </div>
             </div>
+            <div class="contact-mail">
+                <a class="mail-link">
+                    <img src="img/mail-logo.png" alt="logo-mail" class="mail">
+                    <div class="text-mail">titouan.goinard@gmail.com</div>
+                </a>
+            </div>
+            <div class="github-contact">
+                <div class="github-link">
+                    <a href="https://github.com/TGnrd">
+                        <img src="img/github.png" class="github">
+                    </a>
+                </div>
+            </div>
         </div>
+        <a class="btnDownload" href="./fichier/CV_Titouan_Goinard.pdf" download>Télécharger CV</a>
+        <p class="droits">
+            © 2025 Titouan Goinard. Tous droits réservés.
+        </p>
     </footer>
     <script src="script.js"></script>
-
-
 </body>
 
 </html>
