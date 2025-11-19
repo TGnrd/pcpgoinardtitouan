@@ -611,7 +611,7 @@ svg circle:nth-child(2) {
 /** Bouton détail projet **/
 
 .btnCompetences {
-  position: absolute;
+  position: relative;
   padding: 8px 12px;
   background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
   color: #ffffff;
