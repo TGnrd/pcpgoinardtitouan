@@ -1,6 +1,7 @@
 body {
     background-color: rgb(219, 219, 219);
     background-repeat: no-repeat;
+    text-decoration: none;
 }
 
 .menu {
@@ -585,12 +586,17 @@ svg circle:nth-child(2) {
 }
 
 #competencesStage {
-    display: none; 
+    display: block; 
     margin-top: 10px;
     background-color: #dcdcdc;
     padding: 2%;
     border-radius: 5px;
     justify-content: center;
+}
+
+.texteCompDet {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .competencesHeader th {

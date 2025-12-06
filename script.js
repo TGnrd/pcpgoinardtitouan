@@ -78,12 +78,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-function afficherCompetence() {
-        var competenceDiv = document.getElementById("competencesStage");
-        if (competenceDiv.style.display === "none") {
-            competenceDiv.style.display = "block";
-        } 
-        else {
-            competenceDiv.style.display = "none";
-        }
-    }
