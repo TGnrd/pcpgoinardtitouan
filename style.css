@@ -1,7 +1,21 @@
+/* Reset global pour éviter débordement à droite */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
-    background-color: rgb(219, 219, 219);
-    background-repeat: no-repeat;
-    text-decoration: none;
+  background-color: rgb(219, 219, 219);
+  background-repeat: no-repeat;
+  text-decoration: none;
 }
 
 .menu {
@@ -13,16 +27,21 @@ body {
   margin-left: 93%;
   margin-top: -1%;
   padding: 0;
-  width: 70px;   /* <- largeur du bouton */
-  height: 70px;  /* <- hauteur du bouton */
+  width: 70px;
+  /* <- largeur du bouton */
+  height: 70px;
+  /* <- hauteur du bouton */
   align-items: center;
   justify-content: center;
 }
+
 .menu svg {
-  width: 100%;   /* le SVG prend la taille du bouton */
+  width: 100%;
+  /* le SVG prend la taille du bouton */
   height: 100%;
   display: block;
 }
+
 .line {
   fill: none;
   stroke: black;
@@ -30,28 +49,34 @@ body {
   transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
     stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .line1 {
   stroke-dasharray: 60 207;
   stroke-width: 6;
 }
+
 .line2 {
   stroke-dasharray: 60 60;
   stroke-width: 6;
 }
+
 .line3 {
   stroke-dasharray: 60 207;
   stroke-width: 6;
 }
+
 .opened .line1 {
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
   stroke-width: 6;
 }
+
 .opened .line2 {
   stroke-dasharray: 1 60;
   stroke-dashoffset: -30;
   stroke-width: 6;
 }
+
 .opened .line3 {
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
@@ -59,57 +84,66 @@ body {
 }
 
 .typewriter {
-    /* Style de base */
-    font-size: 30px;
-    margin: 2% auto;
-    text-align: left; 
-    position: relative;
-    /* Clé de l'animation */
-    width: 0; 
-    white-space: nowrap; 
-    overflow: hidden; 
-    /* Le curseur est sur l'élément lui-même */
-    border-right: 2px solid rgba(255, 255, 255, .75); 
-    /* On applique les DEUX animations */
-    animation: 
-        /*L'animation d'écriture */
-        typewriter 2s steps(13) forwards, /* 13 étapes pour 13 caractères */
-        /*L'animation de clignotement (infinie) */
-        blinkingCursor 750ms steps(1) infinite;
+  /* Style de base */
+  font-size: 30px;
+  margin: 2% auto;
+  text-align: left;
+  position: relative;
+  /* Clé de l'animation */
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  /* Le curseur est sur l'élément lui-même */
+  border-right: 2px solid rgba(255, 255, 255, .75);
+  /* On applique les DEUX animations */
+  animation:
+    /*L'animation d'écriture */
+    typewriter 2s steps(13) forwards,
+    /* 13 étapes pour 13 caractères */
+    /*L'animation de clignotement (infinie) */
+    blinkingCursor 750ms steps(1) infinite;
 }
 
 /* Animation d'écriture : anime la largeur */
 @keyframes typewriter {
-    from { 
-        width: 0; /* Commence à 0 */
-    }
-    to { 
-        /* Anime la largeur jusqu'à 13 "ch".
+  from {
+    width: 0;
+    /* Commence à 0 */
+  }
+
+  to {
+    /* Anime la largeur jusqu'à 13 "ch".
            "ch" est une unité CSS qui correspond à la largeur du caractère "0" 
            de la police. C'est parfait pour une animation de 13 caractères.
         */
-        width: 13ch; 
-    }
+    width: 13ch;
+  }
 }
 
 /* Animation de clignotement : anime la couleur du curseur */
 @keyframes blinkingCursor {
-    0%, 100% { 
-        border-right-color: rgba(0, 0, 0, 0.75); 
-    }
-    50% { 
-        border-right-color: transparent; /* Le curseur disparaît */
-    }
+
+  0%,
+  100% {
+    border-right-color: rgba(0, 0, 0, 0.75);
+  }
+
+  50% {
+    border-right-color: transparent;
+    /* Le curseur disparaît */
+  }
 }
 
 .navbar {
-  display: none; /* cachée par défaut */
+  display: none;
+  /* cachée par défaut */
   border-radius: 10px;
   transition: max-height 0.25s ease-out, opacity 0.25s ease-out;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  background: transparent; /* optionnel : couleur de fond si souhaitée */
+  background: transparent;
+  /* optionnel : couleur de fond si souhaitée */
   padding: 0;
   background-color: #8e8e8e;
 }
@@ -122,252 +156,270 @@ body {
   height: auto;
   width: 20%;
   opacity: 1;
-  max-height: 500px; /* ajuster selon le contenu */
+  max-height: 500px;
+  /* ajuster selon le contenu */
   padding: 10px 0;
 }
 
 .content {
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column; /* empile verticalement */
-    width: 100%;
-    padding: 8px 16px;
-    gap: 12px;
-    box-sizing: border-box;
-    text-align: center;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  /* empile verticalement */
+  width: 100%;
+  padding: 8px 16px;
+  gap: 12px;
+  box-sizing: border-box;
+  text-align: center;
 
 }
 
 .content a:hover {
-    background-color: #66666665;
-    border-radius: 10px;
-    color: #ebc400;
-    width: 100%;
-    padding: 8px 0;
+  background-color: #66666665;
+  border-radius: 10px;
+  color: #ebc400;
+  width: 100%;
+  padding: 8px 0;
 }
 
 .content a {
-    text-decoration: none;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    color: #000000;
-    font-size: 1.50rem; /* équivalent à ~125% */
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    display: block; /* chaque lien prend sa ligne */
-    width: 100%;
-    padding: 8px 0;
-    justify-content: center;
-    align-items: center;
+  text-decoration: none;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: #000000;
+  font-size: 1.50rem;
+  /* équivalent à ~125% */
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  display: block;
+  /* chaque lien prend sa ligne */
+  width: 100%;
+  padding: 8px 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .information {
-    margin-top: 5%;
-    margin-left: 10%;
-    border-radius: 50px;
-    margin-bottom: 5%;
-    background-image:
-        radial-gradient(circle at 4% 15%, rgb(219, 219, 219) 0%, rgb(219, 219, 219) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
-        radial-gradient(circle at 4% 50%, rgb(219, 219, 219) 0%, rgb(219, 219, 219) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
-        radial-gradient(circle at 4% 85%, rgb(219, 219, 219) 0%, rgb(219, 219, 219) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
-        linear-gradient(90deg, transparent 0%, transparent 10%, #DB676C 10%, #DB676C calc(10% + 2px), transparent calc(10% + 2px), transparent 100%),
-        linear-gradient(180deg, white 12%, transparent 12%), repeating-linear-gradient(180deg, #91C1E1 0px, #91C1E1 1px, transparent 1px, transparent 30px),
-        linear-gradient(white, white);
+  margin-top: 5%;
+  margin-left: 10%;
+  border-radius: 50px;
+  margin-bottom: 5%;
+  background-image:
+    radial-gradient(circle at 4% 15%, rgb(219, 219, 219) 0%, rgb(219, 219, 219) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
+    radial-gradient(circle at 4% 50%, rgb(219, 219, 219) 0%, rgb(219, 219, 219) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
+    radial-gradient(circle at 4% 85%, rgb(219, 219, 219) 0%, rgb(219, 219, 219) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
+    linear-gradient(90deg, transparent 0%, transparent 10%, #DB676C 10%, #DB676C calc(10% + 2px), transparent calc(10% + 2px), transparent 100%),
+    linear-gradient(180deg, white 12%, transparent 12%), repeating-linear-gradient(180deg, #91C1E1 0px, #91C1E1 1px, transparent 1px, transparent 30px),
+    linear-gradient(white, white);
 }
 
 .intro {
-    display: flex;
-    flex-direction: column;
-    height: 650px;
-    width: 100%;
-    margin-bottom: 5%;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 650px;
+  width: 100%;
+  margin-bottom: 5%;
+  justify-content: center;
+  align-items: center;
 }
 
 .intro .text-intro {
-    width: 60%;
-    font-size: 25px;
-    color: #000000;
-    margin-left: 20%;
-    margin-bottom: 8%;
-    margin-right: 3%;
-    line-height: 125%;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
+  width: 60%;
+  font-size: 25px;
+  color: #000000;
+  margin-left: 20%;
+  margin-bottom: 8%;
+  margin-right: 3%;
+  line-height: 125%;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
 }
 
 .text-intro strong {
-    color: #ebc400;
+  color: #ebc400;
 }
 
 #versPresentation {
-    background: none;
-    border: none;
-    font-size: 2.5rem;
-    cursor: pointer;
-    padding: 10px;
-    transition: transform 0.3s ease;
-    color: #000;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  color: #000;
 }
 
 #versPresentation:hover {
-    transform: translateY(5px);
+  transform: translateY(5px);
 }
 
 section {
-    display: flex;
-    height: 60%;
-    width: 100%;
-    margin-bottom: 10%;
+  display: flex;
+  height: 60%;
+  width: 100%;
+  margin-bottom: 10%;
 }
 
 #presentation {
-    background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
+  background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
 }
 
 h1 {
-    width: 90%;
-    font-size: 60px;
-    margin-left: 12%;
-    margin-top: 2%;
-    margin-bottom: 5%;
-    color: #c41f1f;
-    font-family: 'Courier New', Courier, monospace;
+  width: 90%;
+  font-size: 60px;
+  margin-left: 12%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  color: #c41f1f;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .info {
-    font-size: 25px;
-    color: #000000;
-    margin-left: 14%;
-    margin-bottom: 8%;
-    margin-right: 3%;
-    line-height: 125%;
-    font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+  color: #000000;
+  margin-left: 14%;
+  margin-bottom: 8%;
+  margin-right: 3%;
+  line-height: 125%;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .tete {
-    height: 18%;
-    width: 18%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 12%;
-    border-radius: 25px;
+  height: 18%;
+  width: 18%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 12%;
+  border-radius: 25px;
 }
 
 .titre {
-    font-size: 60px;
+  font-size: 60px;
+  margin-left: 5%;
+  margin-top: 1%;
+}
+
+#realisationpro,
+#realisationScolaire {
+  display: flex;
+  flex-direction: column;
+  /* empile les enfants verticalement */
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 4%;
+  /* espace sous la section si besoin */
+}
+
+/*Projet scolaire*/
+
+.ap31 {
+  background-color: #ffffff;
+  border: #ffffff;
+  border-radius: 5px 25px 5px 50px;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 20%);
+  margin-left: 10%;
+  box-sizing: border-box;
+  padding: 2%;
+  max-width: 100%;
+}
+
+.nomProjet {
+  font-size: 30px;
+  margin-left: 10%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  color: #ebc400;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.contexte {
+  font-size: 24px;
+  margin-left: 10%;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.description {
+  font-size: 20px;
+  margin-left: 10%;
+  margin-top: 1%;
+  margin-right: 10%;
+  margin-bottom: 2%;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.technoUsed {
+  margin-left: 10%;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#btnCompetencesAp {
+  position: relative;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 8px 12px;
+  background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
+  margin-left: auto;
+  margin-right: 10%;
+  margin-top: -4%;
+  margin-bottom: 2%;
+  width: auto;
+  max-width: 20%;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  z-index: 5;
+}
+
+/* Page projet scolaire ap31 */
+
+.MilestoneAp31 {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 3.5%;
+}
+
+h2 {
+  font-size: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2%;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+p, h3 {
+  font-family: 'Courier New', Courier, monospace;
     margin-left: 5%;
-    margin-top: 1%;
 }
 
-.tableau {
-    position: relative;
-    margin-top: 15%;
-    margin-right: 20%;
-    margin-left: -40%;
-    color: #000000;
-    border: solid 1px #000000;
-    width: 80%;
-    font-size: 25px;
-    width: 80%;
-    border-collapse: collapse;
+.milestone1 , .milestone2 {
+  width: 70%;
+  margin-left: 15%;
 }
 
-.tableau td {
-    text-align: center;
-    vertical-align: middle;
+.configVM, .gitLocal {
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 2%;
 }
 
-th,
-td {
-    border: solid 1px #000000;
-    margin: auto;
+.issuePerso {
+  width: 60%;
+  margin-left: 20%;
+  margin-bottom: 2%;
 }
 
-.box {
-    position: relative;
-}
-
-svg {
-    width: 120px;
-    height: 120px;
-    display: block;
-    margin: auto;
-    padding: 3%;
-}
-
-svg circle {
-    fill: none;
-    stroke: #bd9e7c;
-    stroke-width: 10px;
-    transform: translate(5px, 5px);
-    stroke-linecap: round;
-    stroke-dasharray: 440;
-    stroke-dashoffset: 440;
-}
-
-
-svg circle:nth-child(1) {
-    stroke: #ebc4005a;
-    stroke-dashoffset: 0;
-}
-
-svg circle:nth-child(2) {
-    stroke: #ebc400;
-    stroke-dashoffset: 440;
-}
-
-.circle-html {
-    stroke-dashoffset: calc(440 - (440 * 100) / 100);
-    /* 60% */
-}
-
-.circle-css {
-    stroke-dashoffset: calc(440 - (440 * 100) / 100);
-    /* 50% */
-}
-
-.circle-js {
-    stroke-dashoffset: calc(440 - (440 * 30) / 100);
-    /* 20% */
-}
-
-.circle-python {
-    stroke-dashoffset: calc(440 - (440 * 75) / 100);
-    /* 75% */
-}
-
-.circle-php {
-    stroke-dashoffset: calc(440 - (440 * 70) / 100);
-    /* 40% */
-}
-
-.circle-sql {
-    stroke-dashoffset: calc(440 - (440 * 80) / 100);
-    /* 90% */
-}
-
-.circle-markdown {
-    stroke-dashoffset: calc(440 - (440 * 30) / 100);
-    /* 90% */
-}
-
-.percent{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
-    font-weight: bold;
-    color: #000000;
-    pointer-events: none;
-}
-
-
-/*Projet*/
+/*Projet professionnel*/
 
 .main {
   max-width: 100%;
@@ -552,72 +604,56 @@ svg circle:nth-child(2) {
   }
 }
 
-/* Faire en sorte que la section realisationpro s'empile verticalement */
-#realisationpro {
-  display: flex;
-  flex-direction: column; /* empile les enfants verticalement */
-  align-items: flex-start;
-  width: 100%;
-  box-sizing: border-box;
-  padding-bottom: 4%; /* espace sous la section si besoin */
-}
-
-.tech{
-    background-color: rgba(128, 128, 128, 0.445);
-    padding: 5px;
-    border-radius: 5px;
-    margin-left: 1%;
+.tech {
+  background-color: rgba(128, 128, 128, 0.445);
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 1%;
 }
 
 .lienProjet {
-    position: relative;
-    display: block;
-    text-decoration: none;
-    color: #000000;
-    font-size: 18px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-.lienProjet:hover {   
-    background-color: rgba(110, 110, 110, 0.658);
-    border-radius: 5px;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
-#competencesStage {
-    display: block; 
-    margin-top: 10px;
-    background-color: #dcdcdc;
-    padding: 2%;
-    border-radius: 5px;
-    justify-content: center;
-}
-
-.texteCompDet {
-    text-decoration: none;
-    color: #ffffff;
-}
-
-.competencesHeader th {
-    padding: 10px;
-    border: 1px solid #000000;
-    background-color: #d3d3d3;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.competencesRow td {
-    padding: 10px;
-    border: 1px solid #000000;
-    text-align: center;
-    vertical-align: middle;
+.lienProjet:hover {
+  background-color: rgba(110, 110, 110, 0.658);
+  border-radius: 5px;
 }
 
 /** Bouton détail projet **/
 
-.btnCompetences {
+.texteCompDet {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.competencesHeader th {
+  padding: 10px;
+  border: 1px solid #000000;
+  background-color: #d3d3d3;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.competencesRow td {
+  padding: 10px;
+  border: 1px solid #000000;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#btnCompetences {
   position: relative;
+  font-family: 'Courier New', Courier, monospace;
+
   padding: 8px 12px;
   background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
   color: #ffffff;
@@ -631,113 +667,119 @@ svg circle:nth-child(2) {
 .card_text h3:first-of-type {
   display: inline-block;
   margin: 0;
-  padding-right: 5rem; /* ajuste si le bouton est plus large */
+  padding-right: 5rem;
+  /* ajuste si le bouton est plus large */
 }
 
 @media (max-width: 480px) {
-  .btnCompetences {
+  #btnCompetences {
     position: static;
     display: inline-block;
     margin-top: 0.5rem;
     width: auto;
   }
+
   .card_text h3:first-of-type {
     padding-right: 0;
   }
 }
+
 /*Footer*/
 
 footer {
-    background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
-    height: 100%;
-    width: 100%;
-    margin-top: 5%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #ffffff;
-    font-family: 'Courier New', Courier, monospace;
+  background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
+  height: 100%;
+  width: 100%;
+  margin-top: 5%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 #contact h1 {
-    margin-left: 5%;
-    color: #ffffff;
+  margin-left: 5%;
+  color: #ffffff;
 }
 
 .contact {
-    display: flex;
-    justify-content: center;
-    margin-top: 10%;
-    height: 200px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  height: 200px;
 }
 
 .mail-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
 }
 
 .contact-mail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .mail {
-    height: 50px;
-    margin-bottom: 8px;
+  height: 50px;
+  margin-bottom: 8px;
 }
 
 .text-mail {
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .linkedin {
-    height: 50px;
+  height: 50px;
 }
 
-.contact-mail, .liste-contact, .github-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 18px;
+.contact-mail,
+.liste-contact,
+.github-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
 }
 
 .linkedin,
-.mail, .github {
-    height: 125px;
-    vertical-align: middle;
+.mail,
+.github {
+  height: 125px;
+  vertical-align: middle;
 }
 
 .btnDownload {
-    justify-content: center;
-    align-items: center;
-    display: block;
-    width: 10%;
-    padding: 10px 20px;
-    background-color: #ffffff;
-    color: #000000;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    margin-top: 5%;
-    margin-left: 45%;
-    margin-bottom: 80px;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  width: 11%;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 5%;
+  margin-left: 45%;
+  margin-bottom: 80px;
 }
 
 .droits {
-    text-align: center;
-    font-size: 14px;
-    color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
 }
