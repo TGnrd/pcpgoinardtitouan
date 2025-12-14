@@ -544,7 +544,8 @@ li:nth-child(even) {
   box-shadow: 0 50px 100px 0 var(--violet);
 }
 
-.card_image img {
+
+.card_image img { 
   display: block;
   width: 100%;
   height: auto;
