@@ -386,7 +386,7 @@ h1 {
   margin-top: 2%;
   margin-bottom: 2%;
   margin-left: 9%;
-  width: 80%;
+  width: 80%; 
 }
 
 h2 {
@@ -414,10 +414,20 @@ p, h3 {
   margin-bottom: 2%;
 }
 
-.issuePerso {
+.issuePerso, .pageIndex {
   width: 60%;
   margin-left: 20%;
   margin-bottom: 2%;
+}
+
+.chargementUsers {
+  width: 40%;
+  margin-left: 50%;
+  margin-bottom: 2%;
+}
+
+.fonctionUsers {
+  width: 30%;
 }
 
 /*Projet professionnel*/
