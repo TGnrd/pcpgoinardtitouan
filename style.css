@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -382,6 +383,13 @@ h1 {
 
 /* Page projet scolaire ap31 */
 
+.detailAp31Git {
+  background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
+  color: #ffffff;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
 .MilestoneAp31 {
   margin-top: 2%;
   margin-bottom: 2%;
@@ -389,7 +397,7 @@ h1 {
   width: 80%; 
 }
 
-h2 {
+.h2Detail {
   font-size: 20px;
   margin-left: 5%;
   margin-right: 5%;
@@ -398,36 +406,113 @@ h2 {
   font-family: 'Courier New', Courier, monospace;
 }
 
-p, h3 {
+p,
+.h3Detail {
   font-family: 'Courier New', Courier, monospace;
-    margin-left: 5%;
+  margin-left: 5%;
 }
 
-.milestone1 , .milestone2 {
+.milestone1,
+.milestone2 {
   width: 70%;
   margin-left: 15%;
 }
 
-.configVM, .gitLocal {
+.configVM,
+.gitLocal {
   width: 50%;
   margin-left: 25%;
   margin-bottom: 2%;
 }
 
-.issuePerso, .pageIndex {
+.issues {
+  width: 200%;
+  position: relative;
+  margin-left: 5%;
+
+}
+
+.issuePerso,
+.pageIndex {
   width: 60%;
   margin-left: 20%;
   margin-bottom: 2%;
 }
 
 .chargementUsers {
-  width: 40%;
-  margin-left: 50%;
+  position: absolute;
+  width: 50%;
+  margin-top: 10%;
+  margin-left: 47%;
   margin-bottom: 2%;
 }
 
 .fonctionUsers {
-  width: 30%;
+  width: 90%;
+}
+
+.activationDesactivationSection {
+  width: 100%;
+}
+
+.codeEtatUsers {
+  position: relative;
+  left: 50%;
+}
+
+.fonctionActiverDesactiver {
+  width: 90%;
+}
+
+/* Carousel */ 
+
+ul {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  width: 45%;
+  height: 40%;
+  padding: 20px;
+  display: flex;
+  gap: 4vw;
+  anchor-name: --my-carousel;
+}
+
+ul::scroll-button(*) {
+  border: 0;
+  font-size: 2rem;
+  background: none;
+  color: black;
+  opacity: 0.7;
+  cursor: pointer;
+  position: relative;
+  position-anchor: --my-carousel;
+}
+
+ul::scroll-button(*):hover,
+ul::scroll-button(*):focus {
+  opacity: 1;
+}
+
+ul::scroll-button(*):active {
+  translate: 1px 1px;
+}
+
+ul::scroll-button(*):disabled {
+  opacity: 0.2;
+  cursor: unset;
+}
+
+li {
+  list-style-type: none;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
+  padding: 20px;
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+}
+
+li:nth-child(even) {
+  background-color: rgb(182, 182, 182);
 }
 
 /*Projet professionnel*/
@@ -459,7 +544,8 @@ p, h3 {
   box-shadow: 0 50px 100px 0 var(--violet);
 }
 
-.card_image img {
+
+.card_image img { 
   display: block;
   width: 100%;
   height: auto;
