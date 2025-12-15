@@ -439,11 +439,16 @@ p,
   margin-bottom: 2%;
 }
 
+.codeChargementUsers {
+  position: relative;
+  left: 2%;
+}
+
 .chargementUsers {
   position: absolute;
   width: 50%;
   margin-top: 10%;
-  margin-left: 47%;
+  margin-left: 45%;
   margin-bottom: 2%;
 }
 
@@ -455,13 +460,64 @@ p,
   width: 100%;
 }
 
+.infoCodeEtatUsers {
+  position: absolute;
+  margin-left: 2%;
+  margin-top: 5%;
+  width: 45%;
+}
+
 .codeEtatUsers {
   position: relative;
   left: 50%;
 }
 
-.fonctionActiverDesactiver {
+.fonctionActiverDesactiver, .fonctionChangerEtatUsers {
   width: 90%;
+  margin-left: 5%;
+}
+
+.preuveFonctionnement {
+  width: 80%;
+}
+
+.preuveFonctionnement ul {
+  width: 100%;
+  margin-left: 12%;
+}
+
+.pageInitialAD, 
+.pageActiveSelect, 
+.pageTroisDesact, 
+.pageActivDesactivSelect, 
+.pageResultatActivDesact {
+  width: 80%;
+  margin-left: 10%;
+}
+
+#next, #prev {
+  background-color: rgba(153, 153, 153, 0.295);
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 1%;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 50px;
+  top: 50%;
+  width: 4%;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 50%;
+}
+
+#next:hover, #prev:hover {
+  background-color: rgba(153, 153, 153, 0.555);
+}
+
+#next {
+  
+
+  
 }
 
 /* Carousel */ 
@@ -514,6 +570,8 @@ li {
 li:nth-child(even) {
   background-color: rgb(182, 182, 182);
 }
+
+
 
 /*Projet professionnel*/
 
