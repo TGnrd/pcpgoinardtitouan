@@ -55,25 +55,31 @@ document.addEventListener('DOMContentLoaded', function() {
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-                
-                // Ferme le menu après le clic (optionnel)
-                const nav = document.getElementById('main-nav');
-                const menuBtn = document.getElementById('menuBtn');
-                if (nav && menuBtn) {
-                    nav.classList.remove('open');
-                    menuBtn.classList.remove('opened');
-                    menuBtn.setAttribute('aria-expanded', 'false');
+            const href = this.getAttribute('href');
+
+            // Si c'est un lien interne (#id), on fait le scroll smooth
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                    // Ferme le menu après le clic
+                    const nav = document.getElementById('main-nav');
+                    const menuBtn = document.getElementById('menuBtn');
+                    if (nav && menuBtn) {
+                        nav.classList.remove('open');
+                        menuBtn.classList.remove('opened');
+                        menuBtn.setAttribute('aria-expanded', 'false');
+                    }
                 }
             }
+            // sinon (ex: index.html) laisser le comportement par défaut pour permettre la navigation
         });
     });
 });

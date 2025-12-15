@@ -439,11 +439,16 @@ p,
   margin-bottom: 2%;
 }
 
+.codeChargementUsers {
+  position: relative;
+  left: 2%;
+}
+
 .chargementUsers {
   position: absolute;
   width: 50%;
   margin-top: 10%;
-  margin-left: 47%;
+  margin-left: 45%;
   margin-bottom: 2%;
 }
 
@@ -451,22 +456,131 @@ p,
   width: 90%;
 }
 
-.activationDesactivationSection {
+.activationDesactivationSection{
+  background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
+  color: #ffffff;
   width: 100%;
+  margin-top: 10%;
+  padding: 2rem;
+  min-height: 400px;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+
+.infoCodeEtatUsers {
+  position: absolute;
+  margin-left: 2%;
+  width: 45%;
 }
 
 .codeEtatUsers {
   position: relative;
+  margin-top: 5;
   left: 50%;
 }
 
-.fonctionActiverDesactiver {
+.fonctionActiverDesactiver, .fonctionChangerEtatUsers {
   width: 90%;
+  margin-left: 5%;
+}
+
+.preuveFonctionnement {
+  width: 80%;
+}
+
+.preuveFonctionnement .carousel {
+  position: absolute;
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.pageInitialAD, 
+.pageActiveSelect, 
+.pageTroisDesact, 
+.pageActivDesactivSelect, 
+.pageResultatActivDesact {
+  width: 80%;
+  margin-left: 10%;
+}
+
+#next, #prev {
+  position: absolute;
+  background-color: rgba(153, 153, 153, 0.295);
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 1%;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 50px;
+  top: 50%;
+  width: 4%;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 50%;
+}
+
+#next:hover, #prev:hover {
+  background-color: rgba(153, 153, 153, 0.555);
+}
+
+#next {
+  position: relative;
+  float: right;  
+  margin-right: -7%;
+  margin-top: 25%;
+}
+
+#prev {
+  position: relative;
+  float: left;
+  margin-left: 18%;
+  margin-top: 25%;
+}
+
+.nombreProjetLimiteSection {
+  margin-top: 40%;
+  margin-bottom: 5%;
+}
+
+.infoProjetLimite {
+  position: relative;
+  margin-top: 4%;
+  margin-right: 2%;
+  float: right;
+  width: 50%;
+}
+
+.pageLimiteProjet {
+  position: relative;
+  margin-left: 2%;
+  width: 100%;
+}
+
+.changementLimiteProjet {
+  width: 100%;
+  height: auto;
+} 
+
+.codeLimite {
+  width: 40%;
+  margin-left: 5%;
+}
+
+.nombreProjetLimiteSection {
+  background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
+  color: #ffffff;
+  padding: 2rem;
 }
 
 /* Carousel */ 
 
-ul {
+.carousel {
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   width: 45%;
@@ -477,7 +591,7 @@ ul {
   anchor-name: --my-carousel;
 }
 
-ul::scroll-button(*) {
+.carousel::scroll-button(*) {
   border: 0;
   font-size: 2rem;
   background: none;
@@ -488,21 +602,21 @@ ul::scroll-button(*) {
   position-anchor: --my-carousel;
 }
 
-ul::scroll-button(*):hover,
-ul::scroll-button(*):focus {
+.carousel::scroll-button(*):hover,
+.carousel::scroll-button(*):focus {
   opacity: 1;
 }
 
-ul::scroll-button(*):active {
+.carousel::scroll-button(*):active {
   translate: 1px 1px;
 }
 
-ul::scroll-button(*):disabled {
+.carousel::scroll-button(*):disabled {
   opacity: 0.2;
   cursor: unset;
 }
 
-li {
+.liImg {
   list-style-type: none;
   background-color: #eeeeee;
   border: 1px solid #dddddd;
@@ -511,7 +625,7 @@ li {
   scroll-snap-align: center;
 }
 
-li:nth-child(even) {
+.liImg:nth-child(even) {
   background-color: rgb(182, 182, 182);
 }
 
@@ -745,6 +859,74 @@ li:nth-child(even) {
   border: 1px solid #000000;
   text-align: center;
   vertical-align: middle;
+}
+
+/* Amélioration visuelle du tableau de compétences */
+.competencesTable {
+  width: 90%;
+  margin: 1.5rem auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.competencesTable thead th {
+  background: linear-gradient(90deg,#16305a 0%, #2f59ff 100%);
+  color: #fff;
+  font-weight: 700;
+  padding: 14px 12px;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  border-bottom: 2px solid rgba(255,255,255,0.08);
+}
+
+.competencesTable tbody td {
+  padding: 12px;
+  background: linear-gradient(180deg,#ffffff 0%, #fafafa 100%);
+  color: #222;
+  font-size: 0.95rem;
+}
+
+.competencesTable tbody tr:nth-child(even) td {
+  background: #f6f8ff;
+}
+
+.competencesTable tbody tr:hover td {
+  background: rgba(47,89,255,0.08);
+  transform: translateY(-1px);
+}
+
+/* Responsive: empile les cellules sur petits écrans */
+@media (max-width: 640px) {
+  .competencesTable,
+  .competencesTable thead,
+  .competencesTable tbody,
+  .competencesTable th,
+  .competencesTable td,
+  .competencesTable tr {
+    display: block;
+  }
+
+  .competencesTable thead {
+    float: left;
+  }
+
+  .competencesTable tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .competencesTable tbody td {
+    display: block;
+    padding: 10px 12px;
+    border: none;
+  }
 }
 
 #btnCompetences {
