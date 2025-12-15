@@ -394,7 +394,7 @@ h1 {
   margin-top: 2%;
   margin-bottom: 2%;
   margin-left: 9%;
-  width: 80%;
+  width: 80%; 
 }
 
 .h2Detail {
@@ -473,6 +473,13 @@ p,
 .infoCodeEtatUsers {
   position: absolute;
   margin-left: 2%;
+  width: 45%;
+}
+
+.infoCodeEtatUsers {
+  position: absolute;
+  margin-left: 2%;
+  margin-top: 5%;
   width: 45%;
 }
 
@@ -628,6 +635,8 @@ p,
 .liImg:nth-child(even) {
   background-color: rgb(182, 182, 182);
 }
+
+
 
 /*Projet professionnel*/
 
