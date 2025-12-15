@@ -23,7 +23,8 @@
         <h2 class="h2Detail">Détail de l'AP</h2>
         <div class="detailAp31Git">
             <p>Voici l'organisations du projet :</p>
-            <img class="MilestoneAp31" src="img/ap31/MilestoneAp31.png" alt="Organisations des tâches AP31 Gitlab Admin">
+            <img class="MilestoneAp31" src="img/ap31/MilestoneAp31.png"
+                alt="Organisations des tâches AP31 Gitlab Admin">
             <p>Les tâches du premier milestone :</p>
             <img class="milestone1" src="img/ap31/missionMilestone1.png" alt="Mission du premier milestone">
             <p>Les tâches du deuxième milestone :</p>
@@ -59,13 +60,15 @@
         <p>Voici la page index du projet :</p>
         <img class="pageIndex" src="img/ap31/pageIndex.png" alt="Page index du projet">
         <div class="chargementUsersSection">
-            <p>Voici le code de la fonction permettant de charger les utilisateurs sur gitlab ainsi que le rendu :</p>
+            <p>Voici le code des fonctions utilisées permettant de charger les utilisateurs sur gitlab ainsi que le
+                rendu :</p>
             <div class="codeChargementUsers">
                 <img class="chargementUsers" src="img/ap31/chargementUsers.png" alt="Chargement des utilisateurs">
                 <ul>
                     <li>
                         <div>
-                            <h3>Fonction permettant d'afficher les utilisateurs présents dans l'API Rest de gitlab</h3>
+                            <h3>Fonction permettant d'afficher les utilisateurs présents dans l'API Rest de gitlab
+                            </h3>
                             <p>Fait appel à plusieurs <strong>fonctions</strong> tel que : <br><br> <strong>
                                     EraseHTMLTab <br><br> CreateTableRow </strong><br><br><br></p>
                         </div>
@@ -77,28 +80,81 @@
                         <img class="fonctionUsers" src="img/ap31/fonctionEraseHTMLTab.png" alt="Fonction EraseHTMLTab">
                     </li>
                     <li>
-                        <h3>Fonction permettant la création du tableau avec les informations présentent dans l'API Rest
+                        <h3>Fonction permettant la création du tableau avec les informations présentent dans l'API
+                            Rest
                         </h3>
                         <p>Pour un utilisateur donnée, il va créer le code html de l'utilisateur.</p>
-                        <img class="fonctionUsers" src="img/ap31/fonctionCreateTableRow.png" alt="Fonction CreateTableRow">
+                        <img class="fonctionUsers" src="img/ap31/fonctionCreateTableRow.png"
+                            alt="Fonction CreateTableRow">
                     </li>
                 </ul>
             </div>
         </div>
+
         <div class="activationDesactivationSection">
-            <p>Voici le code de la fonction permettant d'activer ou de désactiver un utilisateur sur gitlab ainsi que
-                le rendu :</p>
+            <p>
+                Voici le code des fonctions utilisées permettant d'activer ou de désactiver un utilisateur sur gitlab
+                ainsi que le rendu :
+            </p>
+            <div class="infoCodeEtatUsers">
+                <h3>Informations sur les fonctions d'activation et de désactivation des utilisateurs</h3>
+                <p>Ces fonctions font appel à l'API Rest de gitlab pour changer l'état d'un utilisateur. <br><br>
+                    La fonction <strong>activerDesactiverUser</strong> permet de savoir si l'utilisateur est
+                    activé ou désactivé.
+                    <br><br>
+                    La fonction <strong>changerEtatUser</strong> permet de changer l'état de l'utilisateur en
+                    fonction de son état actuel.
+                    <br><br>
+                    <strong>
+                        A la fin de la fonction, la fonction getUsers est appelée pour raffréchir les informations des
+                        utilisateurs donc celles qui ont été modifiées.
+                    </strong>
+                </p>
+
+            </div>
             <div class="codeEtatUsers">
                 <ul>
                     <li>
-                        <img class="fonctionActiverDesactiver" src="img/ap31/fonctionActiverDesactiver.png" alt="Fonction activerDesactiverUser">
+                        <img class="fonctionActiverDesactiver" src="img/ap31/fonctionActiverDesactiver.png"
+                            alt="Fonction activerDesactiverUser">
                     </li>
                     <li>
-                        <img src="img/ap31/fonctionChangerEtatUsers.png" alt="Fonction changerEtatUser">
+                        <img class="fonctionChangerEtatUsers" src="img/ap31/fonctionChangerEtatUsers.png"
+                            alt="Fonction changerEtatUser">
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <h3 class="h3Detail">Tests et preuves du fonctionnement des fonctions :</h3>
+            <br>
+            <div class="preuveFonctionnement">
+                <ul>
+                    <div id="next" class="carousel__button--next">&gt;</div>
+                <div id="prev" class="carousel__button--prev">&lt;</div>
+                    <li>
+                        <img class="pageInitialAD" src="img/ap31/pageInitialAD.png"
+                            alt="Page initial activer desactiver">
+                    </li>
+                    <li>
+                        <img class="pageActiveSelect" src="img/ap31/pageActiveSelect.png"
+                            alt="Page avec activer selectionné">
+                    </li>
+                    <li>
+                        <img class="pageTroisDesact" src="img/ap31/pageTroisDesact.png"
+                            alt="Page avec trois désactivation des utilisateurs">
+                    </li>
+                    <li>
+                        <img class="pageActivDesactivSelect" src="img/ap31/pageActivDesactivSelect.png"
+                            alt="Page avec un utilisateur active et un autre desactive séléctionnés">
+                    </li>
+                    <li>
+                        <img class="pageResultatActivDesact" src="img/ap31/pageResultatActivDesact.png"
+                            alt="Page de résultat pour un utilisateur active et un autre desactive séléctionnés">
                     </li>
                 </ul>
             </div>
         </div>
+
         <div class="">
 
         </div>
