@@ -266,7 +266,7 @@ h1 {
   width: 90%;
   font-size: 60px;
   margin-left: 12%;
-  margin-top: 2%;
+  margin-top: 1%;
   margin-bottom: 5%;
   color: #c41f1f;
   font-family: 'Courier New', Courier, monospace;
@@ -399,6 +399,15 @@ h1 {
   margin-right: 5%;
   margin-bottom: 2%;
   color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.compTravaillées {
+  color: #ffffff;
+  font-size: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2%;
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -632,8 +641,6 @@ p,
   background-color: rgb(182, 182, 182);
 }
 
-
-
 /*Projet professionnel*/
 
 .main {
@@ -820,11 +827,46 @@ p,
   }
 }
 
+/** Code Compétence stage 1**/
+
 .tech {
   background-color: rgba(128, 128, 128, 0.445);
   padding: 5px;
   border-radius: 5px;
   margin-left: 1%;
+}
+
+pre {
+  position: relative;
+  font-size: 20px;
+  margin-left: 5%;
+}
+
+
+.fonctionnement, .pointFort, .leReste {
+  margin-top: 3%;
+  width: 90%;
+}
+
+.tests {
+  margin-top: 10%;
+}
+
+.tableauComparatif {
+  position: relative;
+  display: block;
+  margin-left: 20%;
+  width: 70%;
+}
+
+.etapeAPI  {
+ width: 50%; 
+}
+
+.executionScript {
+  position: absolute;
+  margin-left: 60%;
+  width: 25%;
 }
 
 .lienProjet {
@@ -853,20 +895,43 @@ p,
 
 .competencesHeader th {
   padding: 10px;
-  border: 1px solid #000000;
-  background-color: #d3d3d3;
+  border: 1px solid #ffffff;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.techHeader th{
+  padding: 10px;
+  border: 1px solid #ffffff;
   text-align: center;
   vertical-align: middle;
 }
 
 .competencesRow td {
   padding: 10px;
-  border: 1px solid #000000;
+  border: 1px solid #ffffff;
+  text-align: center;
+  vertical-align: middle;
+}
+
+ .techRow td {
+  padding: 10px;
+  border: 1px solid #ffffff;
   text-align: center;
   vertical-align: middle;
 }
 
 /* Amélioration visuelle du tableau de compétences */
+.competences {
+  margin: 3%;
+}
+
+.techTable {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
 .competencesTable {
   width: 90%;
   margin: 1.5rem auto;
@@ -937,7 +1002,6 @@ p,
 #btnCompetences {
   position: relative;
   font-family: 'Courier New', Courier, monospace;
-
   padding: 8px 12px;
   background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
   color: #ffffff;
@@ -1065,5 +1129,11 @@ footer {
 .droits {
   text-align: center;
   font-size: 14px;
+  color: #ffffff;
+}
+
+.technologies, #competencesStage {
+  background: linear-gradient(90deg,#16305a 0%, #2f59ff 100%);
+  padding: 2%;
   color: #ffffff;
 }
