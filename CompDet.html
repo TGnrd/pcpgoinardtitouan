@@ -9,21 +9,132 @@
 </head>
 
 <body>
-    <h1>PCP - Compétances et détails</h1>
-    <nav class="navigation">
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="#detailMission">Détail du stage</a></li>
-            <li><a href="#competencesStage">Compétances travaillées</a></li>
-        </ul>
-    </nav>
-    <div id="detailMission">
-        <h2>Détail du stage</h2>
-        <p>A venir...</p>
+    <header>
+        <h1>PCP - Compétances et détails</h1>
+        <button id="menuBtn" class="menu" aria-label="Main Menu" aria-expanded="false" aria-controls="main-nav">
+            <svg width="100" height="100" viewBox="0 0 100 100">
+                <path class="line line1"
+                    d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path class="line line3"
+                    d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+        </button>
+        <nav id="main-nav" class="navbar" aria-hidden="true">
+            <ul class="content">
+                <a href="index.html">Accueil</a>
+                <a href="#technologie">Technologie</a>
+                <a href="#fonctionnement">Fonctionnalité</a>
+                <a href="#tests">Tests</a>
+                <a href="#apprentissage">Apprentissage</a>
+                <a href="#competencesStage">Compétances travaillées</a>
+            </ul>
+        </nav>
+        <p class="description">
+            Mon travail sera inclus à l'API de l'entreprise. La finalité de ce projet est de permettre au client de
+            pouvoir déposer un CV
+            sur le site Beauté Job et l'utilisation de l'IA a pour but de mieux référencer les informations d'un
+            candidat.
+            Les recruteurs comme les candidats pourront donc faire des recherches plus pertinentes.
+        </p>
+    </header>
+    <div id="detailMission" >
+        <h2 class="h2Detail">Détail du stage</h2>
+        <div class="detailStage1">
+            <div class="technologies" id="technologie">
+                <h3 class="h3Detail">Technologies utilisées :</h3>
+                <p>Le langage PHP est choisi pour des raisons internes (meilleure expertise), mais aussi car le site
+                    Beauté Job est principalement codé dans ce langage, cela permettra donc de mieux intégrer le programme de recherche.
+                </p>
+                <p>L'utilisation de l'<strong>Intelligence Artificielle</strong> est privilégiée car elle est
+                    plus
+                    fiable et flexible que l'utilisation de l'OCR de <strong>Tesseract</strong> et
+                    <strong>Parser</strong>
+                    pour extraire les informations.
+                </p>
+                <p>L'utilisation de <strong>Parser</strong> a pour but d'aider l'<strong>IA</strong> à trouver
+                    des
+                    informations qu'elle ne parvient pas à trouver.</p>
+                <p>Tableau des technologies utilisées :</p>
+                <table class="techTable">
+                    <thead class="techHeader">
+                        <tr>
+                            <th>Technologies</th>
+                            <th>Intérêts</th>
+                            <th>Limites</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="techRow">
+                            <td>Parser et Tesseract</td>
+                            <td>Récupérer le texte à partir de fichier PDF ou d'un fichier image</td>
+                            <td>Le texte peut être inexact.<br> La réponse n'est pas structurée.<br> Les fichiers sans
+                                texte
+                                ne sont pas traités</td>
+                        </tr>
+                        <tr class="techRow">
+                            <td>Mistral AI (API)</td>
+                            <td>Extraire des informations du CV et les mettre en forme.</td>
+                            <td>Peut interpréter ou inventer.<br> Le temps de réponse est plus ou moins long (en moyenne
+                                25
+                                secondes) selon le nombre d'informations à traiter.<br> Les images peuvent ne pas être
+                                correctement traitées.<br> Ne parvient pas à détecter les icônes dans le CV.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Pour les icônes, l'IA ne parvient pas à les trouver. La solution serais d'utiliser des
+                    bibliothèques comme : <strong>OpenCV, TensorFlow (Hub), PyTorch/TorchVision, Keras ou YOLO</strong>.
+                    Cependant, ce moyen nécéssite l'utilisation de <strong>Python</strong>.</p>
+            </div>
+            <div class="fonctionnement" id="fonctionnement">
+                <img class="executionScript" src="img/executionScript.png" alt="Exécution du code API">
+                <h3 class="h3Detail">Fonctionnement :</h3>
+                <p>Lancement dans la console :</p>
+                <pre><code>php phpUpload.php https://URL_CV.pdf</code></pre> <br><br>
+                <p class="etapeAPI">
+                    1) La récupération et vérification de l'URL; elle doit comporter <code>http(s)</code> et
+                    <code>.pdf</code>. <br><br>
+                    2) La lecture du CV et extraction du texte avec de l'OCR s'il s'agit d'un fichier <code>PDF</code>. <br><br>
+                    3) Enregistrement de la date et l'heure dans une variable (pour les dates d'anniversaire). <br><br>
+                    4) La plus grande partie l'envoie de l'<strong>URL</strong>, de l'extraction <strong>OCR</strong>, des 
+                    <strong>instructions</strong> et du <strong>format de réponse</strong> attendus à l'API
+                    de Mistral pour extraire plus d'informations et les organiser dans le format souhaité (JSON). <br><br>
+                    5) Récupération des informations traitées et enregistrement dans un fichier <code>.json</code>.
+                </p>
+            </div>
+            <div class="tests" id="tests">
+                <h3 class="h3Detail">Le résultat des tests :</h3>
+                <p>Entre <strong>1500 et 2000 tests</strong> du code sur <strong>une vingtaine de CV différents</strong>
+                    ont été effectuer lors de la production du code.
+                    Sur un écantillons de <strong>110 tests</strong>, le code se trouve avec un <strong>taux de
+                        similarité de 88.05%</strong> pour un temps d'exécution de <strong>22.255 secondes</strong>.
+                </p>
+                <img class="tableauComparatif" src="img/tableauComparatif.png" alt="Tableau comparatif entre Open AI et Mistral">
+            </div>
+        </div>
     </div>
     <div id="competencesStage">
-        <h2>Compérences travaillées pendant le stage</h2>
-        <table>
+        <div class="pointFort" id="apprentissage">
+            <h3 class="h3Detail">Ce que j'ai appris lors de la création du projet :</h3>
+            <p>
+                • L'utilisation de l'<strong>API de Mistral</strong> (et en parallèle l'<strong>API d'Open AI</strong>). <br>
+                • Approfondissement de mes connaissances de <strong>PHP</strong>. <br>
+                • Première utilisation de <strong>cURL</strong> pour l'appel d'une API. <br>
+                • Utilisation de <strong>Postman</strong> pour automatiser les tests (premier travail sur ce
+                • logiciel). <br>
+                • Meilleure <strong>utilisation</strong> et <strong>compréhension</strong> de l'IA.
+            </p>
+        </div>
+        <div class="leReste">
+            <h3 class="h3Detail">Ce qu'il me reste à travailler personnellement :</h3>
+            <p>
+                • Apprendre à mieux expliquer quelque chose de technique sans aller dans les détails techniques. <br>
+                • Avoir une meilleure compréhension du code.<br>
+                • Avoir une meilleure compréhension sur les directives données.
+            </p>
+        </div>
+        <h2 class="compTravaillées">Compérences travaillées pendant le stage</h2>
+        <table class="competences">
             <thead>
                 <tr class="competencesHeader">
                     <th scope="col">B1</th>
@@ -60,8 +171,7 @@
             </tr>
         </table>
     </div>
-
-
+    
     <script src="script.js" defer></script>
 </body>
 
