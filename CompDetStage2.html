@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCP - Compétances - Détails</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>PCP - Compétances et détails</h1>
+        <button id="menuBtn" class="menu" aria-label="Main Menu" aria-expanded="false" aria-controls="main-nav">
+            <svg width="100" height="100" viewBox="0 0 100 100">
+                <path class="line line1"
+                    d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path class="line line3"
+                    d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+        </button>
+        <nav id="main-nav" class="navbar" aria-hidden="true">
+            <ul class="content">
+                <a href="index.html">Accueil</a>
+                <a href="#technologie">Technologie</a>
+                <a href="#fonctionnement">Fonctionnalité</a>
+                <a href="#tests">Tests</a>
+                <a href="#apprentissage">Apprentissage</a>
+                <a href="#competencesStage">Compétances travaillées</a>
+            </ul>
+        </nav>
+        <p class="description">
+            Ce projet aura pour but de s'inscrire dans l'application principale de l'entreprise SCR Informatiques, 
+            ... <br>
+            Elle va permettre aux médecins de récupérer les inforamtions d'une prescription médicale de transport des 
+            patients. Les informations sont le numéro de sécurité sociale du patient, l'ALD exonérante ou non, l'identifiant
+            du médecin et la date de la prescription. Une fois récupérer, elles peuvent être envoyées à la sécurité 
+            du travail pour avoir les informations du transport.
+        </p>
+    </header>
+    <div id="detailMission" >
+        <h2 class="h2Detail">Détail du stage</h2>
+        <div class="detailStage1">
+            <div class="technologies" id="technologie">
+                <h3 class="h3Detail">Technologies testée :</h3>
+                <table class="techTable">
+                    <thead class="techHeader">
+                        <tr>
+                            <th>Technologies</th>
+                            <th>Intérêts</th>
+                            <th>Limites</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="techRow">
+                            <td>JavaScript (Tesseract & Jscanify)</td>
+                            <td>Permet de faire un scan d'un document et de récupérer le texte avec de l'OCR. </td>
+                            <td>- Résultats sont aléatoires et désordonnées. <br>
+                                - Texte écrit à la main non trouvé.
+                            </td>
+                        </tr>
+                        <tr class="techRow">
+                            <td>WinDev</td>
+                            <td>- Possède de nombreuses fonctions OCR et de scan. <br>
+                                - Permet de créer une application pour Android et iOS.
+                            </td>
+                            <td>- L'OCR est parfois limité. <br>
+                                - Les informations trouvables dans des cases sont complexes à calibrer. 
+                            </td>
+                        </tr>
+                        <tr class="techRow">
+                            <td>L'Intelligence artificielle</td>
+                            <td>Permettrait d'avoir une bonne lecture des informations et de rendre plus simple la détection de cases cochées.</td>
+                            <td>Cette option n'a pas été testée car elle n'est pas envisageable pour le respect du RGPD (données sensibles)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="fonctionnement" id="fonctionnement">
+                <h3 class="h3Detail">Fonctionnement :</h3>
+            </div>
+            <div class="tests" id="tests">
+                <h3 class="h3Detail">Le résultat des tests :</h3>
+            </div>
+        </div>
+    </div>
+    <div id="competencesStage">
+        <div class="pointFort" id="apprentissage">
+            <h3 class="h3Detail">Ce que j'ai appris lors de la création du projet :</h3>
+        </div>
+        <div class="leReste">
+            <h3 class="h3Detail">Ce qu'il me reste à travailler personnellement :</h3>
+        </div>
+        <h2 class="compTravaillées">Compérences travaillées pendant le stage</h2>
+        <table class="competences">
+            <thead>
+                <tr class="competencesHeader">
+                    <th scope="col">B1</th>
+                    <th scope="col">B2</th>
+                    <th scope="col">B3</th>
+                </tr>
+            </thead>
+            <tr class="competencesRow">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="competencesRow">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="competencesRow">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="competencesRow">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="competencesRow">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    
+    <script src="script.js" defer></script>
+</body>
+
+</html>
