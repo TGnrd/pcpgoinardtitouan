@@ -859,8 +859,9 @@ pre {
   width: 70%;
 }
 
-.etapeAPI  {
+.etapeAPI, .etapeAppli  {
  width: 50%; 
+ margin-top: 5%;
 }
 
 .executionScript {
@@ -884,6 +885,15 @@ pre {
 .lienProjet:hover {
   background-color: rgba(110, 110, 110, 0.658);
   border-radius: 5px;
+}
+
+/* Page stage 2 */
+
+.fonctionnementAppli {
+  position: relative;
+  margin-left: 65%;
+  margin-top: -40%;
+  height: 80%; 
 }
 
 /** Bouton détail projet **/
