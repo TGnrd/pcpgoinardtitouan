@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <h1>PCP - Compétances et détails AP31</h1>
+        <h1>PCP - Compétences et détails AP31</h1>
         <button id="menuBtn" class="menu" aria-label="Main Menu" aria-expanded="false" aria-controls="main-nav">
             <svg width="100" height="100" viewBox="0 0 100 100">
                 <path class="line line1"
@@ -40,180 +40,8 @@
         </p>
     </header>
 
-    <div id="detailMission">
-        <h2 class="h2Detail">Détail de l'AP</h2>
-        <div class="detailAp31Git">
-            <p>Voici l'organisations du projet :</p>
-            <img class="MilestoneAp31" src="img/ap31/MilestoneAp31.png"
-                alt="Organisations des tâches AP31 Gitlab Admin">
-            <p>Les tâches du premier milestone :</p>
-            <img class="milestone1" src="img/ap31/missionMilestone1.png" alt="Mission du premier milestone">
-            <p>Les tâches du deuxième milestone :</p>
-            <img class="milestone2" src="img/ap31/missionMilestone2.png" alt="Mission du deuxième milestone">
-            <p>Étant en groupe, nous nous somme séparés les tâches. Ma partie était sur la création de la page
-                utilisateur
-                du site web. Voici les tickets que j'ai effectué sur le projet :
-            </p>
-            <div class="issues">
-                <ul class="carousel">
-                    <li class="liImg">
-                        <img class="issuePerso" src="img/ap31/issueListeUsers.png" alt="Issue Liste Users">
-                    </li>
-                    <li class="liImg">
-                        <img class="issuePerso" src="img/ap31/issueActivDesactiv.png" alt="Issue Active Désactive">
-                    </li>
-                    <li class="liImg">
-                        <img class="issuePerso" src="img/ap31/issueLimite.png" alt="Issue Limite">
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div id="configurationVM">
-            <h3 class="h3Detail">La mise en place de l'API gitlab</h3>
-            <p>Le serveur est mis sur <strong>VSphere</strong>. Il a fallu configurer le serveur US22 en y mettant
-                <strong>nos adresses IP, la passerelle et la route</strong>.
-            </p>
-            <img class="configVM" src="img/ap31/ConfigVM.png" alt="Configuration de la VM sur VSphere">
-            <p> Après la vérification de
-                la communication avec internet, nous avons téléchargé gitlab sur la machine virtuel. Une fois ces étapes
-                faites, nous avons la possiblité d'ouvrir la page gitlab de la VM en écrivant notre IP.</p>
-            <img class="gitLocal" src="img/ap31/gitLocal.png" alt="Gitlab local sur la VM">
-        </div>
-        <h3 class="h3Detail">Code des fonctions</h3>
-        <p>Voici la page index du projet :</p>
-        <img class="pageIndex" src="img/ap31/pageIndex.png" alt="Page index du projet">
-        <div id="chargementUsersSection" class="chargementUsersSection">
-            <h3 class="h3Detail">Voici le code des fonctions utilisées permettant de charger les utilisateurs sur gitlab
-                ainsi que le
-                rendu :</h3>
-            <div class="codeChargementUsers">
-                <img class="chargementUsers" src="img/ap31/chargementUsers.png" alt="Chargement des utilisateurs">
-                <ul class="carousel">
-                    <li class="liImg">
-                        <div>
-                            <h3>Fonction permettant d'afficher les utilisateurs présents dans l'API Rest de gitlab
-                            </h3>
-                            <p>Fait appel à plusieurs <strong>fonctions</strong> tel que : <br><br> <strong>
-                                    EraseHTMLTab <br><br> CreateTableRow </strong><br><br><br></p>
-                        </div>
-                        <img class="fonctionUsers" src="img/ap31/fonctionGetUsers.png" alt="Fonction getUsers">
-                    </li>
-                    <li class="liImg">
-                        <h3>Fonction permettant de supprimer les utilisateurs d'affichage de la page web.</h3>
-                        <p>Parcours le tableau des utilisateurs pour supprimer chaques lignes <br><br><br></p>
-                        <img class="fonctionUsers" src="img/ap31/fonctionEraseHTMLTab.png" alt="Fonction EraseHTMLTab">
-                    </li>
-                    <li class="liImg">
-                        <h3>Fonction permettant la création du tableau avec les informations présentent dans l'API Rest
-                        </h3>
-                        <p>Pour un utilisateur donnée, il va créer le code html de l'utilisateur.</p>
-                        <img class="fonctionUsers" src="img/ap31/fonctionCreateTableRow.png"
-                            alt="Fonction CreateTableRow">
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div id="activationDesactivationSection" class="activationDesactivationSection">
-            <div class="infoCodeEtatUsers">
-                <h3 class="h3Detail">Informations sur les fonctions d'activation et de désactivation des utilisateurs
-                </h3>
-                <p>Ces fonctions font appel à l'API Rest de gitlab pour changer l'état d'un utilisateur. <br><br>
-                    La fonction <strong>activerDesactiverUser</strong> permet de savoir si l'utilisateur est
-                    activé ou désactivé.
-                    <br><br>
-                    La fonction <strong>changerEtatUser</strong> permet de changer l'état de l'utilisateur en
-                    fonction de son état actuel.
-                    <br><br>
-                    <strong>
-                        A la fin de la fonction, la fonction getUsers est appelée pour rafraîchir les informations des
-                        utilisateurs donc celles qui ont été modifiées.
-                    </strong>
-                </p>
-            </div>
-            <div class="codeEtatUsers">
-                <ul class="carousel">
-                    <li class="liImg">
-                        <img class="fonctionActiverDesactiver" src="img/ap31/fonctionActiverDesactiver.png"
-                            alt="Fonction activerDesactiverUser">
-                    </li>
-                    <li class="liImg">
-                        <img class="fonctionChangerEtatUsers" src="img/ap31/fonctionChangerEtatUsers.png"
-                            alt="Fonction changerEtatUser">
-                    </li>
-                </ul>
-            </div>
-            <br>
-            <h3 class="h3Detail">Tests et preuves du fonctionnement des fonctions :</h3>
-            <br>
-            <div class="preuveFonctionnement">
-                <div id="next" class="carousel__button--next">&gt;</div>
-                <div id="prev" class="carousel__button--prev">&lt;</div>
-                <ul class="carousel">
-                    <li class="liImg">
-                        <img class="pageInitialAD" src="img/ap31/pageInitialAD.png"
-                            alt="Page initial activer desactiver">
-                    </li>
-                    <img class="pageActiveSelect" src="img/ap31/pageActiveSelect.png"
-                        alt="Page avec activer selectionné">
-                    </li>
-                    <li class="liImg">
-                        <img class="pageTroisDesact" src="img/ap31/pageTroisDesact.png"
-                            alt="Page avec trois désactivation des utilisateurs">
-                    </li>
-                    <li class="liImg">
-                        <img class="pageActivDesactivSelect" src="img/ap31/pageActivDesactivSelect.png"
-                            alt="Page avec un utilisateur active et un autre desactive séléctionnés">
-                    </li>
-                    <li class="liImg">
-                        <img class="pageResultatActivDesact" src="img/ap31/pageResultatActivDesact.png"
-                            alt="Page de résultat pour un utilisateur active et un autre desactive séléctionnés">
-                    <li>
-                </ul>
-            </div>
-        </div>
-        <div id="nombreProjetLimiteSection" class="nombreProjetLimiteSection">
-            <h3 class="h3Detail">Information sur les fonctions du changement du nombre de projets limite pour un
-                utilisateur.</h3>
-            <div class="infoProjetLimite">
-
-                <p>Ces fonctions font appel à l'API Rest de gitlab pour changer le nombre de projets limite d'un
-                    utilisateur.
-                    <br><br>
-                    La fonction <strong>changerLimite</strong> permet de récupérer la valeur entrée par
-                    l'utilisateur
-                    dans le champ de texte.
-                    <br><br>
-                    La fonction <strong>changerNombreLimite</strong> permet de mettre à jour la limite de
-                    projets
-                    pour un utilisateur donné.
-                    <br><br>
-                    <strong>
-                        A la fin de la fonction, la fonction getUsers est appelée pour rafraîchir les informations des
-                        utilisateurs donc celles qui ont été modifiées.
-                    </strong>
-            </div>
-            <div class="pageLimiteProjet">
-                <ul class="carousel">
-                    <li class="liImg"><img class="changementLimiteProjet" src="img/ap31/changementInitiale.png"
-                            alt="Page initial des changements"></li>
-                    <li class="liImg"><img class="changementLimiteProjet" src="img/ap31/changement500Select3.png"
-                            alt="3 utilisateurs selectionné 500"></li>
-                    <li class="liImg"><img class="changementLimiteProjet" src="img/ap31/changement500Fait.png"
-                            alt="Changement des 3 fait"></li>
-                    <li class="liImg"><img class="changementLimiteProjet" src="img/ap31/changement300SelectDiff.png"
-                            alt="Changement pour une limite intiale différente"></li>
-                    <li class="liImg"><img class="changementLimiteProjet" src="img/ap31/changement300Fait.png"
-                            alt="300 fait"></li>
-                </ul>
-            </div>
-            <h3 class="h3Detail">Code des fonctions :</h3>
-            <img class="codeLimite" src="img/ap31/fonctionChangerLimite.png" alt="Fonction changerLimite">
-            <img class="codeLimite" src="img/ap31/fonctionChangerNombreLimite.png" alt="Fonction changerNombreLimite">
-        </div>
-    </div>
     <div id="competences">
         <h2 class="h2Detail">Compétences développées</h2>
-
         <table id="competencesTable" class="competencesTable">
             <thead class="competencesHeader">
                 <tr>
@@ -246,7 +74,174 @@
             </tbody>
         </table>
     </div>
+
+    <div id="detailMission">
+        <h2 class="h2Detail">Détail de l'AP</h2>
+        <div class="detailAp31Git">
+            <p>Voici l'organisations du projet :</p>
+            <img class="MilestoneAp31" src="img/ap31/MilestoneAp31.png"
+                alt="Organisations des tâches AP31 Gitlab Admin">
+            <p>Les tâches du premier milestone :</p>
+            <img class="milestone1" src="img/ap31/missionMilestone1.png" alt="Mission du premier milestone">
+            <p>Les tâches du deuxième milestone :</p>
+            <img class="milestone2" src="img/ap31/missionMilestone2.png" alt="Mission du deuxième milestone">
+            <p>
+                Étant en groupe, nous nous sommes séparés les tâches. Ma partie était sur la création de la page
+                utilisateur du site web. Voici les tickets que j'ai effectués sur le projet :
+            </p>
+            <div class="issues">
+                <ul class="carousel">
+                    <li class="liImg">
+                        <img class="issuePerso" src="img/ap31/issueListeUsers.png" alt="Issue Liste Users">
+                    </li>
+                    <li class="liImg">
+                        <img class="issuePerso" src="img/ap31/issueActivDesactiv.png" alt="Issue Active Désactive">
+                    </li>
+                    <li class="liImg">
+                        <img class="issuePerso" src="img/ap31/issueLimite.png" alt="Issue Limite">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="configurationVM">
+            <h3 class="h3Detail">La mise en place de l'API gitlab</h3>
+            <p>Le serveur est mis sur <strong>VSphere</strong>. Il a fallu configurer le serveur US22 en y mettant
+                <strong>nos adresses IP, la passerelle et la route</strong>.
+            </p>
+            <img class="configVM" src="img/ap31/ConfigVM.png" alt="Configuration de la VM sur VSphere">
+            <p> 
+                Après la vérification de la communication avec internet, nous avons téléchargé GitLab sur la machine 
+                virtuelle. Une fois ces étapes faites, nous avons la possibilité d'ouvrir la page GitLab de la VM en 
+                écrivant notre IP.
+            </p>
+            <img class="gitLocal" src="img/ap31/gitLocal.png" alt="Gitlab local sur la VM">
+        </div>
+        <h3 class="h3Detail">Code des fonctions</h3>
+        <p>Voici la page index du projet :</p>
+        <img class="pageIndex" src="img/ap31/pageIndex.png" alt="Page index du projet">
+        <div id="chargementUsersSection" class="chargementUsersSection">
+            <h3 class="h3Detail">Voici le code des fonctions utilisées permettant de charger les utilisateurs sur GitLab
+                ainsi que le rendu :</h3>
+            <div class="codeChargementUsers">
+                <img class="chargementUsers" src="img/ap31/chargementUsers.png" alt="Chargement des utilisateurs">
+                <ul class="carousel">
+                    <li class="liImg">
+                        <div>
+                            <h3>Fonction permettant d'afficher les utilisateurs présents dans l'API Rest de GitLab
+                            </h3>
+                            <p>Fait appel à plusieurs <strong>fonctions</strong> tel que : <br><br> <strong>
+                                    EraseHTMLTab <br><br> CreateTableRow </strong><br><br><br></p>
+                        </div>
+                        <img class="fonctionUsers" src="img/ap31/fonctionGetUsers.png" alt="Fonction getUsers">
+                    </li>
+                    <li class="liImg">
+                        <h3>Fonction permettant de supprimer les utilisateurs d'affichage de la page web.</h3>
+                        <p>Parcours le tableau des utilisateurs pour supprimer chaques lignes <br><br><br></p>
+                        <img class="fonctionUsers" src="img/ap31/fonctionEraseHTMLTab.png" alt="Fonction EraseHTMLTab">
+                    </li>
+                    <li class="liImg">
+                        <h3>Fonction permettant la création du tableau avec les informations présentent dans l'API Rest
+                        </h3>
+                        <p>Pour un utilisateur donnée, il va créer le code html de l'utilisateur.</p>
+                        <img class="fonctionUsers" src="img/ap31/fonctionCreateTableRow.png"
+                            alt="Fonction CreateTableRow">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="activationDesactivationSection" class="activationDesactivationSection">
+            <div class="infoCodeEtatUsers">
+                <h3 class="h3Detail">Informations sur les fonctions d'activation et de désactivation des utilisateurs
+                </h3>
+                <p>Ces fonctions font appel à l'API Rest de GitLab pour changer l'état d'un utilisateur. <br><br>
+                    La fonction <strong>activerDesactiverUser</strong> permet de savoir si l'utilisateur est
+                    activé ou désactivé.
+                    <br><br>
+                    La fonction <strong>changerEtatUser</strong> permet de changer l'état de l'utilisateur en
+                    fonction de son état actuel.
+                    <br><br>
+                    <strong>
+                        A la fin de la fonction, la fonction getUsers est appelée pour rafraîchir les informations
+                        des utilisateurs, donc celles qui ont été modifiées.
+                    </strong>
+                </p>
+            </div>
+            <div class="codeEtatUsers">
+                <ul class="carousel">
+                    <li class="liImg">
+                        <img class="fonctionActiverDesactiver" src="img/ap31/fonctionActiverDesactiver.png"
+                            alt="Fonction activerDesactiverUser">
+                    </li>
+                    <li class="liImg">
+                        <img class="fonctionChangerEtatUsers" src="img/ap31/fonctionChangerEtatUsers.png"
+                            alt="Fonction changerEtatUser">
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <h3 class="h3Detail">Tests et preuves du fonctionnement des fonctions :</h3>
+            <br>
+            <div class="preuveFonctionnement">
+                <ul class="carousel">
+                    <li class="liImg">
+                        <img class="pageInitialAD" src="img/ap31/pageInitialAD.png"
+                            alt="Page initial activer desactiver">
+                    </li>
+                    <img class="pageActiveSelect" src="img/ap31/pageActiveSelect.png"
+                        alt="Page avec activer selectionné">
+                    </li>
+                    <li class="liImg">
+                        <img class="pageTroisDesact" src="img/ap31/pageTroisDesact.png"
+                            alt="Page avec trois désactivation des utilisateurs">
+                    </li>
+                    <li class="liImg">
+                        <img class="pageActivDesactivSelect" src="img/ap31/pageActivDesactivSelect.png"
+                            alt="Page avec un utilisateur active et un autre desactive séléctionnés">
+                    </li>
+                    <li class="liImg">
+                        <img class="pageResultatActivDesact" src="img/ap31/pageResultatActivDesact.png"
+                            alt="Page de résultat pour un utilisateur active et un autre desactive séléctionnés">
+                    <li>
+                </ul>
+            </div>
+        </div>
+        <div id="nombreProjetLimiteSection" class="nombreProjetLimiteSection">
+            <h3 class="h3Detail">Information sur les fonctions du changement du nombre de projets limite pour un
+                utilisateur.</h3>
+            <div class="infoProjetLimite">
+
+                <p>Ces fonctions font appel à l'API Rest de GitLab pour changer le nombre de projets limité d'un utilisateur.
+                    <br><br>
+                    La fonction <strong>changerLimite</strong> permet de récupérer la valeur entrée par
+                    l'utilisateur dans le champ de texte.
+                    <br><br>
+                    La fonction <strong>changerNombreLimite</strong> permet de mettre à jour la limite de projets pour un
+                    utilisateur donné.
+                    <br><br>
+                    <strong>
+                        A la fin de la fonction, la fonction getUsers est appelée pour rafraîchir les informations
+                        utilisateurs donc celles qui ont été modifiées.
+                    </strong>
+            </div>
+            <div class="pageLimiteProjet">
+                <ul class="carousel">
+                    <li class="liImg"><img class="changementLimiteProjet" src="img/ap31/changementInitiale.png"
+                            alt="Page initial des changements"></li>
+                    <li class="liImg"><img class="changementLimiteProjet" src="img/ap31/changement500Select3.png"
+                            alt="3 utilisateurs selectionné 500"></li>
+                    <li class="liImg"><img class="changementLimiteProjet" src="img/ap31/changement500Fait.png"
+                            alt="Changement des 3 fait"></li>
+                    <li class="liImg"><img class="changementLimiteProjet" src="img/ap31/changement300SelectDiff.png"
+                            alt="Changement pour une limite intiale différente"></li>
+                    <li class="liImg"><img class="changementLimiteProjet" src="img/ap31/changement300Fait.png"
+                            alt="300 fait"></li>
+                </ul>
+            </div>
+            <h3 class="h3Detail">Code des fonctions :</h3>
+            <img class="codeLimite" src="img/ap31/fonctionChangerLimite.png" alt="Fonction changerLimite">
+            <img class="codeLimite" src="img/ap31/fonctionChangerNombreLimite.png" alt="Fonction changerNombreLimite">
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
-
-

@@ -521,40 +521,6 @@ p,
   margin-left: 10%;
 }
 
-#next, #prev {
-  position: absolute;
-  background-color: rgba(153, 153, 153, 0.295);
-  border: none;
-  color: rgb(0, 0, 0);
-  padding: 1%;
-  cursor: pointer;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 50px;
-  top: 50%;
-  width: 4%;
-  transform: translateY(-50%);
-  z-index: 1;
-  border-radius: 50%;
-}
-
-#next:hover, #prev:hover {
-  background-color: rgba(153, 153, 153, 0.555);
-}
-
-#next {
-  position: relative;
-  float: right;  
-  margin-right: -7%;
-  margin-top: 25%;
-}
-
-#prev {
-  position: relative;
-  float: left;
-  margin-left: 18%;
-  margin-top: 25%;
-}
-
 .nombreProjetLimiteSection {
   margin-top: 40%;
   margin-bottom: 5%;
