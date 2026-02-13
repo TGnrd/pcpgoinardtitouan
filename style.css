@@ -319,6 +319,13 @@ h1 {
   box-sizing: border-box;
   padding: 2%;
   max-width: 100%;
+  max-height: 30rem;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+
+.ap31::-webkit-scrollbar {
+  width: 12px;
 }
 
 .nomProjet {
@@ -330,7 +337,7 @@ h1 {
   font-family: 'Courier New', Courier, monospace;
 }
 
-.contexte {
+.contexte, .competences {
   font-size: 24px;
   margin-left: 10%;
   margin-top: 2%;
@@ -710,9 +717,9 @@ p,
 
 .card_text h3 {
   margin-top: 0;
-  width: 45%;
   color: var(--aqua);
   font-family: Georgia, Times, serif;
+  white-space: nowrap;
 }
 
 .card_text p:first-of-type:first-letter {
@@ -977,6 +984,7 @@ pre {
   font-family: 'Courier New', Courier, monospace;
   padding: 8px 12px;
   background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
+  margin-left: 20%;
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -988,8 +996,7 @@ pre {
 .card_text h3:first-of-type {
   display: inline-block;
   margin: 0;
-  padding-right: 5rem;
-  /* ajuste si le bouton est plus large */
+  padding-right: 1rem;
 }
 
 @media (max-width: 480px) {
@@ -1009,10 +1016,9 @@ pre {
 
 footer {
   background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
-  height: 100%;
+  height: 60%;
   width: 100%;
   margin-top: 5%;
-  padding-top: 20px;
   padding-bottom: 20px;
   color: #ffffff;
   font-family: 'Courier New', Courier, monospace;
@@ -1026,8 +1032,8 @@ footer {
 .contact {
   display: flex;
   justify-content: center;
-  margin-top: 10%;
-  height: 200px;
+  margin-top: 5%;
+  height: 150px;
 }
 
 .mail-link {
@@ -1084,7 +1090,7 @@ footer {
   justify-content: center;
   align-items: center;
   display: block;
-  width: 11%;
+  width: 12%;
   padding: 10px 20px;
   background-color: #ffffff;
   color: #000000;
