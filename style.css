@@ -856,6 +856,41 @@ pre {
   border-radius: 5px;
 }
 
+.conteneur-json-pdf {
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+  height: 800px; /* Taille fixe de la page */
+}
+
+/* Les deux colonnes prennent CHACUNE 50% strict */
+.section-pdf, .section-code {
+  flex: 1; /* Demande de prendre 50% */
+  min-width: 0; /* MAGIE : Empêche le texte du JSON de casser le 50/50 */
+}
+
+/* Le PDF figé */
+.section-pdf iframe {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Le bloc JSON scrollable */
+.section-code pre {
+  width: 100%; /* Il doit prendre 100% de sa colonne (qui fait 50% de l'écran) */
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 20px;
+  background-color: #282c34;
+  color: #abb2bf;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: auto; /* Permet le scroll du code */
+}
+
 /* Page stage 2 */
 
 .fonctionnementAppli {
