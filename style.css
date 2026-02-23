@@ -351,7 +351,7 @@ h1 {
   margin-left: 10%;
   margin-top: 1%;
   margin-right: 10%;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
   color: #000000;
   font-family: 'Courier New', Courier, monospace;
 }
@@ -417,6 +417,10 @@ h1 {
 p,
 .h3Detail {
   font-family: 'Courier New', Courier, monospace;
+  margin-left: 5%;
+}
+
+h4 {
   margin-left: 5%;
 }
 
@@ -828,9 +832,14 @@ pre {
   width: 70%;
 }
 
-.etapeAPI, .etapeAppli  {
+.etapeAPI, .etapeAppli, .etapeAppliFonctionnelle  {
  width: 50%; 
  margin-top: 5%;
+}
+
+.etapeAppliFonctionnelle {
+  margin-left: 60%;
+  margin-top: -30%;
 }
 
 .executionScript {
@@ -839,7 +848,7 @@ pre {
   width: 25%;
 }
 
-.lienProjet {
+.lienProjet{
   position: relative;
   display: block;
   text-decoration: none;
@@ -851,9 +860,30 @@ pre {
   margin-bottom: 5%;
 }
 
-.lienProjet:hover {
-  background-color: rgba(110, 110, 110, 0.658);
+#competences {
+  position: relative;
+}
+
+.lienProjetPage {
+  background: linear-gradient(90deg,#16305a 0%, #2f59ff 100%);
   border-radius: 5px;
+  position: absolute;
+  display: flex;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  height: 50px;
+  width: 20%;
+  top: 0;
+  right: 5%;
+  align-items: center;
+  justify-content: center;
+}
+
+.lienProjet:hover, .lienProjetPage:hover {
+  background: linear-gradient(90deg,#14243f 0%, #2a3a79 100%);
 }
 
 .conteneur-json-pdf {
@@ -893,11 +923,19 @@ pre {
 
 /* Page stage 2 */
 
-.fonctionnementAppli {
+.fonctionnementAppli, .fonctionnementAppliFinal {
   position: relative;
-  margin-left: 65%;
-  margin-top: -40%;
   height: 80%; 
+}
+
+.fonctionnementAppli {
+  margin-top: -40%;
+  margin-left: 65%;
+}
+
+.fonctionnementAppliFinal {
+  margin-left: 15%;
+  margin-top: 3%;
 }
 
 .PMT {
@@ -962,6 +1000,7 @@ pre {
 .competencesTable {
   width: 90%;
   margin: 1.5rem auto;
+  margin-top: 3%;
   border-collapse: separate;
   border-spacing: 0;
   font-family: 'Courier New', Courier, monospace;

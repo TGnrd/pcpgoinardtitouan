@@ -31,8 +31,8 @@
             </ul>
         </nav>
         <p class="description">
-            Ce projet aura pour but de s'inscrire dans l'une des applications de l'entreprise SCR Informatiques, 
-            ... <br>
+            Ce projet aura pour but de s'inscrire dans l'applications Ambges de l'entreprise SCR Informatiques, 
+            cette application permet aux soignant de gérer les patients de l'hospital.<br><br>
             Elle va permettre aux médecins de récupérer les inforamtions d'une prescription médicale de transport des 
             patients. Les informations sont le numéro de sécurité sociale du patient, l'ALD exonérante ou non, l'identifiant
             du médecin et la date de la prescription. Une fois récupérer, elles peuvent être envoyées à la sécurité 
@@ -40,9 +40,9 @@
         </p>
     </header>
     <div id="competences">
+        <a class="lienProjetPage" href="https://github.com/TGnrd/Stage2"><strong>Productions réalisées</strong></a>
         <h2 class="compTravaillées">Compérences travaillées pendant le stage</h2>
         <table class="competencesTable">
-            <table class="competencesTable">
             <thead>
                 <tr class="competencesHeader">
                     <th scope="col">B1</th>
@@ -115,6 +115,7 @@
             </div>
             <div class="fonctionnement" id="fonctionnement">
                 <h3 class="h3Detail">Fonctionnement :</h3>
+                <h4>Fonctionnement de la première version de l'application.</h4>
                 <p class="etapeAppli">
                     1) Le scan de la prescription médicale de transport. <br><br><br>
                     2) La récupération de la version de du document. <br><br><br>
@@ -123,9 +124,20 @@
                     5) Définir laquelle des deux cases est cochées. <br><br><br>
                     6) La récupération des informations avec de l'OCR dans chaque zone de recherche défini. <br><br><br>
                     7) La mise en forme des informations pour remplir le formulaire. <br><br><br>
-                    8) L'affichage du formulaire complet. 
+                    8) L'affichage du formulaire complet. <br><br><br><br>
+                    Le problème est que les traitements OCR testés (OCR (WinDev), Tesseract, Google ML Kit) <strong>ne sont pas assez 
+                    performants</strong> lorsqu'il s'agit de <strong>scan</strong>. 
                 </p>
                 <img src="./img/Schema_fonctionnement_application.png" alt="Schéma du fonctionnement de l'application." class="fonctionnementAppli">
+                <h4>Fonctionnement définitif de l'application :</h4>
+                <img src="./img/Fonctionnement_application.png" alt="Schéma du fonctionnement de l'application finale." class="fonctionnementAppliFinal">
+                <p class="etapeAppliFonctionnelle">
+                    1) Le scan de la prescription médicale de transport. <br><br><br>
+                    2) La récupération de la version de du document. <br><br><br>
+                    3) La récupération l'emplacement des cases ALD. <br> <br><br>
+                    4) Définir laquelle des deux cases est cochées. <br><br><br>
+                    5) L'affichage du formulaire complet. <br><br><br><br>
+                </p>
             </div>
             <div class="tests" id="tests">
                 <h3 class="h3Detail">Le résultat des tests :</h3>
@@ -133,8 +145,8 @@
                     <strong>Voici le type de document à tester :</strong> <br><br><br><br>
                     Les informations à récupérer sont les suivantes : <br><br><br>
                     - Le numéro d'immatriculation (numéro de sécurité sociale) <br><br><br>
-                    - L'affection de longue durée (exonérante ou non exonérante) <br><br><br>
-                    - L'identifiant du médecin (RPPS) <br><br>
+                    - <strong>L'affection de longue durée (exonérante ou non exonérante)</strong> <br><br><br>
+                    - L'identifiant du médecin (RPPS) <br><br><br>
                     - La date de la prescription
                 </p>
                 <img class="PMT" src="./img/PMT_zones.png" alt="Prescription médicale de transport">
