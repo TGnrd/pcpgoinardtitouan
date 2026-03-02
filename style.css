@@ -951,6 +951,25 @@ pre {
   margin-top: 15%;
 }
 
+.AffichageApplication {
+  margin-top: 5%;
+  margin-left: 15%;
+  width: 30%;
+}
+
+.AffichageApplicationFinale {
+  width: 30%;
+  display: block; /* Transforme l'image en bloc pour pouvoir la centrer */
+  margin-top: 5%;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+
+.affichageFinal {
+  margin-top: 10%;
+}
+
 /** Bouton détail projet **/
 
 .texteCompDet {
