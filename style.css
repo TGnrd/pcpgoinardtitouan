@@ -295,11 +295,11 @@ h1 {
 }
 
 #realisationpro,
-#realisationScolaire {
+#realisationScolaire, 
+#veille {
   display: flex;
-  flex-direction: column;
-  /* empile les enfants verticalement */
-  align-items: flex-start;
+  flex-direction: column; /* Aligne le titre et les cartes verticalement */
+  align-items: center;
   width: 100%;
   box-sizing: border-box;
   padding-bottom: 4%;
@@ -798,6 +798,49 @@ h4 {
     right: 0;
     font-size: 1.325rem;
   }
+}
+
+/** Veille **/
+
+#veille {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.veille {
+  width: 100%; 
+  display: flex;
+  justify-content: center; 
+}
+
+.cardsVeille {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2rem;
+  width: 95%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.cards_item_veille {
+  display: flex; 
+  width: 100%;
+}
+
+.cardsVeille .card {
+  width: 100%; 
+  max-width: 100%; 
+  margin: 0; 
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  background-color: white;
+  
 }
 
 /** Code Compétence stage 1**/
