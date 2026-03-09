@@ -269,7 +269,7 @@ h1 {
   font-size: clamp(1rem, 2vw, 25px);
   color: #000000;
   margin-left: 10vw;
-  margin-bottom: 8vh;
+  margin-bottom: 12vh;
   margin-right: 3vw;
   line-height: 1.25;
   font-family: 'Courier New', Courier, monospace;
@@ -303,6 +303,8 @@ h1 {
   box-sizing: border-box;
   padding-bottom: clamp(10px, 4vh, 4%);
 }
+
+/*Projet scolaire*/
 
 .ap31 {
   background-color: #ffffff;
@@ -377,132 +379,142 @@ h1 {
   z-index: 5;
 }
 
+/* Page projet scolaire ap31 */
+
 .detailAp31Git {
   background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
   color: #ffffff;
-  padding-top: clamp(10px, 2vh, 2%);
-  padding-bottom: clamp(10px, 2vh, 2%);
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 .MilestoneAp31 {
-  margin-top: clamp(10px, 2vh, 2%);
-  margin-bottom: clamp(10px, 2vh, 2%);
-  margin-left: clamp(5%, 9vw, 9%);
-  width: clamp(280px, 80vw, 80%); 
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 9%;
+  width: 80%; 
 }
 
 .h2Detail {
-  font-size: clamp(1.1rem, 2vw, 20px);
-  margin-left: clamp(5px, 5vw, 5%);
-  margin-right: clamp(5px, 5vw, 5%);
-  margin-bottom: clamp(10px, 2vh, 2%);
+  font-size: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2%;
   color: #000000;
   font-family: 'Courier New', Courier, monospace;
 }
 
 .compTravaillées {
-  font-size: clamp(1.1rem, 2vw, 20px);
-  margin-left: clamp(5px, 5vw, 5%);
-  margin-right: clamp(5px, 5vw, 5%);
-  margin-bottom: clamp(10px, 2vh, 2%);
+  font-size: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2%;
   font-family: 'Courier New', Courier, monospace;
 }
 
 p,
 .h3Detail {
   font-family: 'Courier New', Courier, monospace;
-  margin-left: clamp(5px, 5vw, 5%);
+  margin-left: 5%;
 }
 
 h4 {
-  margin-left: clamp(5px, 5vw, 5%);
+  margin-left: 5%;
 }
 
 .milestone1,
 .milestone2 {
-  width: clamp(250px, 70vw, 70%);
-  margin-left: clamp(5%, 15vw, 15%);
+  width: 70%;
+  margin-left: 15%;
 }
 
 .configVM,
 .gitLocal {
-  width: clamp(200px, 50vw, 50%);
-  margin-left: clamp(10%, 25vw, 25%);
-  margin-bottom: clamp(10px, 2vh, 2%);
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 2%;
 }
 
 .issues {
-  width: clamp(100%, 150vw, 200%);
+  width: 200%;
   position: relative;
-  margin-left: clamp(5px, 5vw, 5%);
+  margin-left: 5%;
+
 }
 
 .issuePerso,
 .pageIndex {
-  width: clamp(250px, 60vw, 60%);
-  margin-left: clamp(5%, 20vw, 20%);
-  margin-bottom: clamp(10px, 2vh, 2%);
+  width: 60%;
+  margin-left: 20%;
+  margin-bottom: 2%;
 }
 
 .codeChargementUsers {
   position: relative;
-  left: clamp(5px, 2vw, 2%);
+  left: 2%;
 }
 
 .chargementUsers {
   position: absolute;
-  width: clamp(150px, 50vw, 50%);
-  margin-top: clamp(20px, 10vh, 10%);
-  margin-left: clamp(10%, 45vw, 45%);
-  margin-bottom: clamp(10px, 2vh, 2%);
+  width: 50%;
+  margin-top: 10%;
+  margin-left: 45%;
+  margin-bottom: 2%;
 }
 
 .fonctionUsers {
-  width: clamp(280px, 90vw, 90%);
+  width: 90%;
 }
 
 .activationDesactivationSection{
   background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
   color: #ffffff;
   width: 100%;
-  margin-top: clamp(30px, 10vh, 10%);
-  padding: clamp(1rem, 4vw, 2rem);
-  min-height: clamp(300px, 50vh, 400px);
+  margin-top: 10%;
+  padding: 2rem;
+  min-height: 400px;
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 0;
 }
 
+
 .infoCodeEtatUsers {
   position: absolute;
-  margin-left: clamp(5px, 2vw, 2%);
-  margin-top: clamp(15px, 5vh, 5%);
-  width: clamp(150px, 45vw, 45%);
+  margin-left: 2%;
+  width: 45%;
+}
+
+.infoCodeEtatUsers {
+  position: absolute;
+  margin-left: 2%;
+  margin-top: 5%;
+  width: 45%;
 }
 
 .codeEtatUsers {
   position: relative;
-  margin-top: clamp(15px, 5vh, 5%);
+  margin-top: 5;
   left: 50%;
 }
 
 .fonctionActiverDesactiver, .fonctionChangerEtatUsers {
-  width: clamp(280px, 90vw, 90%);
-  margin-left: clamp(5px, 5vw, 5%);
+  width: 90%;
+  margin-left: 5%;
 }
 
 .preuveFonctionnement {
-  width: clamp(280px, 80vw, 80%);
+  width: 80%;
 }
 
 .preuveFonctionnement .carousel {
   position: absolute;
-  width: clamp(250px, 80vw, 80%);
+  width: 80%;
   height: auto;
-  margin-left: clamp(5%, 10vw, 10%);
-  margin-bottom: clamp(15px, 5vh, 5%);
-  margin-top: clamp(15px, 5vh, 5%);
+  margin-left: 10%;
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
 
 .pageInitialAD, 
@@ -510,29 +522,26 @@ h4 {
 .pageTroisDesact, 
 .pageActivDesactivSelect, 
 .pageResultatActivDesact {
-  width: clamp(250px, 80vw, 80%);
-  margin-left: clamp(5%, 10vw, 10%);
+  width: 80%;
+  margin-left: 10%;
 }
 
 .nombreProjetLimiteSection {
-  background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
-  color: #ffffff;
-  margin-top: clamp(100px, 30vh, 40%);
-  margin-bottom: clamp(15px, 5vh, 5%);
-  padding: clamp(1rem, 4vw, 2rem);
+  margin-top: 40%;
+  margin-bottom: 5%;
 }
 
 .infoProjetLimite {
   position: relative;
-  margin-top: clamp(10px, 4vh, 4%);
-  margin-right: clamp(5px, 2vw, 2%);
+  margin-top: 4%;
+  margin-right: 2%;
   float: right;
-  width: clamp(180px, 50vw, 50%);
+  width: 50%;
 }
 
 .pageLimiteProjet {
   position: relative;
-  margin-left: clamp(5px, 2vw, 2%);
+  margin-left: 2%;
   width: 100%;
 }
 
@@ -542,24 +551,32 @@ h4 {
 } 
 
 .codeLimite {
-  width: clamp(150px, 40vw, 40%);
-  margin-left: clamp(5px, 5vw, 5%);
+  width: 40%;
+  margin-left: 5%;
 }
+
+.nombreProjetLimiteSection {
+  background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
+  color: #ffffff;
+  padding: 2rem;
+}
+
+/* Carousel */ 
 
 .carousel {
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  width: clamp(280px, 45vw, 45%);
-  height: clamp(200px, 40vh, 40%);
-  padding: clamp(10px, 2vw, 20px);
+  width: 45%;
+  height: 40%;
+  padding: 20px;
   display: flex;
-  gap: clamp(1rem, 4vw, 4vw);
+  gap: 4vw;
   anchor-name: --my-carousel;
 }
 
 .carousel::scroll-button(*) {
   border: 0;
-  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-size: 2rem;
   background: none;
   color: black;
   opacity: 0.7;
@@ -586,13 +603,199 @@ h4 {
   list-style-type: none;
   background-color: #eeeeee;
   border: 1px solid #dddddd;
-  padding: clamp(10px, 2vw, 20px);
+  padding: 20px;
   flex: 0 0 100%;
   scroll-snap-align: center;
 }
 
 .liImg:nth-child(even) {
   background-color: rgb(182, 182, 182);
+}
+
+/*Projet professionnel*/
+
+.main {
+  max-width: 100%;
+  margin-left: 5%;
+}
+
+.cards {
+  display: grid;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  width: 95%;
+}
+
+.cards_item {
+  display: flex;
+  margin-left: 5%;
+}
+
+.card_image {
+  display: flex;
+  height: 250px;
+  box-shadow: 0 50px 100px 0 var(--violet);
+}
+
+
+.card_image img { 
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-color: #ffffff;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--purple);
+  border-radius: 5px 25px 5px 50px;
+  transition: transform 0.1s linear, box-shadow 0.2s;
+}
+
+.card_text:focus,
+.card:focus {
+  outline: 2px dashed var(--aqua);
+}
+
+.card:focus,
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.2);
+}
+
+.card_content {
+  padding: 0.5rem 1rem 1rem;
+  color: var(--white);
+  background-color: #ffffff;
+}
+
+.card_title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90%;
+  height: auto;
+  color: var(--black);
+  padding: 0.5rem;
+  border-radius: 5px 0 0 5px;
+  transform: rotate(-3.3deg);
+  transform-origin: left top;
+  font-family: Georgia, Times, serif;
+  font-weight: 600;
+  font-size: 1.325rem;
+  overflow: hidden;
+  z-index: 1;
+  background: linear-gradient(70deg, rgba(19, 46, 81, 0.602), rgb(47, 89, 255, 0.602), rgb(77, 18, 89, 0.602));
+  animation: 0s 0s fly-in 0 reverse both;
+}
+
+@media (min-width: 535px) {
+  .card_title {
+    animation: 0.5s 0.25s fly-out 1 both;
+  }
+}
+
+.card:focus .card_title,
+.card:hover .card_title {
+  animation: 0.5s ease-in 0s fly-in 1 both;
+}
+
+.card_text {
+  font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica,
+    Helvetica Neue, Arial, sans-serif;
+  line-height: 1.5;
+  text-size-adjust: 0.2px;
+  padding: 0 1rem;
+}
+
+.card_text h3 {
+  margin-top: 0;
+  color: var(--aqua);
+  font-family: Georgia, Times, serif;
+  white-space: nowrap;
+}
+
+.card_text p:first-of-type:first-letter {
+  font-size: 1.8em;
+  font-family: Georgia, Times, serif;
+  margin-right: 0.05em;
+}
+
+@media (min-width: 480px) {
+  .card_text {
+    overflow: auto;
+    max-height: 20rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--aqua) var(--violet);
+  }
+
+  .card_text::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .card_text::-webkit-scrollbar-track {
+    background: var(--violet);
+  }
+
+  .card_text::-webkit-scrollbar-thumb {
+    background-color: var(--aqua);
+  }
+}
+
+.card_text strong {
+  color: var(--aqua);
+}
+
+@keyframes fly-in {
+  0% {
+    top: 0;
+    right: 0;
+    font-size: 1.325rem;
+  }
+
+  25% {
+    top: 0;
+    right: -200%;
+    font-size: 1.325rem;
+  }
+
+  26% {
+    font-size: 2rem;
+  }
+
+  100% {
+    top: 2rem;
+    right: 0;
+    font-size: 2rem;
+  }
+}
+
+@keyframes fly-out {
+  0% {
+    top: 2rem;
+    right: 0;
+    font-size: 2rem;
+  }
+
+  50% {
+    top: 0;
+    right: -200%;
+    font-size: 1.325rem;
+  }
+
+  100% {
+    top: 0;
+    right: 0;
+    font-size: 1.325rem;
+  }
 }
 
 .main {
@@ -767,6 +970,8 @@ h4 {
   }
 }
 
+/* Veille */
+
 #veille {
   display: flex;
   flex-direction: column;
@@ -837,6 +1042,8 @@ h4 {
   padding: clamp(0.5rem, 1vw, 1rem);
   text-align: center;
 }
+
+/** Code Compétence stage 1**/
 
 .tech {
   background-color: rgba(128, 128, 128, 0.445);
@@ -957,6 +1164,8 @@ pre {
   overflow: auto; 
 }
 
+/* Page stage 2 */
+
 .fonctionnementAppli, .fonctionnementAppliFinal {
   position: relative;
   height: clamp(200px, 60vh, 80%); 
@@ -1002,6 +1211,8 @@ pre {
 .affichageFinal {
   margin-top: clamp(2rem, 10vh, 10%);
 }
+
+/** Bouton détail projet **/
 
 .texteCompDet {
   text-decoration: none;
@@ -1067,7 +1278,6 @@ pre {
   transform: translateY(-1px);
 }
 
-/* Cette media query reste indispensable pour restructurer la table sur mobile */
 @media (max-width: 640px) {
   .competencesTable,
   .competencesTable thead,
@@ -1116,7 +1326,6 @@ pre {
   padding-right: clamp(0.5rem, 1vw, 1rem);
 }
 
-/* Identique ici : cette restructuration spécifique reste nécessaire sur mobile */
 @media (max-width: 480px) {
   #btnCompetences {
     position: static;
@@ -1129,6 +1338,8 @@ pre {
     padding-right: 0;
   }
 }
+
+/*Footer*/
 
 footer {
   background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
