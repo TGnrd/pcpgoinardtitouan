@@ -999,42 +999,29 @@ h4 {
 .cards_item_veille {
   display: flex; 
   width: 100%;
-}
-
-.cardsVeille .card {
-  width: 100%; 
-  max-width: 100%; 
-  margin: 0; 
-  display: flex;
-  flex-direction: column;
-}
-
-.cardDev, .cardCyber, .cardReseau, .cardTech, .cardIA {
   background-color: white;
-  height: 100%;
-  width: 100%;
-  padding: auto;
-  margin-bottom: clamp(10%, 4vh, 30%);
   border-top-left-radius: 5px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 5px;
+  margin-bottom: clamp(10%, 4vh, 30%);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: auto;
 }
 
-.cardDev:hover,
-.cardCyber:hover, 
-.cardReseau:hover, 
-.cardTech:hover, 
-.cardIA:hover {
-    background-color: #abb2bf;
-    height: 110%;
+.cards_item_veille:hover {
+  background-color: #a0a0a1;
+  height: 110%;
 }
 
-.cardDev h2,
-.cardCyber h2,
-.cardReseau h2,
-.cardTech h2,
-.cardIA h2 {
+.cardsVeille {
+  max-width: 100%; 
+  margin: 0;   
+}
+
+.theme   {
   position: relative;
   display: flex;
   align-items: center;
@@ -1451,6 +1438,21 @@ footer {
   background: linear-gradient(90deg,#16305a 0%, #2f59ff 100%);
   padding: clamp(10px, 2vw, 2%);
   color: #ffffff;
+}
+
+.article-veille {
+    display: none; 
+}
+
+/* La classe qui permet d'afficher l'article demandé */
+.article-veille.actif {
+    display: block; 
+    animation: apparitionDouce 0.5s ease;
+}
+
+@keyframes apparitionDouce {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 900px) {

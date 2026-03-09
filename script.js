@@ -84,3 +84,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. On lit l'URL de la page pour trouver le paramètre "?theme="
+    const parametresUrl = new URLSearchParams(window.location.search);
+    const themeDemande = parametresUrl.get('theme');
+
+    // 2. On vérifie si un thème a bien été demandé
+    if (themeDemande) {
+        // 3. On cherche l'article qui a le même ID que le thème demandé
+        const articleA_Afficher = document.getElementById(themeDemande);
+
+        if (articleA_Afficher) {
+            // Si on le trouve, on lui ajoute la classe "actif" pour le rendre visible
+            articleA_Afficher.classList.add('actif');
+        } else {
+            // Si le thème n'existe pas, on affiche le message d'erreur
+            document.getElementById('erreur-theme').classList.add('actif');
+        }
+    } else {
+        // Si aucun thème n'est précisé dans l'URL, on affiche l'erreur
+        document.getElementById('erreur-theme').classList.add('actif');
+    }
+});
