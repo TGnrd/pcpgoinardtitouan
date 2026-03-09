@@ -1,0 +1,1254 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  background-color: rgb(219, 219, 219);
+  background-repeat: no-repeat;
+  text-decoration: none;
+}
+
+.menu {
+  position: fixed;
+  top: 10vh;
+  left: 7vw;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+  width: clamp(45px, 5vw, 70px);
+  height: clamp(45px, 5vw, 70px);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.menu svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.typewriter {
+  font-size: clamp(1.2rem, 2.5vw, 30px);
+  margin: 2vh auto;
+  text-align: left;
+  position: relative;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid rgba(255, 255, 255, .75);
+  animation:
+    typewriter 2s steps(13) forwards,
+    blinkingCursor 750ms steps(1) infinite;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 13ch;
+  }
+}
+
+@keyframes blinkingCursor {
+  0%,
+  100% {
+    border-right-color: rgba(0, 0, 0, 0.75);
+  }
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+.navbar {
+  display: none;
+  border-radius: clamp(5px, 1vw, 10px);
+  transition: max-height 0.25s ease-out, opacity 0.25s ease-out;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  background: transparent;
+  padding: 0;
+  background-color: #222;
+}
+
+.navbar.open {
+  display: block;
+  position: fixed;
+  top: 10vh;
+  left: 15vw;
+  height: auto;
+  width: 75vw;
+  opacity: 1;
+  max-height: clamp(80px, 10vh, 100px);
+  z-index: 1000;
+}
+
+.content {
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 clamp(8px, 1.5vw, 16px);
+  gap: clamp(8px, 1vw, 12px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.content a:hover {
+  background-color: #66666665;
+  border-radius: clamp(5px, 1vw, 10px);
+}
+
+.content a {
+  text-decoration: none;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: clamp(4px, 1vw, 8px) clamp(8px, 1.5vw, 12px);
+}
+
+.information {
+  width: clamp(300px, 90vw, 800px);
+  min-height: 400px;
+  margin: 0;
+  /* La magie est ici : on met 70px en haut (exactement 2 lignes de 35px) 
+     pour que le texte tombe pile sur les lignes bleues du fond ! */
+  padding: 70px 2rem 2rem 2rem; 
+  border-radius: 20px;
+  background-color: white;
+  background-image:
+    radial-gradient(circle at 4% 15%, rgb(219, 219, 219) 0%, rgb(219, 219, 219) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
+    radial-gradient(circle at 4% 50%, rgb(219, 219, 219) 0%, rgb(219, 219, 219) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
+    radial-gradient(circle at 4% 85%, rgb(219, 219, 219) 0%, rgb(219, 219, 219) 1.5%, transparent calc(1.5% + 1px), transparent 100%),
+    linear-gradient(90deg, transparent 0%, transparent 10%, #DB676C 10%, #DB676C calc(10% + 2px), transparent calc(10% + 2px), transparent 100%),
+    linear-gradient(180deg, white 35px, transparent 35px),
+    repeating-linear-gradient(180deg, #91C1E1 0px, #91C1E1 1px, transparent 1px, transparent 35px);
+  
+  /* On centre tout le bloc horizontalement */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  height: clamp(30vh, 40vw, 60vh);
+  width: 100vw;
+  margin-bottom: 5vh;
+  justify-content: center; /* Centre verticalement */
+  align-items: center; /* Centre horizontalement */
+}
+
+.intro .text-intro {
+  width: clamp(280px, 60vw, 800px);
+  font-size: clamp(1rem, 2vw, 25px);
+  color: #000000;
+  /* J'ai supprimé margin-left et margin-right pour laisser le parent centrer le bloc */
+  margin-bottom: 8vh;
+  line-height: 1.25;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center; /* Centre le texte à l'intérieur de son propre bloc */
+}
+
+.text-intro strong {
+  color: #ebc400;
+}
+#versPresentation {
+  background: none;
+  border: none;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  cursor: pointer;
+  padding: clamp(5px, 1vw, 10px);
+  transition: transform 0.3s ease;
+  color: #000;
+}
+
+#versPresentation:hover {
+  transform: translateY(5px);
+}
+
+section {
+  display: flex;
+  height: auto;
+  min-height: 60vh;
+  width: 100%;
+  margin-bottom: 10vh;
+}
+
+#presentation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Permet à la photo de passer en dessous sur petit écran */
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2rem, 5vw, 4rem); /* Espace entre le carnet et la photo */
+  padding: clamp(2rem, 5vh, 4rem) 0;
+  background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
+  min-height: 60vh;
+}
+
+#presentation h1 {
+  font-size: clamp(2rem, 4vw, 40px);
+  margin: 0 0 35px 0; /* Marge de 35px pour sauter exactement une ligne bleue */
+  text-align: center; /* Centre le titre */
+  width: 100%;
+}
+
+h1 {
+  width: 90vw;
+  font-size: clamp(2rem, 5vw, 60px);
+  margin-left: 12vw;
+  margin-top: 1vh;
+  margin-bottom: 5vh;
+  color: #c41f1f;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.info {  
+  width: clamp(300px, 50vw, 750px); /* C'EST LA CLÉ : bloque la largeur maximale pour qu'il soit "moins large" */
+  padding: 3rem;/* Ajoute de l'espace à l'intérieur pour aérer ton texte */
+  margin-left: 5vw; /* Réduit un peu la marge pour le recentrer avec l'image */
+  margin-right: 5vw;
+  font-size: clamp(1rem, 2vw, 25px);
+  color: #000000;
+  margin-left: 14vw;
+  margin-bottom: 8vh;
+  margin-right: 3vw;
+  line-height: 1.25;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center; /* Centre le texte des paragraphes */
+  width: 100%;
+}
+
+.tete {
+  height: clamp(120px, 18vw, 350px);
+  width: clamp(120px, 18vw, 350px);
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 12vh;
+  border-radius: clamp(15px, 2vw, 25px);
+  object-fit: cover;
+  height: clamp(150px, 20vw, 350px);
+  width: clamp(150px, 20vw, 350px);
+  object-fit: cover;
+}
+
+.titre {
+  font-size: clamp(2rem, 5vw, 60px);
+  margin-left: 5vw;
+  margin-top: 1vh;
+}
+
+#realisationpro,
+#realisationScolaire, 
+#veille {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: clamp(10px, 4vh, 4%);
+}
+
+.ap31 {
+  background-color: #ffffff;
+  border: #ffffff;
+  border-radius: 5px clamp(15px, 2vw, 25px) 5px clamp(25px, 4vw, 50px);
+  display: flex;
+  flex-direction: column;
+  width: clamp(280px, 80vw, calc(100% - 20%));
+  margin-left: clamp(5%, 10vw, 10%);
+  box-sizing: border-box;
+  padding: clamp(10px, 2vw, 2%);
+  max-width: 100%;
+  max-height: clamp(300px, 60vh, 30rem);
+  overflow: auto;
+  scrollbar-width: thin;
+}
+
+.ap31::-webkit-scrollbar {
+  width: 12px;
+}
+
+.nomProjet {
+  font-size: clamp(1.5rem, 3vw, 30px);
+  margin-left: clamp(5%, 10vw, 10%);
+  margin-top: clamp(10px, 2vh, 2%);
+  margin-bottom: clamp(10px, 2vh, 2%);
+  color: #ebc400;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.contexte, .competences {
+  font-size: clamp(1.2rem, 2.5vw, 24px);
+  margin-left: clamp(5%, 10vw, 10%);
+  margin-top: clamp(10px, 2vh, 2%);
+  margin-bottom: clamp(5px, 1vh, 1%);
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.description {
+  font-size: clamp(1rem, 2vw, 20px);
+  margin-left: clamp(5%, 10vw, 10%);
+  margin-top: clamp(5px, 1vh, 1%);
+  margin-right: clamp(5%, 10vw, 10%);
+  margin-bottom: clamp(15px, 4vh, 4%);
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.technoUsed {
+  margin-left: clamp(5%, 10vw, 10%);
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#btnCompetencesAp {
+  position: relative;
+  font-family: 'Courier New', Courier, monospace;
+  padding: clamp(6px, 1vw, 8px) clamp(8px, 1.5vw, 12px);
+  background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
+  margin-left: auto;
+  margin-right: clamp(5%, 10vw, 10%);
+  margin-top: clamp(-6%, -4vh, -4%);
+  margin-bottom: clamp(10px, 2vh, 2%);
+  width: auto;
+  max-width: clamp(150px, 30vw, 20%);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  z-index: 5;
+}
+
+.detailAp31Git {
+  background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
+  color: #ffffff;
+  padding-top: clamp(10px, 2vh, 2%);
+  padding-bottom: clamp(10px, 2vh, 2%);
+}
+
+.MilestoneAp31 {
+  margin-top: clamp(10px, 2vh, 2%);
+  margin-bottom: clamp(10px, 2vh, 2%);
+  margin-left: clamp(5%, 9vw, 9%);
+  width: clamp(280px, 80vw, 80%); 
+}
+
+.h2Detail {
+  font-size: clamp(1.1rem, 2vw, 20px);
+  margin-left: clamp(5px, 5vw, 5%);
+  margin-right: clamp(5px, 5vw, 5%);
+  margin-bottom: clamp(10px, 2vh, 2%);
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.compTravaillées {
+  font-size: clamp(1.1rem, 2vw, 20px);
+  margin-left: clamp(5px, 5vw, 5%);
+  margin-right: clamp(5px, 5vw, 5%);
+  margin-bottom: clamp(10px, 2vh, 2%);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+p,
+.h3Detail {
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: clamp(5px, 5vw, 5%);
+}
+
+h4 {
+  margin-left: clamp(5px, 5vw, 5%);
+}
+
+.milestone1,
+.milestone2 {
+  width: clamp(250px, 70vw, 70%);
+  margin-left: clamp(5%, 15vw, 15%);
+}
+
+.configVM,
+.gitLocal {
+  width: clamp(200px, 50vw, 50%);
+  margin-left: clamp(10%, 25vw, 25%);
+  margin-bottom: clamp(10px, 2vh, 2%);
+}
+
+.issues {
+  width: clamp(100%, 150vw, 200%);
+  position: relative;
+  margin-left: clamp(5px, 5vw, 5%);
+}
+
+.issuePerso,
+.pageIndex {
+  width: clamp(250px, 60vw, 60%);
+  margin-left: clamp(5%, 20vw, 20%);
+  margin-bottom: clamp(10px, 2vh, 2%);
+}
+
+.codeChargementUsers {
+  position: relative;
+  left: clamp(5px, 2vw, 2%);
+}
+
+.chargementUsers {
+  position: absolute;
+  width: clamp(150px, 50vw, 50%);
+  margin-top: clamp(20px, 10vh, 10%);
+  margin-left: clamp(10%, 45vw, 45%);
+  margin-bottom: clamp(10px, 2vh, 2%);
+}
+
+.fonctionUsers {
+  width: clamp(280px, 90vw, 90%);
+}
+
+.activationDesactivationSection{
+  background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
+  color: #ffffff;
+  width: 100%;
+  margin-top: clamp(30px, 10vh, 10%);
+  padding: clamp(1rem, 4vw, 2rem);
+  min-height: clamp(300px, 50vh, 400px);
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.infoCodeEtatUsers {
+  position: absolute;
+  margin-left: clamp(5px, 2vw, 2%);
+  margin-top: clamp(15px, 5vh, 5%);
+  width: clamp(150px, 45vw, 45%);
+}
+
+.codeEtatUsers {
+  position: relative;
+  margin-top: clamp(15px, 5vh, 5%);
+  left: 50%;
+}
+
+.fonctionActiverDesactiver, .fonctionChangerEtatUsers {
+  width: clamp(280px, 90vw, 90%);
+  margin-left: clamp(5px, 5vw, 5%);
+}
+
+.preuveFonctionnement {
+  width: clamp(280px, 80vw, 80%);
+}
+
+.preuveFonctionnement .carousel {
+  position: absolute;
+  width: clamp(250px, 80vw, 80%);
+  height: auto;
+  margin-left: clamp(5%, 10vw, 10%);
+  margin-bottom: clamp(15px, 5vh, 5%);
+  margin-top: clamp(15px, 5vh, 5%);
+}
+
+.pageInitialAD, 
+.pageActiveSelect, 
+.pageTroisDesact, 
+.pageActivDesactivSelect, 
+.pageResultatActivDesact {
+  width: clamp(250px, 80vw, 80%);
+  margin-left: clamp(5%, 10vw, 10%);
+}
+
+.nombreProjetLimiteSection {
+  background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
+  color: #ffffff;
+  margin-top: clamp(100px, 30vh, 40%);
+  margin-bottom: clamp(15px, 5vh, 5%);
+  padding: clamp(1rem, 4vw, 2rem);
+}
+
+.infoProjetLimite {
+  position: relative;
+  margin-top: clamp(10px, 4vh, 4%);
+  margin-right: clamp(5px, 2vw, 2%);
+  float: right;
+  width: clamp(180px, 50vw, 50%);
+}
+
+.pageLimiteProjet {
+  position: relative;
+  margin-left: clamp(5px, 2vw, 2%);
+  width: 100%;
+}
+
+.changementLimiteProjet {
+  width: 100%;
+  height: auto;
+} 
+
+.codeLimite {
+  width: clamp(150px, 40vw, 40%);
+  margin-left: clamp(5px, 5vw, 5%);
+}
+
+.carousel {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  width: clamp(280px, 45vw, 45%);
+  height: clamp(200px, 40vh, 40%);
+  padding: clamp(10px, 2vw, 20px);
+  display: flex;
+  gap: clamp(1rem, 4vw, 4vw);
+  anchor-name: --my-carousel;
+}
+
+.carousel::scroll-button(*) {
+  border: 0;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  background: none;
+  color: black;
+  opacity: 0.7;
+  cursor: pointer;
+  position: relative;
+  position-anchor: --my-carousel;
+}
+
+.carousel::scroll-button(*):hover,
+.carousel::scroll-button(*):focus {
+  opacity: 1;
+}
+
+.carousel::scroll-button(*):active {
+  translate: 1px 1px;
+}
+
+.carousel::scroll-button(*):disabled {
+  opacity: 0.2;
+  cursor: unset;
+}
+
+.liImg {
+  list-style-type: none;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
+  padding: clamp(10px, 2vw, 20px);
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+}
+
+.liImg:nth-child(even) {
+  background-color: rgb(182, 182, 182);
+}
+
+.main {
+  max-width: 100%;
+  margin-left: clamp(2%, 5vw, 5%);
+}
+
+.cards {
+  display: grid;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  width: 95%;
+}
+
+.cards_item {
+  display: flex;
+  margin-left: clamp(2%, 5vw, 5%);
+}
+
+.card_image {
+  display: flex;
+  height: clamp(180px, 30vh, 250px);
+  box-shadow: 0 clamp(20px, 5vw, 50px) clamp(50px, 10vw, 100px) 0 var(--violet);
+}
+
+.card_image img { 
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-color: #ffffff;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--purple);
+  border-radius: 5px clamp(15px, 2vw, 25px) 5px clamp(25px, 4vw, 50px);
+  transition: transform 0.1s linear, box-shadow 0.2s;
+}
+
+.card_text:focus,
+.card:focus {
+  outline: 2px dashed var(--aqua);
+}
+
+.card:focus,
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.2);
+}
+
+.card_content {
+  padding: clamp(0.5rem, 1vw, 1rem) clamp(0.5rem, 2vw, 1rem) clamp(1rem, 2vw, 1.5rem);
+  color: var(--white);
+  background-color: #ffffff;
+}
+
+.card_title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90%;
+  height: auto;
+  color: var(--black);
+  padding: clamp(0.3rem, 1vw, 0.5rem);
+  border-radius: 5px 0 0 5px;
+  transform: rotate(-3.3deg);
+  transform-origin: left top;
+  font-family: Georgia, Times, serif;
+  font-weight: 600;
+  font-size: clamp(1rem, 2.5vw, 1.325rem);
+  overflow: hidden;
+  z-index: 1;
+  background: linear-gradient(70deg, rgba(19, 46, 81, 0.602), rgb(47, 89, 255, 0.602), rgb(77, 18, 89, 0.602));
+  animation: 0s 0s fly-in 0 reverse both;
+}
+
+@media (min-width: 535px) {
+  .card_title {
+    animation: 0.5s 0.25s fly-out 1 both;
+  }
+}
+
+.card:focus .card_title,
+.card:hover .card_title {
+  animation: 0.5s ease-in 0s fly-in 1 both;
+}
+
+.card_text {
+  font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica, Helvetica Neue, Arial, sans-serif;
+  line-height: 1.5;
+  text-size-adjust: 0.2px;
+  padding: 0 clamp(0.5rem, 2vw, 1rem);
+  overflow: auto;
+  max-height: clamp(15rem, 40vh, 20rem);
+  scrollbar-width: thin;
+  scrollbar-color: var(--aqua) var(--violet);
+}
+
+.card_text h3 {
+  margin-top: 0;
+  color: var(--aqua);
+  font-family: Georgia, Times, serif;
+  white-space: nowrap;
+}
+
+.card_text p:first-of-type:first-letter {
+  font-size: clamp(1.4em, 3vw, 1.8em);
+  font-family: Georgia, Times, serif;
+  margin-right: 0.05em;
+}
+
+.card_text::-webkit-scrollbar {
+  width: 12px;
+}
+
+.card_text::-webkit-scrollbar-track {
+  background: var(--violet);
+}
+
+.card_text::-webkit-scrollbar-thumb {
+  background-color: var(--aqua);
+}
+
+.card_text strong {
+  color: var(--aqua);
+}
+
+@keyframes fly-in {
+  0% {
+    top: 0;
+    right: 0;
+    font-size: clamp(1rem, 2.5vw, 1.325rem);
+  }
+  25% {
+    top: 0;
+    right: -200%;
+    font-size: clamp(1rem, 2.5vw, 1.325rem);
+  }
+  26% {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+  100% {
+    top: clamp(1.5rem, 4vh, 2rem);
+    right: 0;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+}
+
+@keyframes fly-out {
+  0% {
+    top: clamp(1.5rem, 4vh, 2rem);
+    right: 0;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+  50% {
+    top: 0;
+    right: -200%;
+    font-size: clamp(1rem, 2.5vw, 1.325rem);
+  }
+  100% {
+    top: 0;
+    right: 0;
+    font-size: clamp(1rem, 2.5vw, 1.325rem);
+  }
+}
+
+#veille {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.veille {
+  width: 100%; 
+  display: flex;
+  justify-content: center; 
+}
+
+.cardsVeille {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes strictement */
+  gap: clamp(1rem, 3vw, 2rem);
+  width: clamp(280px, 90vw, 1200px); /* S'assure que ça ne devienne pas trop large sur un écran géant */
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.cards_item_veille {
+  display: flex; 
+  width: 100%;
+}
+
+.cardsVeille .card {
+  width: 100%; 
+  max-width: 100%; 
+  margin: 0; 
+  display: flex;
+  flex-direction: column;
+}
+
+.cardDev, .cardCyber, .cardReseau, .cardTech, .cardIA {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  padding: auto;
+  margin-bottom: clamp(10%, 4vh, 30%);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 5px;
+}
+
+.cardDev h2,
+.cardCyber h2,
+.cardReseau h2,
+.cardTech h2,
+.cardIA h2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  padding: clamp(0.5rem, 1vw, 1rem);
+  text-align: center;
+}
+
+.tech {
+  background-color: rgba(128, 128, 128, 0.445);
+  padding: clamp(3px, 1vw, 5px);
+  border-radius: 5px;
+  margin-left: clamp(2px, 1vw, 1%);
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  display: inline-block;
+}
+
+pre {
+  position: relative;
+  font-size: clamp(1rem, 1.5vw, 20px);
+  margin-left: clamp(2%, 5vw, 5%);
+  overflow-x: auto;
+}
+
+.fonctionnement, .pointFort, .leReste {
+  margin-top: clamp(15px, 3vh, 3%);
+  width: clamp(280px, 90vw, 90%);
+}
+
+.tests {
+  margin-top: clamp(2rem, 10vh, 10%);
+}
+
+.tableauComparatif {
+  position: relative;
+  display: block;
+  margin-left: clamp(5%, 20vw, 20%);
+  width: clamp(280px, 70vw, 90%);
+}
+
+.etapeAPI, .etapeAppli, .etapeAppliFonctionnelle  {
+  width: clamp(250px, 50vw, 50%);
+  margin-top: clamp(1rem, 5vh, 5%);
+}
+
+.etapeAppliFonctionnelle {
+  margin-left: clamp(10%, 60vw, 60%);
+  margin-top: clamp(-50px, -30vh, -10%);
+}
+
+.executionScript {
+  position: absolute;
+  margin-left: clamp(10%, 60vw, 60%);
+  width: clamp(150px, 25vw, 30%);
+}
+
+.lienProjet{
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  font-size: clamp(1rem, 2vw, 18px);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  margin-top: clamp(1rem, 5vh, 5%);
+  margin-bottom: clamp(1rem, 5vh, 5%);
+}
+
+#competences {
+  position: relative;
+}
+
+.lienProjetPage {
+  background: linear-gradient(90deg,#16305a 0%, #2f59ff 100%);
+  border-radius: 5px;
+  position: absolute;
+  display: flex;
+  text-decoration: none;
+  color: white;
+  font-size: clamp(0.9rem, 1.5vw, 18px);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  height: clamp(40px, 5vh, 50px);
+  width: clamp(150px, 20vw, 25%);
+  top: 0;
+  right: clamp(2%, 5vw, 5%);
+  align-items: center;
+  justify-content: center;
+}
+
+.lienProjet:hover, .lienProjetPage:hover {
+  background: linear-gradient(90deg,#14243f 0%, #2a3a79 100%);
+}
+
+.conteneur-json-pdf {
+  display: flex;
+  flex-wrap: wrap; /* Ajouté pour permettre le passage sur 1 colonne sur mobile */
+  gap: clamp(10px, 2vw, 20px);
+  margin: clamp(10px, 2vw, 20px);
+  height: clamp(400px, 80vh, 800px); 
+}
+
+.section-pdf, .section-code {
+  flex: 1 1 clamp(300px, 45%, 100%); /* S'adapte dynamiquement selon l'espace disponible */
+  min-width: 0; 
+}
+
+.section-pdf iframe {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.section-code pre {
+  width: 100%; 
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: clamp(10px, 2vw, 20px);
+  background-color: #282c34;
+  color: #abb2bf;
+  border-radius: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: auto; 
+}
+
+.fonctionnementAppli, .fonctionnementAppliFinal {
+  position: relative;
+  height: clamp(200px, 60vh, 80%); 
+}
+
+.fonctionnementAppli {
+  margin-top: clamp(-40%, -40vh, -20%);
+  margin-left: clamp(10%, 65vw, 65%);
+}
+
+.fonctionnementAppliFinal {
+  margin-left: clamp(5%, 15vw, 15%);
+  margin-top: clamp(1rem, 3vh, 3%);
+}
+
+.PMT {
+  width: clamp(150px, 30vw, 40%);
+  margin-left: clamp(5%, 10vw, 10%);
+  position: relative;
+  margin-top: clamp(-30%, -30vh, -10%);
+  margin-bottom: clamp(1rem, 5vh, 5%);
+}
+
+.typeDoc {
+  margin-left: clamp(10%, 45vw, 45%);
+  margin-top: clamp(2rem, 15vh, 15%);
+}
+
+.AffichageApplication {
+  margin-top: clamp(1rem, 5vh, 5%);
+  margin-left: clamp(5%, 15vw, 15%);
+  width: clamp(150px, 30vw, 40%);
+}
+
+.AffichageApplicationFinale {
+  width: clamp(200px, 30vw, 50%);
+  display: block; 
+  margin-top: clamp(1rem, 5vh, 5%);
+  margin-left: auto; /* Optimisé pour le centrage automatique */
+  margin-right: auto;
+}
+
+.affichageFinal {
+  margin-top: clamp(2rem, 10vh, 10%);
+}
+
+.texteCompDet {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.competencesHeader th,
+.techHeader th,
+.competencesRow td,
+.techRow td {
+  padding: clamp(6px, 1vw, 10px);
+  border: 1px solid #ffffff;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.competences {
+  margin: clamp(1rem, 3vw, 3%);
+}
+
+.techTable {
+  width: clamp(280px, 80vw, 90%);
+  border-collapse: collapse;
+  margin: clamp(10px, 2vw, 20px) auto;
+}
+
+.competencesTable {
+  width: clamp(280px, 90vw, 95%);
+  margin: clamp(1rem, 3vh, 1.5rem) auto;
+  margin-top: clamp(1rem, 3vh, 3%);
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.competencesTable thead th {
+  background: linear-gradient(90deg,#16305a 0%, #2f59ff 100%);
+  color: #fff;
+  font-weight: 700;
+  padding: clamp(8px, 1.5vw, 14px) clamp(6px, 1vw, 12px);
+  text-transform: uppercase;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  border-bottom: 2px solid rgba(255,255,255,0.08);
+}
+
+.competencesTable tbody td {
+  padding: clamp(8px, 1.5vw, 12px);
+  background: linear-gradient(180deg,#ffffff 0%, #fafafa 100%);
+  color: #222;
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+}
+
+.competencesTable tbody tr:nth-child(even) td {
+  background: #f6f8ff;
+}
+
+.competencesTable tbody tr:hover td {
+  background: rgba(47,89,255,0.08);
+  transform: translateY(-1px);
+}
+
+/* Cette media query reste indispensable pour restructurer la table sur mobile */
+@media (max-width: 640px) {
+  .competencesTable,
+  .competencesTable thead,
+  .competencesTable tbody,
+  .competencesTable th,
+  .competencesTable td,
+  .competencesTable tr {
+    display: block;
+  }
+
+  .competencesTable thead {
+    float: left;
+  }
+
+  .competencesTable tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .competencesTable tbody td {
+    display: block;
+    padding: 10px 12px;
+    border: none;
+  }
+}
+
+#btnCompetences {
+  position: relative;
+  font-family: 'Courier New', Courier, monospace;
+  padding: clamp(6px, 1vw, 8px) clamp(8px, 1.5vw, 12px);
+  background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
+  margin-left: clamp(5%, 20vw, 20%);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  z-index: 5;
+}
+
+.card_text h3:first-of-type {
+  display: inline-block;
+  margin: 0;
+  padding-right: clamp(0.5rem, 1vw, 1rem);
+}
+
+/* Identique ici : cette restructuration spécifique reste nécessaire sur mobile */
+@media (max-width: 480px) {
+  #btnCompetences {
+    position: static;
+    display: inline-block;
+    margin-top: 0.5rem;
+    width: auto;
+  }
+
+  .card_text h3:first-of-type {
+    padding-right: 0;
+  }
+}
+
+footer {
+  background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
+  height: auto;
+  min-height: clamp(300px, 60vh, 60%);
+  width: 100%;
+  margin-top: clamp(2rem, 5vh, 5%);
+  padding-bottom: clamp(20px, 3vh, 30px);
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#contact h1 {
+  margin-left: clamp(5%, 5vw, 5%);
+  color: #ffffff;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 2vw, 2rem);
+  margin-top: clamp(1rem, 5vh, 5%);
+  height: auto;
+  min-height: clamp(100px, 15vh, 150px);
+}
+
+.mail-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: clamp(14px, 1.5vw, 18px);
+}
+
+.contact-mail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mail {
+  height: clamp(30px, 5vw, 50px);
+  margin-bottom: clamp(4px, 1vw, 8px);
+}
+
+.text-mail {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.linkedin {
+  height: clamp(30px, 5vw, 50px);
+}
+
+.contact-mail,
+.liste-contact,
+.github-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: clamp(2%, 5vw, 5%);
+  margin-right: clamp(2%, 5vw, 5%);
+  text-decoration: none;
+  color: #ffffff;
+  font-size: clamp(14px, 1.5vw, 18px);
+}
+
+.linkedin,
+.mail,
+.github {
+  height: clamp(60px, 10vw, 125px);
+  vertical-align: middle;
+  width: auto;
+}
+
+.btnDownload {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: clamp(180px, 40vw, 12%);
+  padding: clamp(8px, 1.5vw, 10px) clamp(16px, 3vw, 20px);
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: clamp(1rem, 5vh, 5%);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: clamp(40px, 8vh, 80px);
+}
+
+.droits {
+  text-align: center;
+  font-size: clamp(10px, 1.2vw, 14px);
+  color: #ffffff;
+  padding: 0 clamp(10px, 2vw, 20px);
+}
+
+.technologies, #competencesStage {
+  background: linear-gradient(90deg,#16305a 0%, #2f59ff 100%);
+  padding: clamp(10px, 2vw, 2%);
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .cardsVeille {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Sur téléphone, on passe à 1 colonne */
+@media (max-width: 600px) {
+  .cardsVeille {
+    grid-template-columns: 1fr;
+  }
+}

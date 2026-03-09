@@ -838,9 +838,26 @@ h4 {
   flex-direction: column;
 }
 
-.card {
+.cardDev, .cardCyber, .cardReseau, .cardTech, .cardIA {
   background-color: white;
-  
+  height: 100%;
+  width: 100%;
+  padding: auto;
+  margin-bottom: 30%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 5px;
+}
+
+.cardDev h2,
+.cardCyber h2,
+.cardReseau h2,
+.cardTech h2,
+.cardIA h2 {
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
 /** Code Compétence stage 1**/
