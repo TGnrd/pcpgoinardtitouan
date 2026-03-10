@@ -1009,6 +1009,8 @@ h4 {
   flex-direction: column;
   height: 100%;
   padding: auto;
+  text-decoration: none;
+  color: #000;
 }
 
 .cards_item_veille:hover {
@@ -1029,6 +1031,23 @@ h4 {
   font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   padding: clamp(0.5rem, 1vw, 1rem);
   text-align: center;
+}
+
+/* Page veille */
+
+.btn-retour {
+  display: inline-flex; 
+  align-items: center; 
+  background-color: rgb(182, 170, 170);
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 0 clamp(15px, 5vw, 20px);
+  height: clamp(40px, 8vh, 60px);
+  margin-left: 20px;
+  margin-top: clamp(20px, 4vh, 40px);
 }
 
 /** Code Compétence stage 1**/
