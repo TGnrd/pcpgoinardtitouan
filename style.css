@@ -307,14 +307,15 @@ h1 {
 
 /*Projet scolaire*/
 
-.ap31 {
+.ap31, .ap32 {
   background-color: #ffffff;
   border: #ffffff;
   border-radius: 5px clamp(15px, 2vw, 25px) 5px clamp(25px, 4vw, 50px);
   display: flex;
   flex-direction: column;
   width: clamp(280px, 80vw, calc(100% - 20%));
-  margin-left: clamp(5%, 10vw, 10%);
+  margin-left: clamp(2%, 3vw, 70%);
+  margin-top: clamp(3%, 5vw, 5%);
   box-sizing: border-box;
   padding: clamp(10px, 2vw, 2%);
   max-width: 100%;
@@ -323,7 +324,7 @@ h1 {
   scrollbar-width: thin;
 }
 
-.ap31::-webkit-scrollbar {
+.ap31::-webkit-scrollbar, .ap32::-webkit-scrollbar {
   width: 12px;
 }
 
