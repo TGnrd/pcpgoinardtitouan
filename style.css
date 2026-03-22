@@ -383,14 +383,15 @@ h1 {
 
 /* Page projet scolaire ap31 */
 
-.detailAp31Git {
+.detailAp31Git, .detailAp32Git {
   background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
   color: #ffffff;
   padding-top: 2%;
   padding-bottom: 2%;
 }
 
-.MilestoneAp31 {
+
+.MilestoneAp31, .MilestoneAp32 {
   margin-top: 2%;
   margin-bottom: 2%;
   margin-left: 9%;
@@ -441,14 +442,32 @@ h4 {
   width: 200%;
   position: relative;
   margin-left: 5%;
+}
 
+.issues > .carousel {
+  height: 70vh;
 }
 
 .issuePerso,
 .pageIndex {
-  width: 60%;
-  margin-left: 20%;
+  width: 40%;
+  margin-left: 30%;
   margin-bottom: 2%;
+}
+
+.issuePersoP {
+  width: 40%;
+  margin-top: 10vh;
+  margin-left: 30%;
+}
+
+.CdC {
+  height: 70vh;
+  margin-left: 10vw;
+}
+
+.CdCLarge {
+  height: 70vh;
 }
 
 .codeChargementUsers {
@@ -468,7 +487,7 @@ h4 {
   width: 90%;
 }
 
-.activationDesactivationSection{
+.activationDesactivationSection, .missions{
   background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
   color: #ffffff;
   width: 100%;
@@ -517,6 +536,11 @@ h4 {
   margin-left: 10%;
   margin-bottom: 5%;
   margin-top: 5%;
+}
+
+.txt + .carousel {
+  width: 80%;
+  margin-left: 9%;
 }
 
 .pageInitialAD, 
