@@ -494,6 +494,21 @@ h4 {
   margin-bottom: 3%;
 }
 
+.infoControleur, .infoRegex {
+  position: absolute;
+  margin-top: 5vh;
+  width: 40vw;
+}
+
+.infoRegex {
+  margin-top: 70vh;
+}
+
+.entityCode {
+  position: relative;
+  margin-left: 50vw;
+}
+
 .codeChargementUsers {
   position: relative;
   left: 2%;
@@ -565,6 +580,36 @@ h4 {
 .txt + .carousel {
   width: 80%;
   margin-left: 9%;
+}
+
+.tests .carousel {
+  width: 90vw;
+  height: 90vh;
+  margin-left: 5vw;
+  margin-bottom: 25vh;
+}
+
+.imgTalendPetite {
+  width: 60vw;
+  margin-left: 15vw;
+  margin-top: 15vh;
+}
+
+.imgTalend {
+  height: 70vh;
+  margin-left: 20vw;
+}
+
+.imgTalendMoyenne {
+  height: 60vh;
+  margin-left: 30vw;
+  margin-top: 10vh;
+}
+
+.imgTalendGrand {
+  height: 70vh;
+  margin-left: 20vw;
+
 }
 
 .pageInitialAD, 

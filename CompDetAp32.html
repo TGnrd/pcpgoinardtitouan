@@ -51,24 +51,19 @@
             </thead>
             <tbody>
                 <tr class="competencesRow">
-                    <td>Présence en ligne / projet</td>
-                    <td>B1.3 - Développer la présence en ligne de l’organisation</td>
-                    <td>B2.1 - Concevoir une solution applicative</td>
-                </tr>
-                <tr class="competencesRow">
                     <td>Travail en mode projet</td>
                     <td>B1.4 - Travailler en mode projet</td>
-                    <td>B2.2 - Assurer la maintenance corrective ou évolutive d’une solution applicative</td>
+                    <td>B2.1 - Concevoir une solution applicative</td>
                 </tr>
                 <tr class="competencesRow">
                     <td>Mise à disposition de services</td>
                     <td>B1.5 - Mettre à disposition des utilisateurs un service informatique</td>
-                    <td>B2.3 - Gérer les données</td>
+                    <td>B2.2 - Assurer la maintenance corrective ou évolutive d’une solution applicative</td>
                 </tr>
                 <tr class="competencesRow">
                     <td>Développement professionnel</td>
                     <td>B1.6 - Organiser son développement professionnel</td>
-                    <td></td>
+                    <td>B2.3 - Gérer les données</td>
                 </tr>
             </tbody>
         </table>
@@ -108,9 +103,6 @@
                     </li>
                     <li class="liImg">
                         <img class="issuePersoP" src="img/ap32/IssuesMilestones3.png" alt="Issue milestone 3">
-                    </li>
-                    <li class="liImg">
-                        <img class="issuePerso" src="img/ap32/IssuesMilestones4.png" alt="Issue milestone 4">
                     </li>
                 </ul>
             </div>
@@ -170,7 +162,8 @@
             </div>
             <div>
                 <h3 class="h3Detail">Création du controlleur d'organisations :</h3>
-                <p><strong>Commandes console :</strong><br><br>
+                <p class="infoControleur">
+                    <strong>Commandes console :</strong><br><br>
                     <strong>Attention :</strong> il faut être a la racine du projet php symfony <br><br>
                     bin/console make:entity "Organisation" <br><br>
                     <strong>Information à renseigner :</strong> <br><br>
@@ -182,14 +175,50 @@
                     Contact). <br><br>
                     - ManyToOne : Plusieurs instances de l'entité actuelle sont liées à 
                     une seule instance de l'entité cible (ex : Plusieurs Contacts 
-                    appartiennent à 1 seule Organisation). <br><br>
+                    appartiennent à 1 seule Organisation). <br><br><br><br>
+                    <strong>Ajout des règles de gestion</strong> <br><br><br>
+                    Code postal : ^(?:[0-9]{2}|2A|2B)[0-9]{3}$ <br><br>
+                    Numéro de téléphone : ^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$ <br><br>
+                    Symfony\Component\Validator\Constraints <br>
+                    URL : #[Assert\Email()]
                 </p>
-                <img src="./img/ap32/organisation.png" alt="Code créé par symfony">
+                <img class="entityCode" src="./img/ap32/organisation.png" alt="Code créé par symfony">
             </div>
+            <div>
 
+            </div>
         </div>
         <div id="tests" class="tests">
-
+        <h2 class="h2Detail">Tests sur Talend API tester :</h2>
+            <ul class="carousel">
+                <li class="liImg">
+                    <img class="imgTalend" src="./img/ap32/talend_all_orga.png" alt="">
+                </li>
+                <li class="liImg">
+                    <img class="imgTalend" src="./img/ap32/resultat_all_orga.png" alt="">
+                </li>
+                <li class="liImg">
+                    <img class="imgTalendGrand" src="./img/ap32/talend_une_orga5.png" alt="">
+                </li>
+                <li class="liImg">
+                    <img class="imgTalendMoyenne" src="./img/ap32/resultat_une_orga_attendu5.png" alt="">
+                </li>
+                <li class="liImg">
+                    <img class="imgTalendMoyenne" src="./img/ap32/resultat_une_orga_obtenu5.png" alt="">
+                </li>
+                <li class="liImg">
+                    <img class="imgTalendGrand" src="./img/ap32/talend_id_non_existant.png" alt="">
+                </li>
+                <li class="liImg">
+                    <img class="imgTalendPetite" src="./img/ap32/talend_id_non_existant_resultat.png" alt="">
+                </li>
+                <li class="liImg">
+                    <img class="imgTalend" src="./img/ap32/talend_id_non_possible.png" alt="">
+                </li>
+                <li class="liImg">
+                    <img class="imgTalendPetite" src="./img/ap32/talend_id_non_possible_resultat.png" alt="">
+                </li>
+            </ul>
         </div>
     </div>
 
