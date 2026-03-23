@@ -307,14 +307,15 @@ h1 {
 
 /*Projet scolaire*/
 
-.ap31 {
+.ap31, .ap32 {
   background-color: #ffffff;
   border: #ffffff;
   border-radius: 5px clamp(15px, 2vw, 25px) 5px clamp(25px, 4vw, 50px);
   display: flex;
   flex-direction: column;
   width: clamp(280px, 80vw, calc(100% - 20%));
-  margin-left: clamp(5%, 10vw, 10%);
+  margin-left: clamp(2%, 3vw, 70%);
+  margin-top: clamp(3%, 5vw, 5%);
   box-sizing: border-box;
   padding: clamp(10px, 2vw, 2%);
   max-width: 100%;
@@ -323,7 +324,7 @@ h1 {
   scrollbar-width: thin;
 }
 
-.ap31::-webkit-scrollbar {
+.ap31::-webkit-scrollbar, .ap32::-webkit-scrollbar {
   width: 12px;
 }
 
@@ -382,14 +383,15 @@ h1 {
 
 /* Page projet scolaire ap31 */
 
-.detailAp31Git {
+.detailAp31Git, .detailAp32Git {
   background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
   color: #ffffff;
   padding-top: 2%;
   padding-bottom: 2%;
 }
 
-.MilestoneAp31 {
+
+.MilestoneAp31, .MilestoneAp32 {
   margin-top: 2%;
   margin-bottom: 2%;
   margin-left: 9%;
@@ -405,6 +407,14 @@ h1 {
   font-family: 'Courier New', Courier, monospace;
 }
 
+.h2DetailMissions {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2%;
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .compTravaillées {
   font-size: 20px;
   margin-left: 5%;
@@ -417,6 +427,7 @@ p,
 .h3Detail {
   font-family: 'Courier New', Courier, monospace;
   margin-left: 5%;
+  margin-right: 5%;
 }
 
 h4 {
@@ -440,14 +451,62 @@ h4 {
   width: 200%;
   position: relative;
   margin-left: 5%;
-
 }
 
-.issuePerso,
+.issues > .carousel {
+  height: 70vh;
+}
+
+.issuePerso {
+  width: 35vw;
+  margin-left: 30vw;
+}
+
 .pageIndex {
-  width: 60%;
-  margin-left: 20%;
+  width: 60vw;
+  margin-left: 20vw;
   margin-bottom: 2%;
+}
+
+.issuePersoP {
+  width: 40vw;
+  margin-top: 10vh;
+  margin-left: 30vw;
+}
+
+.CdC {
+  height: 70vh;
+  margin-left: 10vw;
+}
+
+.CdCLarge {
+  height: 70vh;
+}
+
+.CdCTresLarge {
+  width: 40vw;
+}
+
+.ddc {
+  width: 50vw;
+  margin-left: 23%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.infoControleur, .infoRegex {
+  position: absolute;
+  margin-top: 5vh;
+  width: 40vw;
+}
+
+.infoRegex {
+  margin-top: 70vh;
+}
+
+.entityCode {
+  position: relative;
+  margin-left: 50vw;
 }
 
 .codeChargementUsers {
@@ -467,7 +526,7 @@ h4 {
   width: 90%;
 }
 
-.activationDesactivationSection{
+.activationDesactivationSection, .missions{
   background: linear-gradient(70deg, rgb(19, 46, 81), rgb(47, 89, 255), rgb(77, 18, 89));
   color: #ffffff;
   width: 100%;
@@ -516,6 +575,41 @@ h4 {
   margin-left: 10%;
   margin-bottom: 5%;
   margin-top: 5%;
+}
+
+.txt + .carousel {
+  width: 80%;
+  margin-left: 9%;
+}
+
+.tests .carousel {
+  width: 90vw;
+  height: 90vh;
+  margin-left: 5vw;
+  margin-bottom: 25vh;
+}
+
+.imgTalendPetite {
+  width: 60vw;
+  margin-left: 15vw;
+  margin-top: 15vh;
+}
+
+.imgTalend {
+  height: 70vh;
+  margin-left: 20vw;
+}
+
+.imgTalendMoyenne {
+  height: 60vh;
+  margin-left: 30vw;
+  margin-top: 10vh;
+}
+
+.imgTalendGrand {
+  height: 70vh;
+  margin-left: 20vw;
+
 }
 
 .pageInitialAD, 
