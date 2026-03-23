@@ -137,7 +137,7 @@
                     <img class="CdCLarge" src="./img/ap32/CdC_une_orga_modifiee.png" alt="">
                 </li>
                 <li class="liImg">
-                    <img class="CdCLarge" src="./img/ap32/CdC_une_orga_modifiee_succès.png" alt="">
+                    <img class="CdCTresLarge" src="./img/ap32/CdC_une_orga_modifiee_succès.png" alt="">
                 </li>
                 <li class="liImg">
                     <img class="CdCLarge" src="./img/ap32/CdC_une_orga_modifiee_erreur.png" alt="">
@@ -146,7 +146,7 @@
         </div>
         <div id="configurationVM">
             <h3 class="h3Detail">La mise en place de l'API gitlab</h3>
-            <p>Le serveur est mis sur <strong>VSphere</strong>. Il a fallu configurer le serveur US22 en y mettant
+            <p>Le serveur est mis sur <strong>VSphere</strong>. Il a fallu configurer le serveur US24 en y mettant
                 <strong>nos adresses IP, la passerelle et la route</strong>.
             </p>
             <img class="configVM" src="img/ap32/configuration_ip.png" alt="Configuration de la VM sur VSphere">
@@ -156,13 +156,36 @@
                 VM
                 en écrivant notre IP.
             </p>
-            <img class="gitLocal" src="img/ap31/gitLocal.png" alt="Gitlab local sur la VM">
         </div>
         <h3 class="h3Detail">Code des fonctions</h3>
         <p>Voici la page index du projet :</p>
-        <img class="pageIndex" src="img/ap31/pageIndex.png" alt="Page index du projet">
+        <img class="pageIndex" src="img/ap32/pageIndex.png" alt="Page index du projet">
 
         <div id="missions" class="missions">
+            <h2 class="h2DetailMissions">Missions</h2>
+            <div class="diagClasse">
+                <h3 class="h3Detail">Réalisation du diagramme de classe :</h3>
+                <p>Il s'agit de la plus grosse partie du premier milestone</p>
+                <img src="./img/ap32/DDC.png" alt="Diagramme de classe" class="ddc">
+            </div>
+            <div>
+                <h3 class="h3Detail">Création du controlleur d'organisations :</h3>
+                <p><strong>Commandes console :</strong><br><br>
+                    <strong>Attention :</strong> il faut être a la racine du projet php symfony <br><br>
+                    bin/console make:entity "Organisation" <br><br>
+                    <strong>Information à renseigner :</strong> <br><br>
+                    - Le type (char, int, <strong>relation</strong>,...) <br>
+                    - La taille <br><br>
+                    <strong>En cas de type relation :</strong> <br><br>
+                    - OneToMany : Une instance de l'entité actuelle contient plusieurs 
+                    instances de l'entité cible (ex : 1 Organisation possède Plusieurs 
+                    Contact). <br><br>
+                    - ManyToOne : Plusieurs instances de l'entité actuelle sont liées à 
+                    une seule instance de l'entité cible (ex : Plusieurs Contacts 
+                    appartiennent à 1 seule Organisation). <br><br>
+                </p>
+                <img src="./img/ap32/organisation.png" alt="Code créé par symfony">
+            </div>
 
         </div>
         <div id="tests" class="tests">
@@ -172,3 +195,4 @@
 
     <script src="script.js"></script>
 </body>
+</html>
