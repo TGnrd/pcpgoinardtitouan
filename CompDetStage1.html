@@ -4,32 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PCP - Compétances - Détails</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Stage 1 — Altervoice</title>
+    <link rel="stylesheet" href="./style/style-s1.css">
 </head>
 
 <body>
-    <header>
-        <h1>PCP - Compétances et détails</h1>
-        <button id="menuBtn" class="menu" aria-label="Main Menu" aria-expanded="false" aria-controls="main-nav">
-            <svg width="100" height="100" viewBox="0 0 100 100">
-                <path class="line line1"
-                    d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-                <path class="line line2" d="M 20,50 H 80" />
-                <path class="line line3"
-                    d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-            </svg>
+    <nav class="navbar">
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
-        <nav id="main-nav" class="navbar" aria-hidden="true">
-            <ul class="content">
-                <a href="index.html">Accueil</a>
-                <a href="#technologie">Technologie</a>
-                <a href="#fonctionnement">Fonctionnement</a>
-                <a href="#tests">Tests</a>
-                <a href="#apprentissage">Apprentissage</a>
-                <a href="#competencesStage">Compétances travaillées</a>
-            </ul>
-        </nav>
+        <ul class="content" id="nav-content">
+            <a href="index.html">Accueil</a>
+            <a href="#technologie">Technologie</a>
+            <a href="#fonctionnement">Fonctionnement</a>
+            <a href="#tests">Tests</a>
+            <a href="#apprentissage">Apprentissage</a>
+            <a href="#competencesStage">Compétances travaillées</a>
+        </ul>
+    </nav>
+    <header>
+        <div class="header-badge"><span class="dot"></span> Réalisation professionnel — API</div>
+        <h1>Stages première année</h1>
         <p class="description">
             Mon travail sera inclus à l'API de l'entreprise. La finalité de ce projet est de permettre au client de
             pouvoir déposer un CV
@@ -39,7 +36,8 @@
         </p>
     </header>
     <div id="competences">
-        <a class="lienProjetPage" href="https://github.com/TGnrd/Stage1_production"><strong>Productions réalisées</strong></a>
+        <a class="lienProjetPage" href="https://github.com/TGnrd/Stage1_production"><strong>Productions
+                réalisées</strong></a>
         <h2 class="compTravaillées">Compérences travaillées</h2>
         <table class="competencesTable">
             <thead>
@@ -148,18 +146,20 @@
             <div class="tests" id="tests">
                 <h3 class="h3Detail">Le résultat des tests :</h3>
                 <p>Entre <strong>1500 et 2000 tests</strong> du code sur <strong>une vingtaine de CV différents</strong>
-                    ont été effectuer lors de la production du code.
-                    Sur un écantillons de <strong>110 tests</strong>, le code se trouve avec un <strong>taux de
-                        similarité de 88.05%</strong> pour un temps d'exécution de <strong>22.255 secondes</strong>.
+                    ont été effectués lors de la production du code.
+                    Sur un échantillon de <strong>110 tests</strong>, le code se trouve avec un
+                    <strong>taux de similarité de 88.05%</strong> pour un temps d'exécution de
+                    <strong>22.255 secondes</strong>.
                 </p>
                 <img class="tableauComparatif" src="img/tableauComparatif.png"
                     alt="Tableau comparatif entre Open AI et Mistral">
             </div>
             <h3 class="h3Detail">Exemple :</h3>
             <div class="conteneur-json-pdf">
-                
+
                 <div class="section-pdf">
-                    <iframe src="./fichier/CV_Titouan_Goinard.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" title="CV Titouan Goinard" class="CV"></iframe>
+                    <iframe src="./fichier/CV_Titouan_Goinard.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit"
+                        title="CV Titouan Goinard" class="CV"></iframe>
                 </div>
 
                 <div class="section-code">
@@ -299,18 +299,17 @@
         <div class="pointFort" id="apprentissage">
             <h3 class="h3Detail">Ce que j'ai appris lors de la création du projet :</h3>
             <p>
-                • L'utilisation de l'<strong>API de Mistral</strong> (et en parallèle l'<strong>API d'Open AI</strong>).
-                <br><br>
-                • Approfondissement de mes connaissances de <strong>PHP</strong>. <br><br>
-                • Première utilisation de <strong>cURL</strong> pour l'appel d'une API. <br><br>
-                • Utilisation de <strong>Postman</strong> pour automatiser les tests (premier travail sur ce logiciel). <br><br>
+                • L'utilisation de l'<strong>API de Mistral</strong> (et en parallèle l'<strong>API d'Open AI</strong>).<br><br>
+                • Approfondissement de mes connaissances de <strong>PHP</strong>.<br><br>
+                • Première utilisation de <strong>cURL</strong> pour l'appel d'une API.<br><br>
+                • Utilisation de <strong>Postman</strong> pour automatiser les tests (premier travail sur ce logiciel).<br><br>
                 • Meilleure <strong>utilisation</strong> et <strong>compréhension</strong> de l'IA.
             </p>
         </div>
         <div class="leReste">
             <h3 class="h3Detail">Ce qu'il me reste à travailler personnellement :</h3>
             <p>
-                • Apprendre à mieux expliquer quelque chose de technique sans aller dans les détails techniques. <br><br>
+                • Apprendre à mieux expliquer quelque chose de technique sans aller dans les détails techniques.<br><br>
                 • Avoir une meilleure compréhension du code.<br><br>
                 • Avoir une meilleure compréhension sur les directives données.
             </p>
