@@ -4,224 +4,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>PCP </title>
+    <link rel="stylesheet" href="./style/style-ap32.css">
+    <title>AP32 — Stages API REST </title>
 
 </head>
 
 <body>
-    <header>
-        <h1>PCP - Compétences et détails AP32</h1>
-        <button id="menuBtn" class="menu" aria-label="Main Menu" aria-expanded="false" aria-controls="main-nav">
-            <svg width="100" height="100" viewBox="0 0 100 100">
-                <path class="line line1"
-                    d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-                <path class="line line2" d="M 20,50 H 80" />
-                <path class="line line3"
-                    d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-            </svg>
+
+    <nav class="navbar">
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
-        <nav id="main-nav" class="navbar" aria-hidden="true">
-            <ul class="content">
-                <a href="./index.html">Accueil</a>
-                <a href="#detailMission">Détails</a>
-                <a href="#CdC">Cahier des charges</a>
-                <a href="#configurationVM">Configuration VM / Gitlab local</a>
-                <a href="#missions">Missions</a>
-                <a href="#tests">Tests</a>
-            </ul>
-        </nav>
-        <p class="description">Le but de l'application est de gérer les utilisateurs, les projets et les groupes
+        <ul class="content" id="nav-content">
+            <a href="./index.html">← Accueil</a>
+            <a href="#competences">Compétences</a>
+            <a href="#detailMission">Détails</a>
+            <a href="#configurationVM">Config VM</a>
+            <a href="#CdC">Cahier des charges</a>
+            <a href="#missions">Missions</a>
+            <a href="#tests">Tests</a>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="header-badge"><span class="dot"></span> Réalisation scolaire — AP32</div>
+        <h1>AP32 — Stages API REST</h1>
+        <p class="header-desc">Le but de l'application est de gérer les utilisateurs, les projets et les groupes
             d'étudiants.
             Autrement dit, pour chaque fin d'année, les professeurs souhaitent une application permettant de
             supprimer ou de modifier des utilisateurs, des projets et des groupes
             d'étudiants sur Gitlab.
         </p>
+        <div class="tech-list">
+            <span class="tech">PHP</span>
+            <span class="tech">Symfony</span>
+            <span class="tech">API REST</span>
+            <span class="tech">GitLab</span>
+            <span class="tech">VSphere</span>
+            <span class="tech">Talend API tester</span>
+            <span class="tech">Visual Studio Code</span>
+        </div>
     </header>
 
-    <div id="competences">
-        <h2 class="h2Detail">Compétences développées</h2>
-        <table id="competencesTable" class="competencesTable">
-            <thead class="competencesHeader">
-                <tr>
-                    <th>Compétences</th>
-                    <th>B1</th>
-                    <th>B2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="competencesRow">
-                    <td>Travail en mode projet</td>
-                    <td>B1.4 - Travailler en mode projet</td>
-                    <td>B2.1 - Concevoir une solution applicative</td>
-                </tr>
-                <tr class="competencesRow">
-                    <td>Mise à disposition de services</td>
-                    <td>B1.5 - Mettre à disposition des utilisateurs un service informatique</td>
-                    <td>B2.2 - Assurer la maintenance corrective ou évolutive d’une solution applicative</td>
-                </tr>
-                <tr class="competencesRow">
-                    <td>Développement professionnel</td>
-                    <td>B1.6 - Organiser son développement professionnel</td>
-                    <td>B2.3 - Gérer les données</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <!-------------------COMPÉTENCES ------------------->
+    <section id="competences">
+        <h2 class="section-title">Compétences développées</h2>
+        <div class="card">
+            <table id="competencesTable" class="competencesTable">
+                <thead class="competencesHeader">
+                    <tr>
+                        <th>Compétences</th>
+                        <th>B1</th>
+                        <th>B2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="competencesRow">
+                        <td>Travail en mode projet</td>
+                        <td>B1.4 - Travailler en mode projet</td>
+                        <td>B2.1 - Concevoir une solution applicative</td>
+                    </tr>
+                    <tr class="competencesRow">
+                        <td>Mise à disposition de services</td>
+                        <td>B1.5 - Mettre à disposition des utilisateurs un service informatique</td>
+                        <td>B2.2 - Assurer la maintenance corrective ou évolutive d'une solution applicative</td>
+                    </tr>
+                    <tr class="competencesRow">
+                        <td>Développement professionnel</td>
+                        <td>B1.6 - Organiser son développement professionnel</td>
+                        <td>B2.3 - Gérer les données</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 
-    <div id="detailMission">
-        <h2 class="h2Detail">Détail de l'AP</h2>
-        <div class="detailAp32Git">
-            <p>Voici l'organisations du projet :</p>
-            <img class="MilestoneAp32" src="img/ap32/Milestones.png" alt="Organisations des tâches AP31 Gitlab Admin">
-            <p class="txt">Les tâches des milestones :</p>
-            <ul class="carousel">
-                <li class="liImg">
-                    <img class="milestone1" src="img/ap32/Milestone1.png" alt="Mission du premier milestone">
-                </li>
-                <li class="liImg">
-                    <img class="milestone2" src="img/ap32/Milestone2.png" alt="Mission du deuxième milestone">
-                </li>
-                <li class="liImg">
-                    <img class="milestone1" src="img/ap32/Milestone3.png" alt="Mission du troisième milestone">
-                </li>
-                <li class="liImg">
-                    <img class="milestone1" src="img/ap32/Milestone4.png" alt="Mission du quatrième milestone">
-                </li>
-            </ul>
+    <!-------------------ORGANISATION DU PROJET ------------------->
+    <section id="detailMission">
+        <h2 class="section-title">Organisation du projet</h2>
+        <div class="dark-block">
+            <p>Voici l'organisation du projet en milestones :</p>
+            <img class="img-large" src="img/ap32/Milestones.png" alt="Organisations des tâches AP32">
+            <h3 class="subsection-title">Tâches des milestones</h3>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn light" onclick="slide(this, -1)">&#8592;</button>
+                <ul class="carousel">
+                    <li class="slide">
+                        <p class="img-label">Milestone 1</p>
+                        <img src="img/ap32/Milestone1.png" alt="Mission du premier milestone">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">Milestone 2</p>
+                        <img src="img/ap32/Milestone2.png" alt="Mission du deuxième milestone">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">Milestone 3</p>
+                        <img src="img/ap32/Milestone3.png" alt="Mission du troisième milestone">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">Milestone 4</p>
+                        <img src="img/ap32/Milestone4.png" alt="Mission du quatrième milestone">
+                    </li>
+                </ul>
+                <button class="carousel-btn light" onclick="slide(this, 1)">&#8594;</button>
+            </div>
             <p>
                 Étant en groupe, nous nous sommes séparés les tâches. Ma partie était sur la création de la page
                 utilisateur du site web. Voici les tickets que j'ai effectués sur le projet :
             </p>
-            <div class="issues">
+            <div class="carousel-wrapper">
+                <button class="carousel-btn light" onclick="slide(this, -1)">&#8592;</button>
                 <ul class="carousel">
-                    <li class="liImg">
-                        <img class="issuePerso" src="img/ap32/IssuesMilestones1.png" alt="Issue milestone 1">
+                    <li class="slide">
+                        <img src="img/ap32/IssuesMilestones1.png" alt="Issue milestone 1">
                     </li>
-                    <li class="liImg">
-                        <img class="issuePersoP" src="img/ap32/IssuesMilestones2.png" alt="Issue milestone 2">
+                    <li class="slide">
+                        <img src="img/ap32/IssuesMilestones2.png" alt="Issue milestone 2">
                     </li>
-                    <li class="liImg">
-                        <img class="issuePersoP" src="img/ap32/IssuesMilestones3.png" alt="Issue milestone 3">
+                    <li class="slide">
+                        <img src="img/ap32/IssuesMilestones3.png" alt="Issue milestone 3">
                     </li>
                 </ul>
+                <button class="carousel-btn light" onclick="slide(this, 1)">&#8594;</button>
             </div>
         </div>
-        <div id="CdC">
-            <h2 class="h2Detail">Cahier des charges pour les organisations</h2>
-            <ul class="carousel">
-                <li class="liImg">
-                    <img class="CdC" src="./img/ap32/CdC_all_Orga.png" alt="">
-                </li>
-                <li class="liImg">
-                    <img class="CdC" src="./img/ap32/CdC_all_orga_resultat.png" alt="">
-                </li>
-                <li class="liImg">
-                    <img class="CdC" src="./img/ap32/CdC_une_orga.png" alt="">
-                </li>
-                <li class="liImg">
-                    <img class="CdCLarge" src="./img/ap32/CdC_une_orga_resultat.png" alt="">
-                </li>
-                <li class="liImg">
-                    <img class="CdCLarge" src="./img/ap32/CdC_une_orga_erreur.png" alt="">
-                </li>
-                <li class="liImg">
-                    <img class="CdCLarge" src="./img/ap32/CdC_une_orga_modifiee.png" alt="">
-                </li>
-                <li class="liImg">
-                    <img class="CdCTresLarge" src="./img/ap32/CdC_une_orga_modifiee_succès.png" alt="">
-                </li>
-                <li class="liImg">
-                    <img class="CdCLarge" src="./img/ap32/CdC_une_orga_modifiee_erreur.png" alt="">
-                </li>
-            </ul>
-        </div>
-        <div id="configurationVM">
-            <h3 class="h3Detail">La mise en place de l'API gitlab</h3>
-            <p>Le serveur est mis sur <strong>VSphere</strong>. Il a fallu configurer le serveur US24 en y mettant
-                <strong>nos adresses IP, la passerelle et la route</strong>.
-            </p>
-            <img class="configVM" src="img/ap32/configuration_ip.png" alt="Configuration de la VM sur VSphere">
+    </section>
+
+    <!-------------------CONFIGURATION VM ------------------->
+    <section id="configurationVM">
+        <h2 class="section-title">Configuration VM / GitLab local</h2>
+        <div class="card">
             <p>
-                Après la vérification de la communication avec internet, nous avons téléchargé GitLab sur la machine
-                virtuelle. Une fois ces étapes faites, nous avons la possibilité d'ouvrir la page index du projet de la
-                VM
-                en écrivant notre IP.
+                Le serveur est mis sur <strong>VSphere</strong>. Il a fallu configurer le serveur US24
+                en y renseignant <strong>nos adresses IP, la passerelle et la route</strong>.
             </p>
-        </div>
-        <h3 class="h3Detail">Code des fonctions</h3>
-        <p>Voici la page index du projet :</p>
-        <img class="pageIndex" src="img/ap32/pageIndex.png" alt="Page index du projet">
-
-        <div id="missions" class="missions">
-            <h2 class="h2DetailMissions">Missions</h2>
-            <div class="diagClasse">
-                <h3 class="h3Detail">Réalisation du diagramme de classe :</h3>
-                <p>Il s'agit de la plus grosse partie du premier milestone</p>
-                <img src="./img/ap32/DDC.png" alt="Diagramme de classe" class="ddc">
-            </div>
-            <div>
-                <h3 class="h3Detail">Création du controlleur d'organisations :</h3>
-                <p class="infoControleur">
-                    <strong>Commandes console :</strong><br><br>
-                    <strong>Attention :</strong> il faut être a la racine du projet php symfony <br><br>
-                    bin/console make:entity "Organisation" <br><br>
-                    <strong>Information à renseigner :</strong> <br><br>
-                    - Le type (char, int, <strong>relation</strong>,...) <br>
-                    - La taille <br><br>
-                    <strong>En cas de type relation :</strong> <br><br>
-                    - OneToMany : Une instance de l'entité actuelle contient plusieurs 
-                    instances de l'entité cible (ex : 1 Organisation possède Plusieurs 
-                    Contact). <br><br>
-                    - ManyToOne : Plusieurs instances de l'entité actuelle sont liées à 
-                    une seule instance de l'entité cible (ex : Plusieurs Contacts 
-                    appartiennent à 1 seule Organisation). <br><br><br><br>
-                    <strong>Ajout des règles de gestion</strong> <br><br><br>
-                    Code postal : ^(?:[0-9]{2}|2A|2B)[0-9]{3}$ <br><br>
-                    Numéro de téléphone : ^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$ <br><br>
-                    Symfony\Component\Validator\Constraints <br>
-                    URL : #[Assert\Email()]
-                </p>
-                <img class="entityCode" src="./img/ap32/organisation.png" alt="Code créé par symfony">
-            </div>
-            <div>
-
+            <p>
+                Après vérification de la communication avec internet, nous avons téléchargé GitLab sur
+                la machine virtuelle. Il est ensuite accessible en saisissant notre IP dans le navigateur.
+            </p>
+            <div class="two-col">
+                <div>
+                    <p class="img-label">Configuration de la VM sur VSphere</p>
+                    <img src="img/ap32/configuration_ip.png" alt="Configuration de la VM">
+                </div>
+                <div>
+                    <p class="img-label">Page index du projet</p>
+                    <img src="img/ap32/pageIndex.png" alt="Page index du projet">
+                </div>
             </div>
         </div>
-        <div id="tests" class="tests">
-        <h2 class="h2Detail">Tests sur Talend API tester :</h2>
-            <ul class="carousel">
-                <li class="liImg">
-                    <img class="imgTalend" src="./img/ap32/talend_all_orga.png" alt="">
+    </section>
+
+    <!-------------------CAHIER DES CHARGES ------------------->
+    <section id="CdC">
+        <h2 class="section-title">Cahier des charges — Organisations</h2>
+        <div class="card">
+            <p>
+                Voici les spécifications du cahier des charges pour la gestion des organisations,
+                avec les cas nominaux, les erreurs et les modifications attendues.
+            </p>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn" onclick="slide(this, -1)">&#8592;</button>
+                <ul class="carousel">
+                    <li class="slide">
+                        <p class="img-label">Toutes les organisations</p>
+                        <img src="./img/ap32/CdC_all_Orga.png" alt="CdC toutes les orgas">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">Résultat — toutes les organisations</p>
+                        <img src="./img/ap32/CdC_all_orga_resultat.png" alt="Résultat toutes les orgas">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">Une organisation</p>
+                        <img src="./img/ap32/CdC_une_orga.png" alt="CdC une orga">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">Résultat — une organisation</p>
+                        <img src="./img/ap32/CdC_une_orga_resultat.png" alt="Résultat une orga">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">Erreur — une organisation</p>
+                        <img src="./img/ap32/CdC_une_orga_erreur.png" alt="Erreur une orga">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">Organisation modifiée</p>
+                        <img src="./img/ap32/CdC_une_orga_modifiee.png" alt="Orga modifiée">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">Succès modification</p>
+                        <img src="./img/ap32/CdC_une_orga_modifiee_succès.png" alt="Succès modification">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">Erreur modification</p>
+                        <img src="./img/ap32/CdC_une_orga_modifiee_erreur.png" alt="Erreur modification">
+                    </li>
+                </ul>
+                <button class="carousel-btn" onclick="slide(this, 1)">&#8594;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-------------------MISSIONS ------------------->
+    <section id="missions">
+        <h2 class="section-title">Missions</h2>
+
+        <div class="card">
+            <p>
+                Réalisation du <strong>diagramme de classe</strong> — il s'agit de la plus grosse partie
+                du premier milestone.
+            </p>
+            <img src="./img/ap32/DDC.png" alt="Diagramme de classe" class="img-large">
+        </div>
+
+        <div class="dark-block" style="margin-top: 1rem;">
+            <p>
+                Création du <strong>contrôleur d'organisations</strong> avec Symfony.
+            </p>
+            <ul class="info-list">
+                <li><strong>bin/console make:entity "Organisation"</strong> — génère l'entité depuis la console Symfony.
                 </li>
-                <li class="liImg">
-                    <img class="imgTalend" src="./img/ap32/resultat_all_orga.png" alt="">
-                </li>
-                <li class="liImg">
-                    <img class="imgTalendGrand" src="./img/ap32/talend_une_orga5.png" alt="">
-                </li>
-                <li class="liImg">
-                    <img class="imgTalendMoyenne" src="./img/ap32/resultat_une_orga_attendu5.png" alt="">
-                </li>
-                <li class="liImg">
-                    <img class="imgTalendMoyenne" src="./img/ap32/resultat_une_orga_obtenu5.png" alt="">
-                </li>
-                <li class="liImg">
-                    <img class="imgTalendGrand" src="./img/ap32/talend_id_non_existant.png" alt="">
-                </li>
-                <li class="liImg">
-                    <img class="imgTalendPetite" src="./img/ap32/talend_id_non_existant_resultat.png" alt="">
-                </li>
-                <li class="liImg">
-                    <img class="imgTalend" src="./img/ap32/talend_id_non_possible.png" alt="">
-                </li>
-                <li class="liImg">
-                    <img class="imgTalendPetite" src="./img/ap32/talend_id_non_possible_resultat.png" alt="">
+                <li><strong>OneToMany</strong> — une Organisation possède plusieurs Contacts.</li>
+                <li><strong>ManyToOne</strong> — plusieurs Contacts appartiennent à une seule Organisation.</li>
+                <li><strong>Règles de validation</strong> — code postal, numéro de téléphone et URL via Symfony Assert.
                 </li>
             </ul>
-        </div>
-    </div>
 
-    <script src="script.js"></script>
+            <h3 class="subsection-title">Code de l'entité et règles de gestion</h3>
+            <div class="two-col">
+                <div>
+                    <p class="img-label">Entité Organisation générée par Symfony</p>
+                    <img src="./img/ap32/organisation.png" alt="Code entité Organisation">
+                </div>
+                <div>
+                    <p class="img-label">Expressions régulières utilisées</p>
+                    <p class="regex-block">
+                        Code postal :<br>
+                        <code>^(?:[0-9]{2}|2A|2B)[0-9]{3}$</code><br><br>
+                        Téléphone :<br>
+                        <code>^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$</code><br><br>
+                        URL / Email :<br>
+                        <code>#[Assert\Email()]</code>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-------------------TESTS TALEND ------------------->
+    <section id="tests">
+        <h2 class="section-title">Tests sur Talend API tester</h2>
+        <div class="dark-block">
+            <p>Voici les tests effectués sur l'API REST via Talend, avec les résultats obtenus et attendus.</p>
+            <ul class="info-list">
+                <li><strong>GET /organisations</strong> — récupération de toutes les organisations.</li>
+                <li><strong>GET /organisations/{id}</strong> — récupération d'une organisation par son ID.</li>
+                <li><strong>ID non existant</strong> — réponse 404 attendue.</li>
+                <li><strong>ID non valide</strong> — réponse 400 attendue.</li>
+            </ul>
+
+            <h3 class="subsection-title">Résultats des tests</h3>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn light" onclick="slide(this, -1)">&#8592;</button>
+                <ul class="carousel">
+                    <li class="slide">
+                        <p class="img-label">GET — toutes les organisations</p>
+                        <img src="./img/ap32/talend_all_orga.png" alt="Talend toutes les orgas">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">Résultat — toutes les organisations</p>
+                        <img src="./img/ap32/resultat_all_orga.png" alt="Résultat toutes les orgas">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">GET — une organisation (ID 5)</p>
+                        <img src="./img/ap32/talend_une_orga5.png" alt="Talend une orga ID 5">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">Résultat attendu — ID 5</p>
+                        <img src="./img/ap32/resultat_une_orga_attendu5.png" alt="Résultat attendu ID 5">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">Résultat obtenu — ID 5</p>
+                        <img src="./img/ap32/resultat_une_orga_obtenu5.png" alt="Résultat obtenu ID 5">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">GET — ID non existant</p>
+                        <img src="./img/ap32/talend_id_non_existant.png" alt="Talend ID non existant">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">Résultat — ID non existant (404)</p>
+                        <img src="./img/ap32/talend_id_non_existant_resultat.png" alt="Résultat 404">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">GET — ID non valide</p>
+                        <img src="./img/ap32/talend_id_non_possible.png" alt="Talend ID non possible">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">Résultat — ID non valide (400)</p>
+                        <img src="./img/ap32/talend_id_non_possible_resultat.png" alt="Résultat 400">
+                    </li>
+                </ul>
+                <button class="carousel-btn light" onclick="slide(this, 1)">&#8594;</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js" defer></script>
+
 </body>
 </html>

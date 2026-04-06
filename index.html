@@ -4,72 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>PCP </title>
+    <link rel="stylesheet" href="style_main.css">
+    <title>Titouan Goinard - PCP </title>
 
 </head>
 
 <body>
-    <!-- Navbar -->
-    <button id="menuBtn" class="menu" aria-label="Main Menu" aria-expanded="false" aria-controls="main-nav">
-        <svg width="100" height="100" viewBox="0 0 100 100">
-            <path class="line line1"
-                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-            <path class="line line2" d="M 20,50 H 80" />
-            <path class="line line3"
-                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-        </svg>
-    </button>
-    <nav id="main-nav" class="navbar" aria-hidden="true">
-        <ul class="content">
+    <!------------------- Navbar ------------------->
+    <nav class="navbar">
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="content" id="nav-content">
             <a href="#presentation">Présentation</a>
-            <a href="#realisationScolaire">Réalisation scolaire</a>
-            <a href="#realisationpro">Réalisation professionnelle</a>
+            <a href="#scolaire">Réalisation scolaire</a>
+            <a href="#professionnel">Réalisation professionnelle</a>
             <a href="#veille">Veille</a>
             <a href="#contact">Contact</a>
         </ul>
     </nav>
-    <h1 class="typewriter">Découvrez-moi</h1>
-    <section class="intro">
-        <div>
-            <h2 class="nom">Titouan Goinard</h2>
-        </div>
-        <div>
-            <h3>Étudiant en BTS SIO option SLAM</h3>
-        </div>
-        <div>
-            <p class="text-intro">
+    <section id="presentation">
+        <div class="information">
+            <div class="badge"><span class="dot"></span> BTS SIO SLAM — 2ᵉ année</div>
+            <h1>Présentation</h1>
+            <div>
+                <h2 class="nom">Titouan Goinard</h2>
+            </div>
+            <div>
+                <h3>Étudiant en BTS SIO option SLAM</h3>
+            </div>
+            <p class="info">
                 Passionné par la programmation. J'effectue ma <strong>seconde année de BTS SIO option SLAM</strong>
                 au lycée Victor Hélène Basch de Rennes. Mon but est de continuer mes études jusqu'au
                 <strong>Master</strong> pour pouvoir
                 travailler en tant que <strong>développeur Full-Stack</strong>.
             </p>
         </div>
-        <button id="versPresentation">⏷</button>
-    </section>
-    <section id="presentation">
-        <div class="information">
-            <h1>Présentation</h1>
-            <p class="info">
-                Bonjour, je m'appelle <strong>Titouan Goinard</strong> et j'ai 20 ans.
-            </p>
-            <p class="info">
-                Je suis actuellement étudiant au lycée <strong>Victor Hélène Basch</strong> en
-                <strong>BTS Services Informatiques aux Organisations option Solutions Logicielles
-                    et Applications Métiers</strong>.
-            </p>
-            <p class="info">
-                Étant créatif, je suis passionné par la programmation depuis <strong>7 ans</strong> maintenant.
-            </p>
-        </div>
         <img src="img/pp.jpg" class="tete">
     </section>
 
-    <section id="realisationScolaire">
-        <h1 class="titre">Réalisation scolaire</h1>
+    <section id="scolaire" class="section">
+        <h2 class="section-title">Réalisation scolaire</h2>
         <div class="ap31">
-            <h2 class="nomProjet">Application web AP31-Gitlab-Admin</h2>
-            <h3 class="contexte">Contexte</h3>
+            <h3 class="project-name">Application web AP31 — GitLab Admin</h3>
+            <p class="project-context">Contexte</p>
             <button id="btnCompetencesAp"><a class="texteCompDet" href="./CompDetAp31.html  ">Compétences et
                     détails</a></button>
             <p class="description">Le but de l'application est de gérer les utilisateurs, les projets et les groupes
@@ -77,140 +57,129 @@
                 permettant de supprimer ou de modifier des utilisateurs, des projets et des groupes
                 d'étudiants sur Gitlab.
             </p>
-            <div class="compétencesAP">
-                <h3 class="competences">Compétences</h3>
-                <table id="competencesTable" class="competencesTable">
-                    <thead class="competencesHeader">
-                        <tr>
-                            <th>Compétences</th>
-                            <th>B1</th>
-                            <th>B2</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="competencesRow">
-                            <td>Présence en ligne / projet</td>
-                            <td>B1.3 - Développer la présence en ligne de l’organisation</td>
-                            <td>B2.1 - Concevoir une solution applicative</td>
-                        </tr>
-                        <tr class="competencesRow">
-                            <td>Travail en mode projet</td>
-                            <td>B1.4 - Travailler en mode projet</td>
-                            <td>B2.2 - Assurer la maintenance corrective ou évolutive d’une solution applicative</td>
-                        </tr>
-                        <tr class="competencesRow">
-                            <td>Mise à disposition de services</td>
-                            <td>B1.5 - Mettre à disposition des utilisateurs un service informatique</td>
-                            <td>B2.3 - Gérer les données</td>
-                        </tr>
-                        <tr class="competencesRow">
-                            <td>Développement professionnel</td>
-                            <td>B1.6 - Organiser son développement professionnel</td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <p class="table-title">Compétences</p>
+            <table>
+                <thead class="competencesHeader">
+                    <tr>
+                        <th>Compétences</th>
+                        <th>B1</th>
+                        <th>B2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="competencesRow">
+                        <td>Présence en ligne / projet</td>
+                        <td>B1.3 - Développer la présence en ligne de l’organisation</td>
+                        <td>B2.1 - Concevoir une solution applicative</td>
+                    </tr>
+                    <tr class="competencesRow">
+                        <td>Travail en mode projet</td>
+                        <td>B1.4 - Travailler en mode projet</td>
+                        <td>B2.2 - Assurer la maintenance corrective ou évolutive d’une solution applicative</td>
+                    </tr>
+                    <tr class="competencesRow">
+                        <td>Mise à disposition de services</td>
+                        <td>B1.5 - Mettre à disposition des utilisateurs un service informatique</td>
+                        <td>B2.3 - Gérer les données</td>
+                    </tr>
+                    <tr class="competencesRow">
+                        <td>Développement professionnel</td>
+                        <td>B1.6 - Organiser son développement professionnel</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="table-title">Technologies utilisées</p>
+            <div class="tech-list">
+                <span class="tech">Visual Studio Code</span>
+                <span class="tech">JavaScript</span>
+                <span class="tech">API-Rest</span>
+                <span class="tech">Gitlab</span>
+                <span class="tech">Vsphere</span>
+                <span class="tech">Talend API tester</span>
             </div>
-            <div class="technoUsed">
-                <h3>Technologies utilisées</h3>
-                <div>
-                    <span class="tech">Visual Studio Code</span>
-                    <span class="tech">JavaScript</span>
-                    <span class="tech">API-Rest</span>
-                    <span class="tech">Gitlab</span>
-                    <span class="tech">Vsphere</span>
-                    <span class="tech">Talend API tester</span>
-                </div>
-            </div>
+        </div>
+
+
 
         </div>
         <div class="ap32">
-            <h2 class="nomProjet">Application web AP32-stages-apirest</h2>
-            <h3 class="contexte">Contexte</h3>
+            <h3 class="project-name">Application web AP32 — Stages API REST</h3>
+            <p class="project-context">Contexte</p>
             <button id="btnCompetencesAp"><a class="texteCompDet" href="./CompDetAp32.html  ">Compétences et
                     détails</a></button>
             <p class="description">Le but de l'API est de gérer les stages, les étudiant, les organisations et les
                 contacts.
             </p>
-            <div class="compétencesAP">
-                <h3 class="competences">Compétences</h3>
-                <table id="competencesTable" class="competencesTable">
-                    <thead class="competencesHeader">
-                        <tr>
-                            <th>Compétences</th>
-                            <th>B1</th>
-                            <th>B2</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="competencesRow">
-                            <td>Présence en ligne / projet</td>
-                            <td>B1.3 - Développer la présence en ligne de l’organisation</td>
-                            <td>B2.1 - Concevoir une solution applicative</td>
-                        </tr>
-                        <tr class="competencesRow">
-                            <td>Travail en mode projet</td>
-                            <td>B1.4 - Travailler en mode projet</td>
-                            <td>B2.2 - Assurer la maintenance corrective ou évolutive d’une solution applicative</td>
-                        </tr>
-                        <tr class="competencesRow">
-                            <td>Mise à disposition de services</td>
-                            <td>B1.5 - Mettre à disposition des utilisateurs un service informatique</td>
-                            <td>B2.3 - Gérer les données</td>
-                        </tr>
-                        <tr class="competencesRow">
-                            <td>Développement professionnel</td>
-                            <td>B1.6 - Organiser son développement professionnel</td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <p class="table-title">Compétences</p>
+            <table>
+                <thead class="competencesHeader">
+                    <tr>
+                        <th>Compétences</th>
+                        <th>B1</th>
+                        <th>B2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="competencesRow">
+                        <td>Présence en ligne / projet</td>
+                        <td>B1.3 - Développer la présence en ligne de l’organisation</td>
+                        <td>B2.1 - Concevoir une solution applicative</td>
+                    </tr>
+                    <tr class="competencesRow">
+                        <td>Travail en mode projet</td>
+                        <td>B1.4 - Travailler en mode projet</td>
+                        <td>B2.2 - Assurer la maintenance corrective ou évolutive d’une solution applicative</td>
+                    </tr>
+                    <tr class="competencesRow">
+                        <td>Mise à disposition de services</td>
+                        <td>B1.5 - Mettre à disposition des utilisateurs un service informatique</td>
+                        <td>B2.3 - Gérer les données</td>
+                    </tr>
+                    <tr class="competencesRow">
+                        <td>Développement professionnel</td>
+                        <td>B1.6 - Organiser son développement professionnel</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="table-title">Technologies utilisées</p>
+            <div class="tech-list">
+                <span class="tech">Visual Studio Code</span>
+                <span class="tech">PHP</span>
+                <span class="tech">Symfony</span>
+                <span class="tech">API-Rest</span>
+                <span class="tech">Gitlab</span>
+                <span class="tech">Vsphere</span>
+                <span class="tech">Talend API tester</span>
             </div>
-            <div class="technoUsed">
-                <h3>Technologies utilisées</h3>
-                <div>
-                    <span class="tech">Visual Studio Code</span>
-                    <span class="tech">PHP</span>
-                    <span class="tech">Symfony</span>
-                    <span class="tech">API-Rest</span>
-                    <span class="tech">Gitlab</span>
-                    <span class="tech">Vsphere</span>
-                    <span class="tech">Talend API tester</span>
-                </div>
-            </div>
-
         </div>
 
     </section>
-    <section id="realisationpro">
-        <h1 class="titre">Réalisation professionnelle</h1>
+    <section id="professionnel" class="section">
+        <h2 class="section-title">Réalisation professionnelle</h2>
         <div class="main">
             <ul class="cards">
                 <li class="cards_item">
                     <div class="card" tabindex="0">
                         <div class="card_image"><img src="./img/altervoice.png"></div>
                         <div class="card_content">
-                            <h2 class="card_title">Stage Altervoice Thema-web</h2>
+                            <h3 class="project-name">Stage SCR Informatiques</h3>
                             <div class="card_text">
-                                <h3>Stage de 1ère année</h3>
-                                <button id="btnCompetences" class="btnCompetences"><a class="texteCompDet"
-                                        href="./CompDetStage1.html">Compétences et détails</a></button>
+                                <p class="project-context">Stage de 2ᵉ année</p>
+                                <a href="./CompDetStage1.html" class="btn-detail">Compétences et détails</a>
                                 <p>J'ai effectué mon stage de 1ère année de BTS dans l'entreprise <strong>Altervoice -
                                         Thema-web</strong> au Rheu. <br><br>
-
                                     Altervoice - Thema-web est une entreprise proposant des solutions techniques
                                     auditives à des
                                     particuliers et professionnels. <br><br>
-
                                     Lors de ce stage, j'ai eu à réaliser une <strong>API</strong> permetteant
                                     d'<strong>extraire</strong>
                                     les informations d'un <strong>CV</strong> par de la <strong>lecture OCR</strong> et
-                                    par la
-                                    <strong>reconnaissance de caractères de l'API de Mistral</strong>. Le but du
-                                    programme est de l'implémenter sur
-                                    le site web <strong>Beauté Job</strong> édité par l'entreprise, l'objectif final est
-                                    de <strong>pré-remplir les
-                                        informations personnelles des utilisateurs</strong>.
+                                    par la <strong>reconnaissance de caractères de l'API de Mistral</strong>. Le but du
+                                    programme est de l'implémenter sur le site web <strong>Beauté Job</strong> édité par
+                                    l'entreprise, l'objectif final est de <strong>pré-remplir les informations
+                                        personnelles des utilisateurs</strong>.
                                 </p>
                                 <h3>Compétences</h3>
                                 <table class="competencesTable">
@@ -248,8 +217,8 @@
                                         <td></td>
                                     </tr>
                                 </table>
-                                <h3>Technologies utilisées</h3>
-                                <div>
+                                <p class="table-title">Technologies utilisées</p>
+                                <div class="tech-list">
                                     <span class="tech">Visual Studio Code</span>
                                     <span class="tech">PHP</span>
                                     <span class="tech">Mistral AI</span>
@@ -269,11 +238,10 @@
                     <div class="card" tabindex="0">
                         <div class="card_image"><img src="./img/scr_logo.png"></div>
                         <div class="card_content">
-                            <h2 class="card_title">Stage SCR Informatiques</h2>
+                            <h3 class="project-name">Stage SCR Informatiques</h3>
                             <div class="card_text">
-                                <h3>Stage de 2nde année</h3>
-                                <button id="btnCompetences" class="btnCompetences"><a class="texteCompDet"
-                                        href="./CompDetStage2.html">Compétences et détails</a></button>
+                                <p class="project-context">Stage de 2ᵉ année</p>
+                                <a href="./CompDetStage2.html" class="btn-detail">Compétences et détails</a>
                                 <p>J'ai effectué mon stage de 2nd année de BTS dans l'entreprise <strong>SCR
                                         Informatiques</strong> à Erbray. <br><br>
 
@@ -322,8 +290,8 @@
                                             <td></td>
                                         </tr>
                                     </table>
-                                    <h3>Technologies utilisées</h3>
-                                    <div>
+                                    <p class="table-title">Technologies utilisées</p>
+                                    <div class="tech-list">
                                         <span class="tech">WinDev</span>
                                         <span class="tech">wLangage</span>
                                         <span class="tech">Java</span>
@@ -338,36 +306,17 @@
         </ul>
         </div>
     </section>
-    <section id="veille">
-    <h1 class="titre">Veille</h1>
-    <div class="veille">
-        <ul class="cardsVeille">
-            <a href="veille.html?theme=dev" class="cards_item_veille">
-                <h2 class="theme">Développement</h2>
-            </a>
-            
-            <a href="veille.html?theme=cyber" class="cards_item_veille">
-                <h2 class="theme">Cybersécurité</h2>
-            </a>
-            
-            <a href="veille.html?theme=reseaux" class="cards_item_veille">
-                <h2 class="theme">Réseaux</h2>
-            </a>
-            
-            <a href="veille.html?theme=technos" class="cards_item_veille">
-                <h2 class="theme">Technologies</h2>
-            </a>
-            
-            <a href="veille.html?theme=attaques" class="cards_item_veille">
-                <h2 class="theme">Cyberattaques</h2>
-            </a>
-            
-            <a href="veille.html?theme=ia" class="cards_item_veille">
-                <h2 class="theme">Intelligence Artificielle</h2>
-            </a>
-        </ul>
-    </div>
-</section>
+    <section id="veille" class="section">
+        <h2 class="section-title">Veille technologique</h2>
+        <div class="veille-grid">
+            <a href="veille.html?theme=dev" class="veille-card">Développement</a>
+            <a href="veille.html?theme=cyber" class="veille-card">Cybersécurité</a>
+            <a href="veille.html?theme=reseaux" class="veille-card">Réseaux</a>
+            <a href="veille.html?theme=technos" class="veille-card">Technologies</a>
+            <a href="veille.html?theme=attaques" class="veille-card">Cyberattaques</a>
+            <a href="veille.html?theme=ia" class="veille-card">Intelligence Artificielle</a>
+        </div>
+    </section>
     <footer id="contact">
         <h1>Contact</h1>
         <div class="contact">
@@ -398,7 +347,7 @@
             <a href="mentions-legales.html" style="color: inherit; text-decoration: underline;">Mentions légales</a>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

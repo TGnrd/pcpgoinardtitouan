@@ -1,47 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PCP - Compétances - Détails</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Stage 2 — SCR Informatiques</title>
+    <link rel="stylesheet" href="./style/style-s2.css">
 </head>
 
 <body>
-    <header>
-        <h1>PCP - Compétences et détails</h1>
-        <button id="menuBtn" class="menu" aria-label="Main Menu" aria-expanded="false" aria-controls="main-nav">
-            <svg width="100" height="100" viewBox="0 0 100 100">
-                <path class="line line1"
-                    d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-                <path class="line line2" d="M 20,50 H 80" />
-                <path class="line line3"
-                    d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-            </svg>
+    <nav class="navbar">
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
-        <nav id="main-nav" class="navbar" aria-hidden="true">
-            <ul class="content">
-                <a href="index.html">Accueil</a>
-                <a href="#technologie">Technologie</a>
-                <a href="#fonctionnement">Fonctionnement</a>
-                <a href="#tests">Tests</a>
-                <a href="#apprentissage">Apprentissage</a>
-                <a href="#competencesStage">Compétances travaillées</a>
-            </ul>
-        </nav>
+        <ul class="content" id="nav-content">
+            <a href="index.html">← Accueil</a>
+            <a href="#technologie">Technologie</a>
+            <a href="#fonctionnement">Fonctionnement</a>
+            <a href="#tests">Tests</a>
+            <a href="#apprentissage">Apprentissage</a>
+            <a href="#competencesStage">Compétences travaillées</a>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="header-badge"><span class="dot"></span> Réalisation professionnelle — Stage 2ᵉ année</div>
+        <h1>Stage deuxième année</h1>
         <p class="description">
-            Ce projet aura pour but de s'inscrire dans l'applications Ambges de l'entreprise SCR Informatiques, 
-            cette application permet aux soignant de gérer les patients de l'hospital.<br><br>
-            Elle va permettre aux médecins de récupérer les inforamtions d'une prescription médicale de transport des 
-            patients. Les informations sont le numéro de sécurité sociale du patient, l'ALD exonérante ou non, l'identifiant
-            du médecin et la date de la prescription. Une fois récupérer, elles peuvent être envoyées à la sécurité 
-            du travail pour avoir les informations du transport.
+            Ce projet aura pour but de s'inscrire dans l'application Ambges de l'entreprise SCR Informatiques,
+            cette application permet aux soignants de gérer les patients de l'hôpital.<br><br>
+            Elle va permettre aux médecins de récupérer les informations d'une prescription médicale de transport des
+            patients. Les informations sont le numéro de sécurité sociale du patient, l'ALD exonérante ou non,
+            l'identifiant du médecin et la date de la prescription. Une fois récupérées, elles peuvent être envoyées
+            à la sécurité du travail pour avoir les informations du transport.
         </p>
     </header>
+
+    <!-------------------COMPÉTENCES ------------------->
     <div id="competences">
         <a class="lienProjetPage" href="https://github.com/TGnrd/Stage2_Production"><strong>Productions réalisées</strong></a>
-        <h2 class="compTravaillées">Compérences travaillées</h2>
+        <h2 class="compTravaillées">Compétences travaillées</h2>
         <table class="competencesTable">
             <thead>
                 <tr class="competencesHeader">
@@ -50,36 +50,39 @@
                     <th scope="col">B3</th>
                 </tr>
             </thead>
-            <tr class="competencesRow">
-                <td>B1.2 : Répondre aux incidents et aux demandes d’assistance et d’évolution
-                </td>
-                <td>B2.1 : Concevoir et développer une solution applicative</td>
-                <td>B3.1 : Protéger les données à caractère personnel</td>
-            </tr>
-            <tr class="competencesRow">
-                <td>B1.4 : Travailler en mode projet</td>
-                <td>B2.2 : Assurer la maintenance corrective ou évolutive d’une solution
-                    applicative</td>
-                <td>B3.2 : Préserver l'identité numérique de l’organisation</td>
-            </tr>
-            <tr class="competencesRow">
-                <td>B1.5 : Mettre à disposition des utilisateurs un service informatique
-                    (orienté utilisateurs)</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr class="competencesRow">
-                <td>B1.6 : Organiser son développement professionnel</td>
-                <td></td>
-                <td></td>
-            </tr>
+            <tbody>
+                <tr class="competencesRow">
+                    <td>B1.2 : Répondre aux incidents et aux demandes d'assistance et d'évolution</td>
+                    <td>B2.1 : Concevoir et développer une solution applicative</td>
+                    <td>B3.1 : Protéger les données à caractère personnel</td>
+                </tr>
+                <tr class="competencesRow">
+                    <td>B1.4 : Travailler en mode projet</td>
+                    <td>B2.2 : Assurer la maintenance corrective ou évolutive d'une solution applicative</td>
+                    <td>B3.2 : Préserver l'identité numérique de l'organisation</td>
+                </tr>
+                <tr class="competencesRow">
+                    <td>B1.5 : Mettre à disposition des utilisateurs un service informatique (orienté utilisateurs)</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="competencesRow">
+                    <td>B1.6 : Organiser son développement professionnel</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
         </table>
     </div>
-    <div id="detailMission" >
+
+    <!-------------------DÉTAIL DU STAGE ------------------->
+    <div id="detailMission">
         <h2 class="h2Detail">Détail du stage</h2>
-        <div class="detailStage1">
+        <div class="detailStage2">
+
+            <!-- Technologies -->
             <div class="technologies" id="technologie">
-                <h3 class="h3Detail">Technologies testée :</h3>
+                <h3 class="h3Detail">Technologies testées :</h3>
                 <table class="techTable">
                     <thead class="techHeader">
                         <tr>
@@ -91,93 +94,130 @@
                     <tbody>
                         <tr class="techRow">
                             <td>JavaScript (Tesseract & Jscanify)</td>
-                            <td>Permet de faire un scan d'un document et de récupérer le texte avec de l'OCR. </td>
-                            <td>- Résultats sont aléatoires et désordonnées. <br>
-                                - Texte écrit à la main non trouvé.
-                            </td>
+                            <td>Permet de faire un scan d'un document et de récupérer le texte avec de l'OCR.</td>
+                            <td>Résultats aléatoires et désordonnés.<br>Texte écrit à la main non trouvé.</td>
                         </tr>
                         <tr class="techRow">
                             <td>WinDev</td>
-                            <td>- Possède de nombreuses fonctions OCR et de scan. <br>
-                                - Permet de créer une application pour Android et iOS.
-                            </td>
-                            <td>- L'OCR est parfois limité. <br>
-                                - Les informations trouvables dans des cases sont complexes à calibrer. 
-                            </td>
+                            <td>Possède de nombreuses fonctions OCR et de scan.<br>Permet de créer une application pour Android et iOS.</td>
+                            <td>L'OCR est parfois limité.<br>Les informations trouvables dans des cases sont complexes à calibrer.</td>
                         </tr>
                         <tr class="techRow">
-                            <td>L'Intelligence artificielle</td>
+                            <td>Intelligence artificielle</td>
                             <td>Permettrait d'avoir une bonne lecture des informations et de rendre plus simple la détection de cases cochées.</td>
-                            <td>Cette option n'a pas été testée car elle n'est pas envisageable pour le respect du RGPD (données sensibles)</td>
+                            <td>Option non retenue car non envisageable pour le respect du RGPD (données sensibles).</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+
+            <!-- Fonctionnement -->
             <div class="fonctionnement" id="fonctionnement">
                 <h3 class="h3Detail">Fonctionnement :</h3>
-                <h4>Fonctionnement de la première version de l'application.</h4>
-                <p class="etapeAppli">
-                    1) Le scan de la prescription médicale de transport. <br><br><br>
-                    2) La récupération de la version de du document. <br><br><br>
-                    3) La récupération l'emplacement des cases ALD. <br> <br><br>
-                    4) La récupération l'emplacement des informations du patient ou du médecin. <br><br><br>
-                    5) Définir laquelle des deux cases est cochées. <br><br><br>
-                    6) La récupération des informations avec de l'OCR dans chaque zone de recherche défini. <br><br><br>
-                    7) La mise en forme des informations pour remplir le formulaire. <br><br><br>
-                    8) L'affichage du formulaire complet. <br><br><br><br>
-                    Le problème est que les traitements OCR testés (OCR (WinDev), Tesseract, Google ML Kit) <strong>ne sont pas assez 
-                    performants</strong> lorsqu'il s'agit de <strong>scan</strong>. 
-                </p>
-                <img src="./img/Schema_fonctionnement_application.png" alt="Schéma du fonctionnement de l'application." class="fonctionnementAppli"> 
-                <h4>Affichage de la première version de l'application :</h4>
-                <img src="./img/Premiere_version.png" alt="Rendu de la première version de l'application" class="AffichageApplication">
-                <img src="./img/Formulaire.png" alt="Rendu de la recherche d'informations" class="AffichageApplication">
-                <h4>Fonctionnement définitif de l'application :</h4>
-                <img src="./img/Fonctionnement_application.png" alt="Schéma du fonctionnement de l'application finale." class="fonctionnementAppliFinal">
-                <p class="etapeAppliFonctionnelle">
-                    1) Le scan de la prescription médicale de transport. <br><br><br>
-                    2) La récupération de la version de du document. <br><br><br>
-                    3) La récupération l'emplacement des cases ALD. <br> <br><br>
-                    4) Définir laquelle des deux cases est cochées. <br><br><br>
-                    5) L'affichage du formulaire complet. <br><br><br><br>
-                </p>
-                <h4 class="affichageFinal">Affichage de la version finale de l'application :</h4>
-                <img src="./img/ALDFinder.png" alt="Dernière version de l'application" class="AffichageApplicationFinale">
+
+                <h4 class="sous-titre">Fonctionnement de la première version de l'application</h4>
+                <div class="two-col">
+                    <div>
+                        <p class="etape-list">
+                            1) Le scan de la prescription médicale de transport.<br><br>
+                            2) La récupération de la version du document.<br><br>
+                            3) La récupération de l'emplacement des cases ALD.<br><br>
+                            4) La récupération de l'emplacement des informations du patient ou du médecin.<br><br>
+                            5) Définir laquelle des deux cases est cochée.<br><br>
+                            6) La récupération des informations avec OCR dans chaque zone de recherche définie.<br><br>
+                            7) La mise en forme des informations pour remplir le formulaire.<br><br>
+                            8) L'affichage du formulaire complet.
+                        </p>
+                        <p class="note-block">Le problème est que les traitements OCR testés (WinDev, Tesseract,
+                            Google ML Kit) <strong>ne sont pas assez performants</strong> lorsqu'il s'agit de
+                            <strong>scan</strong>.</p>
+                    </div>
+                    <div>
+                        <p class="img-label">Schéma du fonctionnement — v1</p>
+                        <img src="./img/Schema_fonctionnement_application.png" alt="Schéma du fonctionnement de l'application">
+                    </div>
+                </div>
+
+                <h4 class="sous-titre">Affichage de la première version</h4>
+                <div class="two-col">
+                    <div>
+                        <p class="img-label">Rendu de la première version</p>
+                        <img src="./img/Premiere_version.png" alt="Rendu de la première version de l'application">
+                    </div>
+                    <div>
+                        <p class="img-label">Rendu de la recherche d'informations</p>
+                        <img src="./img/Formulaire.png" alt="Rendu de la recherche d'informations">
+                    </div>
+                </div>
+
+                <h4 class="sous-titre">Fonctionnement définitif de l'application</h4>
+                <div class="two-col">
+                    <div>
+                        <p class="img-label">Schéma du fonctionnement final</p>
+                        <img src="./img/Fonctionnement_application.png" alt="Schéma du fonctionnement final">
+                    </div>
+                    <div>
+                        <p class="etape-list">
+                            1) Le scan de la prescription médicale de transport.<br><br>
+                            2) La récupération de la version du document.<br><br>
+                            3) La récupération de l'emplacement des cases ALD.<br><br>
+                            4) Définir laquelle des deux cases est cochée.<br><br>
+                            5) L'affichage du formulaire complet.
+                        </p>
+                    </div>
+                </div>
+
+                <h4 class="sous-titre">Affichage de la version finale</h4>
+                <div class="img-center">
+                    <p class="img-label">Dernière version de l'application</p>
+                    <img src="./img/ALDFinder.png" alt="Dernière version de l'application" class="img-medium">
+                </div>
             </div>
+
+            <!-- Tests -->
             <div class="tests" id="tests">
                 <h3 class="h3Detail">Le résultat des tests :</h3>
-                <p class="typeDoc">
-                    <strong>Voici le type de document à tester :</strong> <br><br><br><br>
-                    Les informations à récupérer sont les suivantes : <br><br><br>
-                    - Le numéro d'immatriculation (numéro de sécurité sociale) <br><br><br>
-                    - <strong>L'affection de longue durée (exonérante ou non exonérante)</strong> <br><br><br>
-                    - L'identifiant du médecin (RPPS) <br><br><br>
-                    - La date de la prescription
-                </p>
-                <img class="PMT" src="./img/PMT_zones.png" alt="Prescription médicale de transport">
-                
+                <div class="two-col">
+                    <div>
+                        <p class="etape-list">
+                            <strong>Type de document testé :</strong><br><br>
+                            Les informations à récupérer sont les suivantes :<br><br>
+                            — Le numéro d'immatriculation (numéro de sécurité sociale)<br><br>
+                            — <strong>L'affection de longue durée (exonérante ou non exonérante)</strong><br><br>
+                            — L'identifiant du médecin (RPPS)<br><br>
+                            — La date de la prescription
+                        </p>
+                    </div>
+                    <div>
+                        <p class="img-label">Prescription médicale de transport</p>
+                        <img src="./img/PMT_zones.png" alt="Prescription médicale de transport">
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
+
+    <!-------------------APPRENTISSAGE ------------------->
     <div id="competencesStage">
         <div class="pointFort" id="apprentissage">
             <h3 class="h3Detail">Ce que j'ai appris lors de la création du projet :</h3>
             <p>
-                • Découverte de <strong>WinDev</strong> pour la création d'applications. <br><br>
-                • L'utilisation de bibliothèques externes. <br><br>
-                • Meilleure compréhension de l'<strong>OCR</strong>. 
+                • Découverte de <strong>WinDev</strong> pour la création d'applications.<br><br>
+                • L'utilisation de bibliothèques externes.<br><br>
+                • Meilleure compréhension de l'<strong>OCR</strong>.
             </p>
         </div>
         <div class="leReste">
             <h3 class="h3Detail">Ce qu'il me reste à travailler personnellement :</h3>
             <p>
-                • Apprendre à mieux expliquer quelque chose de technique sans aller dans les détails techniques. <br><br>
+                • Apprendre à mieux expliquer quelque chose de technique sans aller dans les détails techniques.<br><br>
                 • Avoir une meilleure compréhension du code.<br><br>
                 • Avoir une meilleure compréhension sur les directives données.
             </p>
         </div>
     </div>
-    
+
     <script src="script.js" defer></script>
 </body>
 
