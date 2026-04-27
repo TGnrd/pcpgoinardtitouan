@@ -1,0 +1,168 @@
+!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style-ap41.css">
+    <title>AP41 — Application React Native</title>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="content" id="nav-content">
+            <a href="./index.html">← Accueil</a>
+            <a href="#competences">Compétences</a>
+            <a href="#detailMission">Détails</a>
+            <a href="#configurationVM">Config VM</a>
+            <a href="#missions">Missions</a>
+            <a href="#tests">Tests</a>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="header-badge"><span class="dot"></span> Réalisation scolaire — AP41</div>
+        <h1>AP41 — Application React Native avec API-Rest</h1>
+        <p class="header-desc">En lien avec le projet AP32, le but de ce projet est de créer une application mobile permettant d'afficher les
+                stages, les étudiants, les organisations et les contacts. L'application doit être reliée à
+                l'API créée dans le projet AP32.
+        </p>
+        <div class="tech-list">
+            <span class="tech">Visual Studio Code</span>
+            <span class="tech">React Native</span>
+            <span class="tech">API-Rest</span>
+            <span class="tech">Gitlab</span>
+            <span class="tech">Vsphere</span>
+            <span class="tech">Android Studio</span>
+        </div>
+    </header>
+
+    <section id="competences">
+        <h2 class="section-title">Compétences développées</h2>
+        <div class="card">
+            <table id="competencesTable" class="competencesTable">
+                <thead class="competencesHeader">
+                    <tr>
+                        <th>Compétences</th>
+                        <th>B1</th>
+                        <th>B2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="competencesRow">
+                        <td>Évolution du projet</td>
+                        <td>B1.2 - Répondre aux incidents et aux demandes d’assistance et d’évolution</td>
+                        <td>B2.1 - Concevoir une solution applicative</td>
+                    </tr>
+                    <tr class="competencesRow">
+                        <td>Travail en mode projet</td>
+                        <td>B1.4 - Travailler en mode projet</td>
+                        <td>B2.2 - Assurer la maintenance corrective ou évolutive d’une solution applicative</td>
+                    </tr>
+                    <tr class="competencesRow">
+                        <td>Mise à disposition de services</td>
+                        <td>B1.5 - Mettre à disposition des utilisateurs un service informatique</td>
+                        <td>B2.3 - Gérer les données</td>
+                    </tr>
+                    <tr class="competencesRow">
+                        <td>Développement professionnel</td>
+                        <td>B1.6 - Organiser son développement professionnel</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="detailMission">
+        <h2 class="section-title">Organisation du projet</h2>
+        <div class="dark-block">
+            <p>Voici l'organisation du projet en milestones :</p>
+            <img class="img-large" src="img/ap41/Milestones.png" alt="Organisations des tâches AP32">
+            <h3 class="subsection-title">Tâches des milestones</h3>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn light" onclick="slide(this, -1)">&#8592;</button>
+                <ul class="carousel">
+                    <li class="slide">
+                        <p class="img-label">Milestone 1</p>
+                        <img src="img/ap41/Milestone1.png" alt="Mission du premier milestone">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">Milestone 2</p>
+                        <img src="img/ap41/Milestone2.png" alt="Mission du deuxième milestone">
+                    </li>
+                </ul>
+                <button class="carousel-btn light" onclick="slide(this, 1)">&#8594;</button>
+            </div>
+            <p>
+                Étant en groupe, nous nous sommes séparés les tâches. Ma partie était sur la création de la page
+                utilisateur du site web. Voici les tickets que j'ai effectués sur le projet :
+            </p>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn light" onclick="slide(this, -1)">&#8592;</button>
+                <ul class="carousel">
+                    <li class="slide">
+                        <img src="img/ap41/EXG01.png" alt="Issue milestone 1">
+                    </li>
+                    <li class="slide">
+                        <img src="img/ap41/EXG02.png" alt="Issue milestone 2">
+                    </li>
+                    <li class="slide">
+                        <img src="img/ap41/EXG05.png" alt="Issue milestone 3">
+                    </li>
+                    <li class="slide">
+                        <img src="img/ap41/EXG10.png" alt="Issue milestone 3">
+                    </li>
+                </ul>
+                <button class="carousel-btn light" onclick="slide(this, 1)">&#8594;</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="configurationVM">
+        <h2 class="section-title">Configuration VM / GitLab local (AP32)</h2>
+        <div class="card">
+            <p>
+                Le serveur est mis sur <strong>VSphere</strong>. Il a fallu configurer le serveur US24
+                en y renseignant <strong>nos adresses IP, la passerelle et la route</strong>.
+            </p>
+            <p>
+                Après vérification de la communication avec internet, nous avons téléchargé GitLab sur
+                la machine virtuelle. Il est ensuite accessible en saisissant notre IP dans le navigateur.
+            </p>
+            <div class="two-col">
+                <div>
+                    <p class="img-label">Configuration de la VM sur VSphere</p>
+                    <img src="img/ap32/configuration_ip.png" alt="Configuration de la VM">
+                </div>
+                <div>
+                    <p class="img-label">Page index du projet</p>
+                    <img src="img/ap32/pageIndex.png" alt="Page index du projet">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="missions">
+        <h2 class="section-title">Missions</h2>
+
+        <div class="card">
+            <p>
+                Réalisation du <strong>diagramme de classe</strong> — il s'agit de la plus grosse partie
+                du premier milestone.
+            </p>
+            <img src="./img/ap32/DDC.png" alt="Diagramme de classe" class="img-large">
+        </div>
+
+        
+    </section>
+
+
+    <script src="script.js" defer></script>
