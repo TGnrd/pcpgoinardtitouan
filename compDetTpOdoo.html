@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style-tpodoo.css">
+    <title>TP Odoo - Mise en place d'une application avec Odoo</title>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="content" id="nav-content">
+            <a href="./index.html">← Accueil</a>
+            <a href="#competences">Compétences</a>
+            <a href="#configurationVM">Config VM</a>
+            <a href="#AjoutsTests">Ajouts & Tests</a>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="header-badge"><span class="dot"></span> Réalisation scolaire — TP Odoo</div>
+        <h1>TP Odoo</h1>
+        <p class="header-desc">
+            Mise en ligne d'une application de commerce avec Odoo par groupe de 2. L'application est hébergé sur un
+            serveur linux.
+        </p>
+        <div class="tech-list">
+            <span class="tech">Virtual Box</span>
+            <span class="tech">Odoo</span>
+        </div>
+    </header>
+
+    <body>
+        <section id="competences">
+            <h2 class="section-title">Compétences développées</h2>
+            <div class="card">
+                <table id="competencesTable" class="competencesTable">
+                    <thead class="competencesHeader">
+                        <tr>
+                            <th>Compétences</th>
+                            <th>B1</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="competencesRow">
+                            <td>Évolution du projet</td>
+                            <td>B1.3 - Développer la présence en ligne de l’organisation</td>
+                        </tr>
+                        <tr class="competencesRow">
+                            <td>Mise à disposition de services</td>
+                            <td>B1.5 - Mettre à disposition des utilisateurs un service informatique</td>
+                        </tr>
+                        <tr class="competencesRow">
+                            <td>Développement professionnel</td>
+                            <td>B1.6 - Organiser son développement professionnel</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="configurationVM">
+            <h2 class="section-title">Configuration VM</h2>
+            <div class="card">
+                <p>
+                    Le serveur est mis sur <strong>Virtual Box</strong>. Il a fallu configurer le serveur US24
+                    en y renseignant <strong>nos adresses IP, la passerelle et la route</strong>.
+                </p>
+                <p>
+                    Après vérification de la communication avec internet, nous avons téléchargé Odoo sur
+                    la machine virtuelle. Il est ensuite accessible en saisissant notre IP dans le navigateur.
+                </p>
+                <div class="two-col">
+                    <div>
+                        <p class="img-label">Configuration de la VM sur VSphere</p>
+                        <img src="img/ap32/configuration_ip.png" alt="Configuration de la VM">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="AjoutsTests">
+            <h2 class="section-title">Ajouts & Tests</h2>
+            <h3 class="subsection-title">Premier ajout : Champ prénom sur la fiche client</h3>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn light" onclick="slide(this, -1)">&#8592;</button>
+                <ul class="carousel">
+                    <li class="slide">
+                        <p class="img-label">Dans les modèles :</p>
+                        <img src="img/tpOdoo/CreationChampPrenom.png" alt="Création du champ prénom">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">Preuve du fonctionnement pour un particulier</p>
+                        <img src="img/tpOdoo/PreuveParticulier.png" alt="Preuve du fonctionnement particulier">
+                    </li>
+                    <li class="slide">
+                        <p class="img-label">Preuve du fonctionnement pour une société</p>
+                        <img src="img/tpOdoo/PreuveSociete.png" alt="Preuve du fonctionnement société">
+                    </li>
+                </ul>
+                <button class="carousel-btn light" onclick="slide(this, 1)">&#8594;</button>
+            </div>
+            <h3 class="subsection-title">Deuxième ajout : Création du catalogue de produits</h3>
+            <p>Activation des modules :</p>
+            <img src="./img/tpOdoo/ComposantsActifs.png" alt="Composants activé pour le site de vente">
+            <p>Importation des produits :</p>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn light" onclick="slide(this, -1)">&#8592;</button>
+                <ul class="carousel">
+                    <li class="slide">
+                        <p>L'importation se fait grâce à un tableau excel contenant toutes les informations des produits
+                        </p>
+                        <img src="img/tpOdoo/ImportationProduit.png" alt="Importation des produits">
+                    </li>
+                    <li class="slide">
+                        <p>Le Résultat :</p>
+                        <img src="img/tpOdoo/PreuveProduit.png" alt="Preuve l'ajout des produits">
+                    </li>
+                </ul>
+                <button class="carousel-btn light" onclick="slide(this, 1)">&#8594;</button>
+            </div>
+            <p>Importation des clients :</p>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn light" onclick="slide(this, -1)">&#8592;</button>
+                <ul class="carousel">
+                    <li class="slide">
+                        <p>L'importation se fait grâce à un tableau excel contenant toutes les informations des clients
+                        </p>
+                        <img src="img/tpOdoo/ImportClients.png" alt="Importation des clients">
+                    </li>
+                    <li class="slide">
+                        <p>Le Résultat :</p>
+                        <img src="img/tpOdoo/PreuveClient.png" alt="Preuve l'ajout des clients">
+                    </li>
+                </ul>
+                <button class="carousel-btn light" onclick="slide(this, 1)">&#8594;</button>
+            </div>
+            <p>Création des employés :</p>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn light" onclick="slide(this, -1)">&#8592;</button>
+                <ul class="carousel">
+                    <li class="slide">
+                        <p>Ajout manuel de tous les employés sur la base d'une liste donnée</p>
+                        <img src="img/tpOdoo/listeEmployés.png" alt="Création des employés">
+                    </li>
+                    <li class="slide">
+                        <p>Le Résultat :</p>
+                        <img src="img/tpOdoo/PreuveEmployés.png" alt="Preuve l'ajout des employés">
+                    </li>
+                </ul>
+                <button class="carousel-btn light" onclick="slide(this, 1)">&#8594;</button>
+            </div>
+            <p>Ajout d'une page de mentions légales :</p>
+            <img src="./img/tpOdoo/MentionLegal.png" alt="Mentions légales">
+        </section>
+        <script src="script.js" defer></script>
+    </body>
