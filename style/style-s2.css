@@ -121,7 +121,6 @@ code {
 header {
   background: #ffffff;
   border-bottom: 1px solid #d0d0d0;
-  /* 48px navbar + 1.5rem breathing room */
   padding: calc(48px + 1.5rem) 1.5rem 1.5rem;
 }
 
