@@ -1,0 +1,557 @@
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background: #ebebeb;
+  color: #1a1a1a;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+li {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  background: #f0f0f0;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 11px;
+  color: #333;
+}
+
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  background: #ffffff;
+  border-bottom: 1px solid #d0d0d0;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 48px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content a {
+  font-size: 13px;
+  font-weight: bold;
+  color: #1a1a1a;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.content a:hover {
+  background: #f0f0f0;
+  color: #000;
+}
+
+/* ---- Bouton hamburger (caché sur desktop) ---- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  z-index: 101;
+  flex-shrink: 0;
+}
+
+.hamburger:hover {
+  background: #f0f0f0;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #1a1a1a;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #d0d0d0;
+  padding: 4rem 1.5rem 1.5rem;
+}
+
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0f0f0;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  padding: 3px 10px;
+  font-size: 11px;
+  margin-bottom: 0.75rem;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #888;
+  flex-shrink: 0;
+}
+
+header h1 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  color: #1a1a1a;
+  border-left: 4px solid #aaa;
+  padding-left: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.header-desc {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.65;
+  max-width: 800px;
+  margin-bottom: 1rem;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tech {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: #f0f0f0;
+  color: #555;
+}
+
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+section {
+  padding: 1.5rem;
+  width: 100%;
+}
+
+section[id] {
+  scroll-margin-top: 55px;
+}
+
+.section-title {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: bold;
+  color: #1a1a1a;
+  border-left: 4px solid #aaa;
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.subsection-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  border-left: 3px solid #666;
+  padding-left: 0.6rem;
+}
+
+
+/* ============================================================
+   CARTE BLANCHE
+   ============================================================ */
+.card {
+  background: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.card p {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.card p strong {
+  color: #1a1a1a;
+}
+
+.card h3 {
+  font-size: 13px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 0.4rem;
+}
+
+
+/* ============================================================
+   BLOC SOMBRE
+   ============================================================ */
+.dark-block {
+  background: #222;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.dark-block p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.dark-block p strong {
+  color: #ffffff;
+}
+
+.info-list {
+  list-style: none;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info-list li {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  padding-left: 1.2rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.info-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #666;
+}
+
+.info-list li strong {
+  color: #ffffff;
+}
+
+
+/* ============================================================
+   TABLEAU
+   ============================================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+table th {
+  background: #333;
+  color: #ffffff;
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #e8e8e8;
+  color: #333;
+  vertical-align: top;
+  line-height: 1.4;
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+table tr:nth-child(even) td {
+  background: #f8f8f8;
+}
+
+
+/* ============================================================
+   IMAGES
+   ============================================================ */
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  margin: 0.5rem auto;
+}
+
+.dark-block img {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.img-large { width: 85%; }
+.img-medium { width: 55%; }
+
+.img-label {
+  font-size: 11px;
+  color: #888;
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
+
+.dark-block .img-label {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.miniPhoto {
+  width: 80%;
+  margin-top: 10%;
+}
+
+
+/* ============================================================
+   GRILLE 2 COLONNES
+   ============================================================ */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+
+/* ============================================================
+   CAROUSEL
+   ============================================================ */
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  list-style: none;
+  flex: 1;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.littleImage {
+  height: 50vh;
+}
+
+.slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  background: #f5f5f5;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.dark-block .slide {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.slide h3 {
+  font-size: 13px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 0.4rem;
+}
+
+.dark-block .slide h3 {
+  color: #ffffff;
+}
+
+.slide p {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.dark-block .slide p {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.carousel-btn {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #d0d0d0;
+  background: #ffffff;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.carousel-btn:hover {
+  background: #f0f0f0;
+}
+
+.carousel-btn.light {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.carousel-btn.light:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+
+/* ============================================================
+   AP32 — BLOC REGEX
+   ============================================================ */
+.regex-block {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.9;
+  font-family: 'Courier New', monospace;
+}
+
+.regex-block code {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 11px;
+  display: inline-block;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 700px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .content {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #d0d0d0;
+    padding: 0.5rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .content.open {
+    display: flex;
+  }
+
+  .content a {
+    width: 100%;
+    padding: 10px 1.5rem;
+    border-radius: 0;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .content a:last-child {
+    border-bottom: none;
+  }
+
+  .content a:hover {
+    background: #f5f5f5;
+  }
+}
+
+@media (max-width: 768px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .img-large,
+  .img-medium {
+    width: 100%;
+  }
+
+  table th,
+  table td {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 1rem;
+  }
+}
