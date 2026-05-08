@@ -1,6 +1,3 @@
-/* ============================================================
-   RESET & BASE
-   ============================================================ */
 *,
 *::before,
 *::after {
@@ -29,10 +26,24 @@ h4 {
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* Veille */
 
-/* ============================================================
-   NAVIGATION
-   ============================================================ */
+.article-veille {
+    margin-left: 2%;
+}
+
+.btn-retour {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    margin: 2%;
+}
+
+/* Navigation */
 .navbar {
     display: flex;
     align-items: center;
@@ -72,7 +83,6 @@ h4 {
     color: #000;
 }
 
-/* ---- Bouton hamburger (caché sur desktop) ---- */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -113,9 +123,7 @@ h4 {
 }
 
 
-/* ============================================================
-   SECTION PRÉSENTATION
-   ============================================================ */
+/* Section présentation */
 #presentation {
     display: flex;
     flex-direction: row;
@@ -200,9 +208,7 @@ h4 {
 }
 
 
-/* ============================================================
-   SECTIONS GÉNÉRIQUES
-   ============================================================ */
+/* Section générique */
 section {
     width: 100%;
     padding: 1.5rem;
@@ -228,9 +234,8 @@ hr {
 }
 
 
-/* ============================================================
-   CARTES PROJETS SCOLAIRES (AP31, AP32)
-   ============================================================ */
+/* Carte projets scolaires */
+
 .ap31,
 .ap32,
 .ap41,
@@ -267,7 +272,7 @@ hr {
 }
 
 .project-name {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
     color: #1a1a1a;
     margin-bottom: 0.3rem;
@@ -299,7 +304,7 @@ hr {
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 10px;
+    font-size: 14px;
     font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
     margin-bottom: 0.75rem;
@@ -371,9 +376,7 @@ table tr:nth-child(even) td {
 }
 
 
-/* ============================================================
-   SECTION PROFESSIONNELLE
-   ============================================================ */
+/* Section professionnelle */
 .main {
     width: 100%;
 }
@@ -439,9 +442,18 @@ table tr:nth-child(even) td {
     color: #333;
 }
 
-.card_text::-webkit-scrollbar { width: 6px; }
-.card_text::-webkit-scrollbar-track { background: #f0f0f0; }
-.card_text::-webkit-scrollbar-thumb { background: #bbb; border-radius: 6px; }
+.card_text::-webkit-scrollbar {
+    width: 6px;
+}
+
+.card_text::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+.card_text::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 6px;
+}
 
 .card_text p {
     margin-bottom: 0.5rem;
@@ -457,7 +469,7 @@ table tr:nth-child(even) td {
     background: #333;
     color: white;
     border-radius: 8px;
-    font-size: 10px;
+    font-size: 14px;
     font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
     margin-bottom: 0.75rem;
@@ -482,9 +494,7 @@ table tr:nth-child(even) td {
 }
 
 
-/* ============================================================
-   SECTION VEILLE
-   ============================================================ */
+/* Section veille */
 .veille,
 .cardsVeille,
 .cards_item_veille,
@@ -516,9 +526,7 @@ table tr:nth-child(even) td {
 }
 
 
-/* ============================================================
-   FOOTER / CONTACT
-   ============================================================ */
+/* Footer / Contact */
 footer {
     background: #222;
     width: 100%;
@@ -605,9 +613,7 @@ footer {
 }
 
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+/* Responsive */
 @media (max-width: 700px) {
     .hamburger {
         display: flex;

@@ -1,6 +1,3 @@
-/* ============================================================
-   RESET & BASE
-   ============================================================ */
 *,
 *::before,
 *::after {
@@ -40,9 +37,7 @@ code {
 }
 
 
-/* ============================================================
-   NAVIGATION
-   ============================================================ */
+/* Navigation */
 .navbar {
   display: flex;
   align-items: center;
@@ -82,7 +77,6 @@ code {
   color: #000;
 }
 
-/* ---- Bouton hamburger (caché sur desktop) ---- */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -123,9 +117,7 @@ code {
 }
 
 
-/* ============================================================
-   HEADER
-   ============================================================ */
+/* Header */
 header {
   background: #ffffff;
   border-bottom: 1px solid #d0d0d0;
@@ -184,9 +176,7 @@ header h1 {
 }
 
 
-/* ============================================================
-   SECTIONS
-   ============================================================ */
+/* Sections */
 section {
   padding: 1.5rem;
   width: 100%;
@@ -216,9 +206,7 @@ section[id] {
 }
 
 
-/* ============================================================
-   CARTE BLANCHE
-   ============================================================ */
+/* Cartes blanches */
 .card {
   background: #ffffff;
   border: 1px solid #d0d0d0;
@@ -245,9 +233,7 @@ section[id] {
 }
 
 
-/* ============================================================
-   BLOC SOMBRE
-   ============================================================ */
+/* Bloc sombre */
 .dark-block {
   background: #222;
   border-radius: 12px;
@@ -293,9 +279,7 @@ section[id] {
 }
 
 
-/* ============================================================
-   TABLEAU
-   ============================================================ */
+/* Tableaux */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -326,10 +310,28 @@ table tr:nth-child(even) td {
   background: #f8f8f8;
 }
 
+/* Lien vers projet de la page */
 
-/* ============================================================
-   IMAGES
-   ============================================================ */
+.lienProjetPage {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #333;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  float: right;
+}
+
+.lienProjetPage:hover {
+  background: #111;
+}
+
+/* Images */
 img {
   display: block;
   max-width: 100%;
@@ -343,8 +345,13 @@ img {
   border-color: rgba(255, 255, 255, 0.12);
 }
 
-.img-large { width: 85%; }
-.img-medium { width: 55%; }
+.img-large {
+  width: 85%;
+}
+
+.img-medium {
+  width: 55%;
+}
 
 .img-label {
   font-size: 11px;
@@ -357,10 +364,6 @@ img {
   color: rgba(255, 255, 255, 0.45);
 }
 
-
-/* ============================================================
-   GRILLE 2 COLONNES
-   ============================================================ */
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -369,9 +372,7 @@ img {
 }
 
 
-/* ============================================================
-   CAROUSEL
-   ============================================================ */
+/* Carousel */
 .carousel-wrapper {
   display: flex;
   align-items: center;
@@ -463,10 +464,6 @@ img {
   background: rgba(255, 255, 255, 0.18);
 }
 
-
-/* ============================================================
-   AP32 — BLOC REGEX
-   ============================================================ */
 .regex-block {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.75);
@@ -484,9 +481,7 @@ img {
 }
 
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+/* Responsive */
 @media (max-width: 700px) {
   .hamburger {
     display: flex;
