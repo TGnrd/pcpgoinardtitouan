@@ -114,7 +114,7 @@ code {
 header {
   background: #ffffff;
   border-bottom: 1px solid #d0d0d0;
-  padding: 5rem 1.5rem 1.5rem; /
+  padding: 5rem 1.5rem 1.5rem;/
 }
 
 .header-badge {
@@ -308,6 +308,26 @@ table tr:nth-child(even) td {
   background: #f8f8f8;
 }
 
+/* Lien vers projet de la page */
+
+.lienProjetPage {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #333;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  float: right;
+}
+
+.lienProjetPage:hover {
+  background: #111;
+}
 
 /* Image */
 
@@ -320,8 +340,8 @@ img {
   margin: 0.5rem auto;
 }
 
-section > img,
-section > p + img {
+section>img,
+section>p+img {
   margin: 0.75rem auto 1rem;
   border-color: #d0d0d0;
 }
@@ -350,7 +370,7 @@ section > p + img {
   color: rgba(255, 255, 255, 0.45);
 }
 
-#AjoutsTests > p {
+#AjoutsTests>p {
   font-size: 13px;
   color: #444;
   line-height: 1.6;
@@ -405,7 +425,7 @@ section > p + img {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-#AjoutsTests .carousel-wrapper > .carousel > .slide {
+#AjoutsTests .carousel-wrapper>.carousel>.slide {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.1);
 }

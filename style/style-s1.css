@@ -1,6 +1,3 @@
-/* ============================================================
-   RESET & BASE
-   ============================================================ */
 *,
 *::before,
 *::after {
@@ -40,9 +37,7 @@ code {
 }
 
 
-/* ============================================================
-   NAVIGATION
-   ============================================================ */
+/* Navigation */
 .navbar {
   display: flex;
   align-items: center;
@@ -82,7 +77,6 @@ code {
   color: #000;
 }
 
-/* ---- Bouton hamburger (caché sur desktop) ---- */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -123,9 +117,7 @@ code {
 }
 
 
-/* ============================================================
-   HEADER
-   ============================================================ */
+/* Header */
 header {
   background: #ffffff;
   border-bottom: 1px solid #d0d0d0;
@@ -184,9 +176,7 @@ header h1 {
 }
 
 
-/* ============================================================
-   SECTIONS & DIVS
-   ============================================================ */
+/* Sections */
 section,
 div[id] {
   padding: 1.5rem;
@@ -224,9 +214,7 @@ div[id] {
 }
 
 
-/* ============================================================
-   CARTE BLANCHE & BLOC SOMBRE
-   ============================================================ */
+/* Carte blanche et bloc sombre */
 .card {
   background: #ffffff;
   border: 1px solid #d0d0d0;
@@ -277,7 +265,7 @@ div[id] {
   color: #ffffff;
 }
 
-/* Technologies & fonctionnement divs inside detailStage1 */
+/* Technologies & fonctionnement */
 .technologies,
 .fonctionnement,
 .tests,
@@ -302,9 +290,7 @@ div[id] {
 }
 
 
-/* ============================================================
-   TABLEAUX
-   ============================================================ */
+/* Tableaux */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -364,9 +350,8 @@ table tr:nth-child(even) td {
 }
 
 
-/* ============================================================
-   LIEN PROJET PAGE (bouton absolu en haut à droite)
-   ============================================================ */
+/* Lien vers projet de la page */
+
 .lienProjetPage {
   display: inline-flex;
   align-items: center;
@@ -374,7 +359,7 @@ table tr:nth-child(even) td {
   background: #333;
   color: #ffffff;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   padding: 6px 14px;
   border-radius: 8px;
@@ -387,9 +372,7 @@ table tr:nth-child(even) td {
 }
 
 
-/* ============================================================
-   IMAGES
-   ============================================================ */
+/* Image */
 img {
   display: block;
   max-width: 100%;
@@ -417,9 +400,7 @@ img {
 }
 
 
-/* ============================================================
-   PDF + JSON VIEWER
-   ============================================================ */
+/* PDF et Json */
 .conteneur-json-pdf {
   display: flex;
   gap: 1.25rem;
@@ -463,10 +444,6 @@ img {
   font-size: inherit;
 }
 
-
-/* ============================================================
-   CONSOLE PRE
-   ============================================================ */
 pre {
   background: #282c34;
   color: #abb2bf;
@@ -485,9 +462,7 @@ pre code {
 }
 
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+/* Responsive */
 @media (max-width: 700px) {
   .hamburger {
     display: flex;
@@ -561,6 +536,7 @@ pre code {
 }
 
 @media (max-width: 480px) {
+
   section,
   div[id] {
     padding: 1rem;
