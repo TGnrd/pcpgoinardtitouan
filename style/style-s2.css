@@ -206,10 +206,8 @@ body>div {
   border: 1px solid #d0d0d0;
   border-radius: 12px;
   padding: 1.25rem !important;
-  /* override body > div padding */
   position: relative;
   overflow: hidden;
-  /* contain the floated button */
 }
 
 .lienProjetPage {
@@ -224,7 +222,6 @@ body>div {
   padding: 5px 12px;
   border-radius: 8px;
   margin-bottom: 1rem;
-  /* block instead of float to avoid layout issues */
   float: right;
   margin-left: 1rem;
 }
